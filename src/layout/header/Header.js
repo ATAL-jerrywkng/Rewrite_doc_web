@@ -59,7 +59,7 @@ export const Header = () => {
           <CardMedia component="img" src={Logo} sx={{ width: { xs: '100%', sm: '173px' }, height: '100%', objectFit: 'contain' }} />
         </Grid>
         <Grid item xs={0} sm={4}>
-          <Typography variant="h6" gutterBottom sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Typography variant="subtitle1" className={classess.title} gutterBottom sx={{ display: { xs: 'none', sm: 'block' } }}>
             {t("header.title")}
           </Typography>
         </Grid>
