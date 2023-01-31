@@ -1,38 +1,24 @@
 import React from 'react'
 import {
-    RouterProvider,
-    createBrowserRouter
+    BrowserRouter
 } from 'react-router-dom'
 import { ReduxProvider } from './redux/ReduxProvider';
-
 
 // Layout
 import { LayoutProvider } from './layout/LayoutProvider';
 
-// Pages
-import { Cover } from './pages/Cover';
-import { Home } from './pages/Home';
+// Routes
+import { RoutesProvider } from './router/RoutesProvider';
 
 export const App = () => {
 
-    const router = createBrowserRouter([
-        {
-            path: '/',
-            element: <Home />
-        },
-        {
-            path: '/cover',
-            element: <Cover />
-
-        }
-    ]);
-
-
     return (
         <ReduxProvider>
-            <LayoutProvider>
-                <RouterProvider router={router} />
-            </LayoutProvider>
+            <BrowserRouter>
+                <LayoutProvider>
+                    <RoutesProvider />
+                </LayoutProvider>
+            </BrowserRouter>
         </ReduxProvider>
     )
 }

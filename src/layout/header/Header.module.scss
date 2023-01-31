@@ -1,0 +1,21 @@
+.bg {
+    background: linear-gradient(180deg, rgba(255, 196, 0, 1) 10%, rgba(246, 143, 40, 1) 100%);
+    height: 60px;
+    padding: 2px 4px 4px 4px;
+
+    h6 {
+        text-align: center;
+    }
+
+    .searchBox {
+        text-align: right;
+    }
+}
+
+.drawer {
+    a {
+        text-decoration: none;
+        color: rgba($color: #000000, $alpha: .8);
+        font-size: 15px;
+    }
+}
