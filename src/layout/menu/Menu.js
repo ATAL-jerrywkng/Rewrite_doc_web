@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next';
 
 import classess from './Menu.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { MENU_TRANSLATION_PREFIX } from '../../utils/TranslationPrefixName';
 
 export const Menu = () => {
 
@@ -66,7 +67,7 @@ export const Menu = () => {
             <TreeItem
               key={item.id}
               icon={item?.icon} nodeId={item.id}
-              label={t("menu." + item.translateName)}
+              label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
               onClick={(event) => clickHandler({ event, item })}
             >
               {item?.childrenLists?.map(item =>
@@ -74,7 +75,7 @@ export const Menu = () => {
                   key={item.id}
                   icon={item?.icon}
                   nodeId={item.id}
-                  label={t("menu." + item.translateName)}
+                  label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
                   onClick={(event) => clickHandler({ event, item })}
                 />)}
             </TreeItem>

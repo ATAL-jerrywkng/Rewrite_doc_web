@@ -25,11 +25,14 @@ import Logo from '../../asserts/logo.png';
 import InputElement from '../../components/InputElement';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { HEADER_TRANSLATION_PREFIX, MENU_TRANSLATION_PREFIX } from '../../utils/TranslationPrefixName';
 
 export const Header = () => {
 
 
   const { t } = useTranslation(["layout", "menu"]);
+
+  
 
   // navigate for page change
   const navigate = useNavigate();
@@ -48,7 +51,7 @@ export const Header = () => {
   const checkListItemOpen = (item) => openListItems.find(find => find === item.id);
 
   const handleClick = ({ event, item }) => {
-     console.log("file: Header.js:46 -> handleClick -> event, item ", event.target, item);
+    console.log("file: Header.js:46 -> handleClick -> event, item ", event.target, item);
     if (item?.childrenLists) {
 
       // console.log("file: Header.js:54 -> handleClick -> openListItems", openListItems);
@@ -74,19 +77,19 @@ export const Header = () => {
       {
         menu?.map(item => {
           if (item?.childrenLists) {
-            return <Box key={item.id}  className={classess.ListItem}>
+            return <Box key={item.id} className={classess.ListItem}>
               <ListItemButton onClick={(event) => handleClick({ event, item })}>
                 <ListItemText>
-                    {t("menu." + item.translateName, { ns: 'menu' })}
+                  {t(MENU_TRANSLATION_PREFIX + item.translateName, { ns: 'menu' })}
                 </ListItemText>
                 {checkListItemOpen(item) ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
               <Collapse in={checkListItemOpen(item)} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   {item?.childrenLists?.map(subItem => {
-                    return <ListItemButton key={subItem.id} sx={{ pl: 4 }} onClick={(event) => handleClick({ event, item:subItem })}>
+                    return <ListItemButton key={subItem.id} sx={{ pl: 4 }} onClick={(event) => handleClick({ event, item: subItem })}>
                       <ListItemText>
-                        {t("menu." + subItem.translateName, { ns: 'menu' })}
+                        {t(MENU_TRANSLATION_PREFIX + subItem.translateName, { ns: 'menu' })}
                       </ListItemText>
                     </ListItemButton>
                   })}
@@ -98,7 +101,8 @@ export const Header = () => {
             return <ListItemButton className={classess.ListItem} key={item.id} onClick={(event) => handleClick({ event, item })} >
               <ListItemText>
 
-                {t("menu." + item.translateName, { ns: 'menu' })}
+                {t(MENU_TRANSLATION_PREFIX + item.translateName, { ns: 'menu' })}
+
 
               </ListItemText>
             </ListItemButton>
@@ -129,7 +133,7 @@ export const Header = () => {
         </Grid>
         <Grid item xs={0} sm={4}>
           <Typography variant="h6" className={classess.title} gutterBottom sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {t("header.title", { ns: 'layout' })}
+            {t(HEADER_TRANSLATION_PREFIX + "title", { ns: 'layout' })}
           </Typography>
         </Grid>
         <Grid item xs={0} sm={4} className={classess.searchBox} sx={{ display: { xs: 'none', sm: 'block' } }}>
