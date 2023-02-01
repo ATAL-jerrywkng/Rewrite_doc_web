@@ -20,12 +20,17 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    lng:'hk',
+    lng: 'hk',
     fallbackLng: 'en',
     debug: false,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
+    },
+    backend: {
+      // for all available options read the backend's repository readme file
+      loadPath: '/help2/locales/{{lng}}/{{ns}}.json'
     }
+
   });
 
 

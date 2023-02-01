@@ -14,7 +14,7 @@ export const App = () => {
 
     return (
         <ReduxProvider>
-            <BrowserRouter>
+            <BrowserRouter basename='/help2'>
                 <LayoutProvider>
                     <RoutesProvider />
                 </LayoutProvider>
