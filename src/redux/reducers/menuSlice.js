@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { Help } from "@mui/icons-material";
 
 export const menuSlice = createSlice({
     name: 'menu',
     initialState: {
         menuLists: [
-            { id: 'menu01', name: 'Cover', translateName: 'cover', url: '/cover', icon: null, childrenLists: null },
+            { id: 'menu01', name: 'Cover', translateName: 'cover', url: '/cover', icon: <Help/>, childrenLists: null },
             { id: 'menu02', name: 'AboutECRS', translateName: 'aboutECRS', url: '/about_ecrs', icon: null, childrenLists: null },
             { id: 'menu03', name: 'Qs', translateName: 'qs', url: '/qs', icon: null, childrenLists: null },
             { id: 'menu04', name: 'Installation', translateName: 'installation', url: '/installation', icon: null, childrenLists: null },

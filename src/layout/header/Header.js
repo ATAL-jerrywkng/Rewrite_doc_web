@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import classess from './Header.module.scss';
 
 import { useTranslation } from 'react-i18next';
@@ -23,11 +23,17 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 
 import Logo from '../../asserts/logo.png';
 import InputElement from '../../components/InputElement';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export const Header = () => {
 
-  const { t } = useTranslation("layout");
+
+  const { t } = useTranslation(["layout", "menu"]);
+
+  // navigate for page change
+  const navigate = useNavigate();
+
 
   // Search Bar
   const searchChange = (event) => {
@@ -37,11 +43,74 @@ export const Header = () => {
 
 
   // Menu Control
-  const [open, setOpen] = useState(true);
+  const menu = useSelector(state => state.menu.menuLists);
+  const [openListItems, setOpenListItems] = useState([]);
+  const checkListItemOpen = (item) => openListItems.find(find => find === item.id);
 
-  const handleClick = () => {
-    setOpen(!open);
+  const handleClick = ({ event, item }) => {
+     console.log("file: Header.js:46 -> handleClick -> event, item ", event.target, item);
+    if (item?.childrenLists) {
+
+      // console.log("file: Header.js:54 -> handleClick -> openListItems", openListItems);
+      let findOne = openListItems.find(find => find === item.id);
+
+      if (findOne) {
+        let temp = [...openListItems];
+        temp = temp.filter(filter => filter !== item.id)
+        // console.log("file: Header.js:59 -> handleClick -> temp", temp);
+        setOpenListItems(temp);
+      }
+      else {
+        setOpenListItems(prevState => [...prevState, item.id]);
+      }
+    } else {
+      navigate(item.url)
+    }
+    // setOpen(!open);
   };
+
+  const showMenuList = useMemo(() => {
+    return <List sx={{ width: { xs: '275px', sm: '50%' } }}>
+      {
+        menu?.map(item => {
+          if (item?.childrenLists) {
+            return <Box key={item.id}  className={classess.ListItem}>
+              <ListItemButton onClick={(event) => handleClick({ event, item })}>
+                <ListItemText>
+                    {t("menu." + item.translateName, { ns: 'menu' })}
+                </ListItemText>
+                {checkListItemOpen(item) ? <ExpandLess /> : <ExpandMore />}
+              </ListItemButton>
+              <Collapse in={checkListItemOpen(item)} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                  {item?.childrenLists?.map(subItem => {
+                    return <ListItemButton key={subItem.id} sx={{ pl: 4 }} onClick={(event) => handleClick({ event, item:subItem })}>
+                      <ListItemText>
+                        {t("menu." + subItem.translateName, { ns: 'menu' })}
+                      </ListItemText>
+                    </ListItemButton>
+                  })}
+
+                </List>
+              </Collapse>
+            </Box>
+          } else {
+            return <ListItemButton className={classess.ListItem} key={item.id} onClick={(event) => handleClick({ event, item })} >
+              <ListItemText>
+
+                {t("menu." + item.translateName, { ns: 'menu' })}
+
+              </ListItemText>
+            </ListItemButton>
+          }
+        })
+      }
+
+
+
+    </List>
+  }, [menu, openListItems])
+
 
 
   // Drawer Control
@@ -59,8 +128,8 @@ export const Header = () => {
           <CardMedia component="img" src={Logo} sx={{ width: { xs: '100%', sm: '173px' }, height: '100%', objectFit: 'contain' }} />
         </Grid>
         <Grid item xs={0} sm={4}>
-          <Typography variant="subtitle1" className={classess.title} gutterBottom sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {t("header.title")}
+          <Typography variant="h6" className={classess.title} gutterBottom sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {t("header.title", { ns: 'layout' })}
           </Typography>
         </Grid>
         <Grid item xs={0} sm={4} className={classess.searchBox} sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -73,41 +142,7 @@ export const Header = () => {
         onClose={closeDrawer}
         className={classess.drawer}
       >
-        <List sx={{ maxWidth: { xs: '250px', sm: '50%' } }}>
-          <ListItemButton>
-            <ListItemText>
-              <Link to="/cover">
-                Cover
-              </Link>
-            </ListItemText>
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemText>
-              <Link to="#">關於安樂考勤/自墊費用報銷系統 (ECRS-Timesheet System)</Link>
-            </ListItemText>
-          </ListItemButton>
-          <ListItemButton onClick={handleClick}>
-
-            <ListItemText>
-              <Link to="#">
-                登入到系統
-              </Link>
-            </ListItemText>
-            {open ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemText>
-                  <Link to="#">
-                    已擁有公司電郵地址的同事
-                  </Link>
-                </ListItemText>
-              </ListItemButton>
-            </List>
-          </Collapse>
-
-        </List>
+        {showMenuList}
       </Drawer>
 
 

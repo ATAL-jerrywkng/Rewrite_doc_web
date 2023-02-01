@@ -1,41 +1,109 @@
-import { Tab, Tabs, Typography } from '@mui/material';
-import { Box } from '@mui/system';
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
+import { TreeItem, TreeView } from '@mui/lab';
+import {
+  Tab,
+  Tabs,
+  Typography,
+  Box
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next';
+
+
+import classess from './Menu.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 export const Menu = () => {
 
-  const menu = useSelector(state => state.menu.menuLists);
-  const [selectedTabNumber, setSelectedTabNumber] = React.useState(0);
+  const { t } = useTranslation('menu');
 
+  // menu 
+  const menu = useSelector(state => state.menu.menuLists);
+
+  // navigate for page change
+  const navigate = useNavigate();
+
+  // TreeView Control
+  const [expanded, setExpanded] = useState([]);
+  const handleToggle = (event, nodeIds) => {
+    // console.log("file: Menu.js:20 -> handleToggle -> nodeIds", nodeIds);
+    // console.log("file: Menu.js:31 -> handleToggle -> event", event.target);
+    setExpanded(nodeIds);
+  };
+  const clickHandler = ({ event, item }) => {
+    // console.log("file: Menu.js:38 -> clickHandler -> event", event.target.nodeName)
+    // console.log("file: Menu.js:36 -> clickHandler -> item", item)
+    if (event.target.nodeName !== "svg" && event.target.nodeName !== "path") {
+      navigate(item.url)
+    }
+  }
+
+
+
+  // Tabs Control 
+  const [selectedTabNumber, setSelectedTabNumber] = useState(0);
   const handleChange = (event, newValue) => {
-    console.log("file: Menu.js:15 -> handleChange -> newValue", newValue)
+    // console.log("file: Menu.js:15 -> handleChange -> newValue", newValue);
     setSelectedTabNumber(newValue);
   };
 
 
-  const showTabContent = useCallback(() => {
+
+  const showTabContent = useMemo(() => {
     switch (selectedTabNumber) {
       case 0: {
-        return null;
+        return <TreeView
+          aria-label="controlled"
+          defaultCollapseIcon={<ExpandMoreIcon />}
+          defaultExpandIcon={<ChevronRightIcon />}
+          expanded={expanded}
+          onNodeToggle={handleToggle}
+          multiSelect
+        >
+          {menu?.map(item =>
+            <TreeItem
+              key={item.id}
+              icon={item?.icon} nodeId={item.id}
+              label={t("menu." + item.translateName)}
+              onClick={(event) => clickHandler({ event, item })}
+            >
+              {item?.childrenLists?.map(item =>
+                <TreeItem
+                  key={item.id}
+                  icon={item?.icon}
+                  nodeId={item.id}
+                  label={t("menu." + item.translateName)}
+                  onClick={(event) => clickHandler({ event, item })}
+                />)}
+            </TreeItem>
+          )}
+        </TreeView>;
+
+      }
+      case 1: {
+        return;
+      }
+
+      case 2: {
+        return;
       }
     }
-  }, [selectedTabNumber])
+  }, [selectedTabNumber, expanded, menu])
 
 
 
 
   return (
 
-    <Box>
-      <Tabs value={selectedTabNumber} onChange={handleChange} centered>
+    <Box className={classess.menuContent}>
+      <Tabs className={classess.tabs} value={selectedTabNumber} onChange={handleChange} centered>
         <Tab label="Contents" />
         <Tab label="Index" />
         <Tab label="Bookmarks" />
       </Tabs>
-      {selectedTabNumber === 0 ? <Box>
-        0
-      </Box> : null}
+      {showTabContent}
     </Box>
   )
 }
