@@ -1,24 +1,12 @@
-import React from 'react'
-import {
-    BrowserRouter
-} from 'react-router-dom'
-import { ReduxProvider } from './redux/ReduxProvider';
+import React from "react";
 
-// Layout
-import { LayoutProvider } from './layout/LayoutProvider';
-
-// Routes
-import { RoutesProvider } from './router/RoutesProvider';
+import { ReduxProvider } from "./redux/ReduxProvider";
+import { RoutesProvider } from "./router/RoutesProvider";
 
 export const App = () => {
-
-    return (
-        <ReduxProvider>
-            <BrowserRouter basename='/help2'>
-                <LayoutProvider>
-                    <RoutesProvider />
-                </LayoutProvider>
-            </BrowserRouter>
-        </ReduxProvider>
-    )
-}
+  return (
+    <ReduxProvider>
+      <RoutesProvider />
+    </ReduxProvider>
+  );
+};
