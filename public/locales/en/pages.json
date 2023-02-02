@@ -1,8 +1,14 @@
 {
-    "pages":{
-        "loginSystem":{
-            "title":"登入到系統"
-
-        }
+    "pages": {
+      "loginSystem": {
+        "title": "登入到系統"
+      },
+      "timesheetSystem": {
+        "title": "Timesheet考勤系統"
+      },
+      "ecrsSystem": {
+        "title": "ECRS自墊費用報銷系統"
+      }
     }
-}
+  }
+  

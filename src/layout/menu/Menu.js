@@ -99,7 +99,12 @@ export const Menu = () => {
   return (
 
     <Box className={classess.menuContent}>
-      <Tabs className={classess.tabs} value={selectedTabNumber} onChange={handleChange} centered>
+      <Tabs
+        className={classess.tabs}
+        value={selectedTabNumber}
+        onChange={handleChange}
+        centered
+      >
         <Tab label="Contents" />
         <Tab label="Index" />
         <Tab label="Bookmarks" />
