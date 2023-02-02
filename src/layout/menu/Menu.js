@@ -37,7 +37,7 @@ export const Menu = () => {
     // console.log("file: Menu.js:38 -> clickHandler -> event", event.target.nodeName)
     // console.log("file: Menu.js:36 -> clickHandler -> item", item)
     if (event.target.nodeName !== "svg" && event.target.nodeName !== "path") {
-      navigate(item.url)
+      navigate(item.url);
     }
   }
 
@@ -63,8 +63,8 @@ export const Menu = () => {
           onNodeToggle={handleToggle}
           multiSelect
         >
-          {menu?.map(item =>
-            <TreeItem
+          {menu?.map(item => {
+            return <TreeItem
               key={item.id}
               icon={item?.icon} nodeId={item.id}
               label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
@@ -79,6 +79,7 @@ export const Menu = () => {
                   onClick={(event) => clickHandler({ event, item })}
                 />)}
             </TreeItem>
+          }
           )}
         </TreeView>;
 

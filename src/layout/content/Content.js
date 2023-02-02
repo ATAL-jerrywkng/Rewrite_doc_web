@@ -6,7 +6,7 @@ import { Menu } from '../menu/Menu';
 export const Content = (props) => {
     return (
         <Grid container sx={{ height: '100%' }}>
-            <Grid className={classess.menuContent} item xs={0}
+            <Grid className={classess.menuContent} item xs={0} 
                 sx={{ display: { xs: 'none', sm: 'block' } }}>
                 <Box className={classess.menuBox}>
                     <Menu />

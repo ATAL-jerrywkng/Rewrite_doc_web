@@ -14,7 +14,6 @@ export const EcrsSystem = () => {
     }
     return (
         <SummaryPageBase {...pageInfo}>
-            <div>EcrsSystem</div>
         </SummaryPageBase>
     )
 }

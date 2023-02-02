@@ -8,6 +8,9 @@
     },
     "ecrsSystem": {
       "title": "ECRS自墊費用報銷系統"
+    },
+    "cover":{
+      "title": "Cover "
     }
   }
 }

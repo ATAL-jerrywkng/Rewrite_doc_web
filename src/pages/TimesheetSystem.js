@@ -14,7 +14,6 @@ export const TimesheetSystem = () => {
     }
     return (
         <SummaryPageBase {...pageInfo}>
-            <div>TimesheetSystem</div>
         </SummaryPageBase>
     )
 }

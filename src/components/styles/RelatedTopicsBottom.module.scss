@@ -1,0 +1,21 @@
+.relatedTopics {
+    margin-top: 24px;
+
+    h6 {
+        color: #eb8f00;
+        font-weight: 600;
+    }
+
+    .topicBox {
+        padding-left: 16px;
+
+        a {
+            text-decoration: none;
+            color: #0060B5;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

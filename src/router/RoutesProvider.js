@@ -14,10 +14,10 @@ export const RoutesProvider = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cover" element={<Cover />} />
-            <Route path="/loginSystem" element={<LoginSystem />} />
-            <Route path="/timesheetSystem" element={<TimesheetSystem />} />
-            <Route path="/ecrsSystem" element={<EcrsSystem />} />
+            <Route path="cover" element={<Cover />} />
+            <Route path="loginSystem" element={<LoginSystem />} />
+            <Route path="timesheetSystem" element={<TimesheetSystem />} />
+            <Route path="ecrsSystem" element={<EcrsSystem />} />
         </Routes>
     )
 }
