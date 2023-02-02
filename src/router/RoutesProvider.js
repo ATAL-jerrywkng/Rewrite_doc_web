@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+import { AboutEcrs } from '../pages/AboutEcrs';
 // Pages
 import { Cover } from '../pages/Cover';
 import { EcrsSystem } from '../pages/EcrsSystem';
@@ -13,11 +15,15 @@ export const RoutesProvider = () => {
 
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="cover" element={<Cover />} />
-            <Route path="loginSystem" element={<LoginSystem />} />
-            <Route path="timesheetSystem" element={<TimesheetSystem />} />
-            <Route path="ecrsSystem" element={<EcrsSystem />} />
+            <Route index path="/" element={<Home />} />
+            <Route path="/cover" element={<Cover />} />
+            <Route
+                path="/loginSystem"
+                element={<LoginSystem />}
+            />
+            <Route path="/timesheetSystem" element={<TimesheetSystem />} />
+            <Route path="/ecrsSystem" element={<EcrsSystem />} />
+            <Route path="/about_ecrs" element={<AboutEcrs />} />
         </Routes>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { TreeItem, TreeView } from '@mui/lab';
 import {
   Tab,
@@ -31,7 +31,11 @@ export const Menu = () => {
   const handleToggle = (event, nodeIds) => {
     // console.log("file: Menu.js:20 -> handleToggle -> nodeIds", nodeIds);
     // console.log("file: Menu.js:31 -> handleToggle -> event", event.target);
-    setExpanded(nodeIds);
+    if (event.target.nodeName !== "svg" && event.target.nodeName !== "path") {
+
+    } else {
+      setExpanded(nodeIds);
+    }
   };
   const clickHandler = ({ event, item }) => {
     // console.log("file: Menu.js:38 -> clickHandler -> event", event.target.nodeName)
@@ -95,6 +99,9 @@ export const Menu = () => {
   }, [selectedTabNumber, expanded, menu])
 
 
+  useEffect(() => {
+
+  }, [])
 
 
   return (
