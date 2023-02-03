@@ -5,19 +5,45 @@ import FirstPageIcon from '@mui/icons-material/FirstPage';
 import LastPageIcon from '@mui/icons-material/LastPage';
 import VerticalAlignTopIcon from '@mui/icons-material/VerticalAlignTop';
 import { useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { ContentTopBarButton } from './ContentTopBarButton';
+import { addBookmark, saveBookmarksToLocalStorage } from '../redux/reducers/bookmarkSlice';
 
 export const ContentButtonBar = (props) => {
     const location = useLocation();
+    const dispatch = useDispatch();
     const menu = useSelector(state => state.menu.menuLists);
+    const bookmark = useSelector(state => state.bookmark.bookmarks);
+
+
+
+    const bookmarkHandler = useCallback((location, bookmark) => {
+        console.log("file: ContentButtonBar.js:20 -> bookmarkHandler -> location, bookmark", location, bookmark);
+
+        // find pathname from bookmark
+        let pathname = location?.pathname;
+        if (pathname) {
+            let findOne = bookmark.find(find => find === pathname);
+            if (findOne) {
+                console.log("file: ContentButtonBar.js:25 -> bookmarkHandler -> findOne", true);
+
+            } else {
+                console.log("file: ContentButtonBar.js:25 -> bookmarkHandler -> findOne", false);
+                dispatch(addBookmark(pathname));
+                localStorage.setItem('bookmarks', JSON.parse(bookmark));
+                // dispatch(saveBookmarksToLocalStorage(bookmark)); 
+            }
+        }
+
+    }, [location, bookmark])
 
 
     const clickHandler = ({ event, item }) => {
         // console.log("file: SummaryPageBase.js:20 -> clickHandler -> event", event.target);
-        console.log("file: SummaryPageBase.js:20 -> clickHandler -> item", item);
+        // console.log("file: SummaryPageBase.js:20 -> clickHandler -> item", item);
         switch (item?.name) {
             case 'bookmark': {
+                bookmarkHandler(location, bookmark);
                 break;
             }
             case 'print': {
@@ -82,7 +108,5 @@ export const ContentButtonBar = (props) => {
 
     const showBtns = useMemo(() => buttonList?.map(item => <ContentTopBarButton disabled={item?.disabledControl} key={item.id} onClick={(event) => clickHandler({ event, item })}>{item.buttonElement}</ContentTopBarButton>), [buttonList])
 
-    return (
-        showBtns
-    )
+    return showBtns;
 }
