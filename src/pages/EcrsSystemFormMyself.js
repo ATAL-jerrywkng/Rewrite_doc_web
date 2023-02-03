@@ -1,13 +1,13 @@
 import React from 'react'
 import { BasePage } from '../components/BasePage'
 
-export const AboutEcrs = () => {
+export const EcrsSystemFormMyself = () => {
   const pageInfo = {
-    title: '關於ATAL Mobile Access (AMA)'
+    title: '新增報銷表(自墊費用)'
   }
   return (
     <BasePage  {...pageInfo}>
-      <div>AboutEcrs</div>
+      <div>EcrsSystemFormMyself</div>
     </BasePage>
   )
 }

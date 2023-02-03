@@ -1,13 +1,13 @@
 import React from 'react'
 import { BasePage } from '../components/BasePage'
 
-export const AboutEcrs = () => {
+export const Installation = () => {
   const pageInfo = {
-    title: '關於ATAL Mobile Access (AMA)'
+    title: '安裝AMA手機應用程式'
   }
   return (
     <BasePage  {...pageInfo}>
-      <div>AboutEcrs</div>
+      <div>Installation</div>
     </BasePage>
   )
 }

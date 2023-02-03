@@ -1,14 +1,13 @@
-
 import React from 'react'
 import { BasePage } from '../components/BasePage'
 
-export const Cover = () => {
+export const Attendance = () => {
   const pageInfo = {
-    title: 'Cover'
+    title: '考勤用戶注意事項'
   }
   return (
-    <BasePage {...pageInfo}>
-      Cover
+    <BasePage  {...pageInfo}>
+      <div>Attendance</div>
     </BasePage>
   )
 }

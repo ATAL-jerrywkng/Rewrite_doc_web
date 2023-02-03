@@ -31,11 +31,11 @@ export const Menu = () => {
   const handleToggle = (event, nodeIds) => {
     // console.log("file: Menu.js:20 -> handleToggle -> nodeIds", nodeIds);
     // console.log("file: Menu.js:31 -> handleToggle -> event", event.target);
-    if (event.target.nodeName !== "svg" && event.target.nodeName !== "path") {
+    // if (event.target.nodeName !== "svg" && event.target.nodeName !== "path") {
 
-    } else {
+    // } else {
       setExpanded(nodeIds);
-    }
+    // }
   };
   const clickHandler = ({ event, item }) => {
     // console.log("file: Menu.js:38 -> clickHandler -> event", event.target.nodeName)

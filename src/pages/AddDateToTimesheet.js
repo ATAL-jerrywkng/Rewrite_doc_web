@@ -1,13 +1,13 @@
 import React from 'react'
 import { BasePage } from '../components/BasePage'
 
-export const AboutEcrs = () => {
+export const AddDateToTimesheet = () => {
   const pageInfo = {
-    title: '關於ATAL Mobile Access (AMA)'
+    title: '長按選取“日期”添加到考勤表'
   }
   return (
     <BasePage  {...pageInfo}>
-      <div>AboutEcrs</div>
+      <div>AddDateToTimesheet</div>
     </BasePage>
   )
 }

@@ -1,13 +1,13 @@
 import React from 'react'
 import { BasePage } from '../components/BasePage'
 
-export const AboutEcrs = () => {
+export const NotHasAccount = () => {
   const pageInfo = {
-    title: '關於ATAL Mobile Access (AMA)'
+    title: '沒有公司電郵地址的同事'
   }
   return (
     <BasePage  {...pageInfo}>
-      <div>AboutEcrs</div>
+      <div>NotHasAccount</div>
     </BasePage>
   )
 }

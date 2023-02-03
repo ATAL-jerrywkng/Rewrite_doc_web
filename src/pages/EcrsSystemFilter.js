@@ -1,14 +1,13 @@
-
 import React from 'react'
 import { BasePage } from '../components/BasePage'
 
-export const Cover = () => {
+export const EcrsSystemFilter = () => {
   const pageInfo = {
-    title: 'Cover'
+    title: '篩選'
   }
   return (
-    <BasePage {...pageInfo}>
-      Cover
+    <BasePage  {...pageInfo}>
+      <div>EcrsSystemFilter</div>
     </BasePage>
   )
 }

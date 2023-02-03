@@ -6,7 +6,7 @@ export const menuSlice = createSlice({
     initialState: {
         menuLists: [
             { id: 'menu01', name: 'Cover', translateName: 'cover', url: '/cover', icon: <Help/>, childrenLists: null },
-            { id: 'menu02', name: 'AboutECRS', translateName: 'aboutECRS', url: '/about_ecrs', icon: null, childrenLists: null },
+            { id: 'menu02', name: 'AboutECRS', translateName: 'aboutECRS', url: '/aboutEcrs', icon: null, childrenLists: null },
             { id: 'menu03', name: 'Qs', translateName: 'qs', url: '/qs', icon: null, childrenLists: null },
             { id: 'menu04', name: 'Installation', translateName: 'installation', url: '/installation', icon: null, childrenLists: null },
             { id: 'menu05', name: 'Attendance', translateName: 'attendance', url: '/attendance', icon: null, childrenLists: null },

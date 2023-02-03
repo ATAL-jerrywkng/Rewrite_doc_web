@@ -1,13 +1,13 @@
 import React from 'react'
 import { BasePage } from '../components/BasePage'
 
-export const AboutEcrs = () => {
+export const NewTimesheetClockMode = () => {
   const pageInfo = {
-    title: '關於ATAL Mobile Access (AMA)'
+    title: '新增考勤表(時鐘模式)'
   }
   return (
     <BasePage  {...pageInfo}>
-      <div>AboutEcrs</div>
+      <div>NewTimesheetClockMode</div>
     </BasePage>
   )
 }

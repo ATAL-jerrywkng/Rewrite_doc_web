@@ -1,18 +1,14 @@
 import React from 'react';
 import { Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
 import { ContentPart } from '../components/ContentPart';
 
 
 import { SummaryPageBase } from '../components/SummaryPageBase';
-import { LOGIN_SYSTEM_TRANSLATION_PREFIX, PAGES_TRANSLATION_PREFIX } from '../utils/TranslationPrefixName';
 
 export const LoginSystem = () => {
 
-    const { t } = useTranslation('pages');
-
     const pageInfo = {
-        title: t(PAGES_TRANSLATION_PREFIX + LOGIN_SYSTEM_TRANSLATION_PREFIX + "title")
+        title: '登入到系統' 
     }
     return (
         <SummaryPageBase {...pageInfo}>

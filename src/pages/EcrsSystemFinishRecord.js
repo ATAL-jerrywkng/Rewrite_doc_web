@@ -1,13 +1,13 @@
 import React from 'react'
 import { BasePage } from '../components/BasePage'
 
-export const AboutEcrs = () => {
+export const EcrsSystemFinishRecord = () => {
   const pageInfo = {
-    title: '關於ATAL Mobile Access (AMA)'
+    title: '已安排自動轉賬或自動轉賬狀態(報銷)'
   }
   return (
     <BasePage  {...pageInfo}>
-      <div>AboutEcrs</div>
+      <div>EcrsSystemFinishRecord</div>
     </BasePage>
   )
 }
