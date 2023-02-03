@@ -1,8 +1,24 @@
 .menuContent {
     padding: 4px;
     border-radius: 4px;
-   
+
     .tabs {
-        background: linear-gradient(180deg, rgb(255, 196, 0) 10%, rgb(246, 143, 40) 100%)
+        background: linear-gradient(180deg, rgb(255, 196, 0) 10%, rgb(246, 143, 40) 100%);
+
+        .tabItem {
+            color: white;
+
+            font-weight: 600;
+            opacity: .7;
+
+            &.selectedTab {
+                opacity: 1;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+        }
+
+
     }
 }

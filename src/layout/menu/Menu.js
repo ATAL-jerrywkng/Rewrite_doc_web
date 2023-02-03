@@ -11,10 +11,14 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next';
 
-
 import classess from './Menu.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { MENU_TRANSLATION_PREFIX } from '../../utils/TranslationPrefixName';
+
+
+import closeBook from '../../asserts/mo-tree-c.gif';
+import openBook from '../../asserts/mo-tree-e.gif';
+
 
 export const Menu = () => {
 
@@ -34,7 +38,7 @@ export const Menu = () => {
     // if (event.target.nodeName !== "svg" && event.target.nodeName !== "path") {
 
     // } else {
-      setExpanded(nodeIds);
+    setExpanded(nodeIds);
     // }
   };
   const clickHandler = ({ event, item }) => {
@@ -61,8 +65,8 @@ export const Menu = () => {
       case 0: {
         return <TreeView
           aria-label="controlled"
-          defaultCollapseIcon={<ExpandMoreIcon />}
-          defaultExpandIcon={<ChevronRightIcon />}
+          defaultCollapseIcon={<img src={openBook} />}
+          defaultExpandIcon={<img src={closeBook} />}
           expanded={expanded}
           onNodeToggle={handleToggle}
           multiSelect
@@ -111,11 +115,10 @@ export const Menu = () => {
         className={classess.tabs}
         value={selectedTabNumber}
         onChange={handleChange}
-        centered
       >
-        <Tab label="Contents" />
-        <Tab label="Index" />
-        <Tab label="Bookmarks" />
+        <Tab label="Contents" className={`${classess.tabItem} ${selectedTabNumber===0?classess.selectedTab:''}`} />
+        <Tab label="Index" className={`${classess.tabItem} ${selectedTabNumber===1?classess.selectedTab:''}`} />
+        <Tab label="Bookmarks" className={`${classess.tabItem} ${selectedTabNumber===2?classess.selectedTab:''}`} />
       </Tabs>
       {showTabContent}
     </Box>

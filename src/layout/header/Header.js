@@ -32,7 +32,7 @@ export const Header = () => {
 
   const { t } = useTranslation(["layout", "menu"]);
 
-  
+
 
   // navigate for page change
   const navigate = useNavigate();
@@ -67,13 +67,14 @@ export const Header = () => {
         setOpenListItems(prevState => [...prevState, item.id]);
       }
     } else {
-      navigate(item.url)
+      closeDrawer();
+      navigate(item.url);
     }
     // setOpen(!open);
   };
 
   const showMenuList = useMemo(() => {
-    return <List sx={{ width: { xs: '275px', sm: '50%' } }}>
+    return <List sx={{ width: { xs: '275px', sm: '100%' } }}>
       {
         menu?.map(item => {
           if (item?.childrenLists) {
@@ -124,19 +125,19 @@ export const Header = () => {
 
   return (
     <Box>
-      <Grid container className={classess.bg} sx={{ alignItems: { xs: 'center', sm: 'end' } }}>
-        <Grid item xs={4} sm={0} sx={{ display: { xs: 'block', sm: 'none' } }}>
+      <Grid container className={classess.bg} sx={{ alignItems: { sm: 'center', md: 'end' } }}>
+        <Grid item xs={4} sm={4} md={0} sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }}>
           <Button onClick={openDrawer}><MenuIcon fontSize='large' sx={{ color: 'black' }} /></Button>
         </Grid>
-        <Grid item xs={4} sm={4}>
-          <CardMedia component="img" src={Logo} sx={{ width: { xs: '100%', sm: '173px' }, height: '100%', objectFit: 'contain' }} />
+        <Grid item xs={4} sm={4} md={4}>
+          <CardMedia component="img" src={Logo} sx={{ width: { xs: '100%', sm: '100%', md: '173px' }, height: '100%', objectFit: 'contain' }} />
         </Grid>
-        <Grid item xs={0} sm={4}>
-          <Typography variant="h6" className={classess.title} gutterBottom sx={{ display: { xs: 'none', sm: 'block' } }}>
+        <Grid item xs={0} sm={0} md={4}>
+          <Typography variant="h6" className={classess.title} gutterBottom sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
             {t(HEADER_TRANSLATION_PREFIX + "title", { ns: 'layout' })}
           </Typography>
         </Grid>
-        <Grid item xs={0} sm={4} className={classess.searchBox} sx={{ display: { xs: 'none', sm: 'block' } }}>
+        <Grid item xs={0} sm={0} md={4} className={classess.searchBox} sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
           <InputElement name='searchKeyword' onChange={searchChange} />
           {/* <Button size="small" variant="contained"><SearchIcon/></Button> */}
         </Grid>
