@@ -14,7 +14,7 @@ export const Cover = () => {
   }
   return (
     <BasePage {...pageInfo}>
-      <ContentPart title={"Cover"} sx={{overflow: 'scroll'}}>
+      <ContentPart title={"Cover"} sx={{ overflow: 'scroll' }}>
 
 
         <CardMedia
@@ -22,13 +22,8 @@ export const Cover = () => {
           image={img1}
         />
         <Typography variant='h6' textAlign={'center'}>安樂工程集團</Typography>
-        
+
         <Link to="http://ts.atal.com.hk/site" >http://ts.atal.com.hk/site</Link>
-        {/* <CardMedia
-          sx={{ height: '100%', width: '100%', margin: '0 auto' }}
-          component="img"
-          image={img2}
-        /> */}
 
 
 
