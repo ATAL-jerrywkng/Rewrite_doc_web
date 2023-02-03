@@ -9,7 +9,7 @@ export const Qs = () => {
     return (
         
         <BasePage  {...pageInfo}>
-            <div>Qs24242343</div>
+            <div>Qs242422343</div>
         </BasePage>
     )
 }
