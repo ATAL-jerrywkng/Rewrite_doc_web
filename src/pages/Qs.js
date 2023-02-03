@@ -35,6 +35,7 @@ export const Qs = () => {
 
             </ContentPart>
             <div>Qs24242343</div>
+
         </BasePage>
     )
 }
