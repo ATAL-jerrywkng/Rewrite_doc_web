@@ -138,7 +138,7 @@ export const Header = () => {
           </Typography>
         </Grid>
         <Grid item xs={0} sm={0} md={4} className={classess.searchBox} sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
-          <InputElement name='searchKeyword' onChange={searchChange} />
+          {/* <InputElement name='searchKeyword' onChange={searchChange} /> */}
           {/* <Button size="small" variant="contained"><SearchIcon/></Button> */}
         </Grid>
       </Grid>

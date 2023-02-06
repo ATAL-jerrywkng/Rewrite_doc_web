@@ -3,15 +3,14 @@ import { createSlice } from '@reduxjs/toolkit';
 export const bookmarkSlice = createSlice({
     name: 'bookmark',
     initialState: {
-        bookmarks: JSON.stringify(localStorage.getItem('bookmarks')) || []
+        bookmarks: localStorage.getItem('bookmarks')?.split(",")?.filter(filter => filter !== '') || []
     },
     reducers: {
-        saveBookmarksToLocalStorage: (state, action) => {
 
-        },
         addBookmark: (state, action) => {
-            state.bookmarks.push(action.payload);
-
+            let temp = [...state.bookmarks];
+            temp.push(action.payload);
+            state.bookmarks = temp;
         },
         removeBookmark: (state, action) => {
             state.bookmarks = state.bookmarks.filter(item => item !== action.payload);
@@ -20,6 +19,6 @@ export const bookmarkSlice = createSlice({
     }
 })
 
-export const { saveBookmarksToLocalStorage, addBookmark, removeBookmark } = bookmarkSlice.actions;
+export const { addBookmark, removeBookmark } = bookmarkSlice.actions;
 
 export default bookmarkSlice.reducer;

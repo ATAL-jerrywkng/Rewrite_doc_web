@@ -18,6 +18,8 @@ import { MENU_TRANSLATION_PREFIX } from '../../utils/TranslationPrefixName';
 
 import closeBook from '../../asserts/mo-tree-c.gif';
 import openBook from '../../asserts/mo-tree-e.gif';
+import treeQs from '../../asserts/mo-tree-t.gif';
+
 
 
 export const Menu = () => {
@@ -26,6 +28,8 @@ export const Menu = () => {
 
   // menu 
   const menu = useSelector(state => state.menu.menuLists);
+  // bookmarks
+  const bookmark = useSelector(state => state.bookmark.bookmarks);
 
   // navigate for page change
   const navigate = useNavigate();
@@ -58,6 +62,44 @@ export const Menu = () => {
     setSelectedTabNumber(newValue);
   };
 
+  // show Bookmarks
+  const bookmarkToListByMenuList = useMemo(() => {
+    let tempBookmarks = [...bookmark];
+    let tempList = [];
+    if (menu) {
+      // console.log("file: Menu.js:65 -> bookmarkToListByMenuList -> tempBookmarks", tempBookmarks)
+      menu.forEach(item => {
+        let findMenuItem = tempBookmarks?.find(find => find === item?.url);
+        if (findMenuItem) {
+          tempList?.push(item);
+          tempBookmarks = tempBookmarks?.filter(filter => filter !== findMenuItem);
+        }
+        if (item?.childrenLists) {
+          let findMenuItemChildren = item?.childrenLists?.find(find => {
+            let findChild = tempBookmarks.find(marks => marks === find?.url);
+            if (findChild) {
+              return find;
+            }
+            return false;
+          })
+          if (findMenuItemChildren) {
+
+            tempList?.push(findMenuItemChildren);
+            tempBookmarks = tempBookmarks?.filter(filter => filter !== findMenuItemChildren?.url);
+          }
+        }
+
+      });
+      // console.log("file: Menu.js:66 -> bookmarkToListByMenuList -> tempList", tempList)
+      return tempList;
+    }
+  }, [menu, bookmark])
+
+
+  // show Index
+  // const indexByMenuList = useMemo(() => {
+
+  // }, [menu])
 
 
   const showTabContent = useMemo(() => {
@@ -74,14 +116,15 @@ export const Menu = () => {
           {menu?.map(item => {
             return <TreeItem
               key={item.id}
-              icon={item?.icon} nodeId={item.id}
+              icon={item?.icon === 'treeQs' ? <img src={treeQs} /> : null}
+              nodeId={item.id}
               label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
               onClick={(event) => clickHandler({ event, item })}
             >
               {item?.childrenLists?.map(item =>
                 <TreeItem
                   key={item.id}
-                  icon={item?.icon}
+                  icon={item?.icon === 'treeQs' ? <img src={treeQs} /> : null}
                   nodeId={item.id}
                   label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
                   onClick={(event) => clickHandler({ event, item })}
@@ -92,20 +135,34 @@ export const Menu = () => {
         </TreeView>;
 
       }
-      case 1: {
-        return;
-      }
+      // case 1: {
+      //   return;
+      // }
 
-      case 2: {
-        return;
+      case 1: {
+        return <TreeView
+          aria-label="controlled"
+          defaultCollapseIcon={<img src={openBook} />}
+          defaultExpandIcon={<img src={closeBook} />}
+          expanded={expanded}
+          onNodeToggle={handleToggle}
+          multiSelect
+        >
+          {bookmarkToListByMenuList?.map(item => {
+            return <TreeItem
+              key={item.id}
+              icon={<img src={treeQs} />} nodeId={item.id}
+              label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
+              onClick={(event) => clickHandler({ event, item })}
+            ></TreeItem>
+          })}
+        </TreeView>
       }
     }
-  }, [selectedTabNumber, expanded, menu])
+  }, [selectedTabNumber, expanded, menu, bookmarkToListByMenuList])
 
 
-  useEffect(() => {
 
-  }, [])
 
 
   return (
@@ -116,9 +173,9 @@ export const Menu = () => {
         value={selectedTabNumber}
         onChange={handleChange}
       >
-        <Tab label="Contents" className={`${classess.tabItem} ${selectedTabNumber===0?classess.selectedTab:''}`} />
-        <Tab label="Index" className={`${classess.tabItem} ${selectedTabNumber===1?classess.selectedTab:''}`} />
-        <Tab label="Bookmarks" className={`${classess.tabItem} ${selectedTabNumber===2?classess.selectedTab:''}`} />
+        <Tab label="Contents" className={`${classess.tabItem} ${selectedTabNumber === 0 ? classess.selectedTab : ''}`} />
+        {/* <Tab label="Index" className={`${classess.tabItem} ${selectedTabNumber === 1 ? classess.selectedTab : ''}`} /> */}
+        <Tab label="Bookmarks" className={`${classess.tabItem} ${selectedTabNumber === 1 ? classess.selectedTab : ''}`} />
       </Tabs>
       {showTabContent}
     </Box>
