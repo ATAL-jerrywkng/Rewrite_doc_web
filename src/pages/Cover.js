@@ -22,7 +22,11 @@ export const Cover = () => {
           image={img1}
         />
         <Typography variant='h6' textAlign={'center'}>安樂工程集團</Typography>
-        
+        <Typography variant='h6' textAlign={'center'}>ATAL Mobile Access (ECRS-TS)</Typography>
+        <Typography variant='h6' textAlign={'center'}>使用手冊 (中文版)</Typography>
+        <Typography variant='h6' textAlign={'center'}>第一版</Typography>
+        <Typography variant='h6' textAlign={'center'}>資訊科技</Typography>
+        <Typography variant='h6' textAlign={'center'}>最後更新: 2023年01月16日</Typography>
         <Link to="http://ts.atal.com.hk/site" >http://ts.atal.com.hk/site</Link>
         {/* <CardMedia
           sx={{ height: '100%', width: '100%', margin: '0 auto' }}

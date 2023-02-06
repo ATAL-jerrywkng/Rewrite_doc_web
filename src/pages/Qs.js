@@ -14,17 +14,12 @@ export const Qs = () => {
     return (
 
         <BasePage  {...pageInfo}>
-            <ContentPart title={"Cover"} sx={{ overflow: 'scroll' }}>
+            <ContentPart title={"指引及注意事項"} sx={{ overflow: 'scroll' }}>
 
-                <CardMedia
-                    sx={{ height: '500px', width: '250px', margin: '0 auto' }}
-                    image={img3}
-                />
+                <Typography variant='h6' textAlign={'left'}>有關AMA的指引及注意事項，可點擊以下鏈結了解更多：</Typography>
 
-                <Typography variant='h6' textAlign={'center'}>有關AMA的指引及注意事項，可點擊以下鏈結了解更多：</Typography>
-
-                <Link to="http://ts.atal.com.hk/site" >http://ts.atal.com.hk/site</Link>
-                <Typography variant='h6' textAlign={'center'}>有關AMA的指引及注意事項，可點擊以下鏈結了解更多：</Typography>
+                <Link to="http://ts.atal.com.hk/gl/" >ATAL Mobile Access（AMA）指引</Link>
+                <Typography variant='h6' textAlign={'left'}>網址為: http://ts.atal.com.hk/gl/</Typography>
                 {/* <CardMedia
   sx={{ height: '100%', width: '100%', margin: '0 auto' }}
   component="img"
@@ -34,7 +29,7 @@ export const Qs = () => {
 
 
             </ContentPart>
-            <div>Qs24242343</div>
+            
 
         </BasePage>
     )
