@@ -32,7 +32,8 @@ export const Header = () => {
 
   const { t } = useTranslation(["layout", "menu"]);
 
-
+  // bookmarks
+  const bookmark = useSelector(state => state.bookmark.bookmarks);
 
   // navigate for page change
   const navigate = useNavigate();
@@ -73,6 +74,8 @@ export const Header = () => {
     // setOpen(!open);
   };
 
+ 
+
   const showMenuList = useMemo(() => {
     return <List sx={{ width: { xs: '275px', sm: '100%' } }}>
       {
@@ -109,12 +112,11 @@ export const Header = () => {
             </ListItemButton>
           }
         })
+
       }
-
-
-
     </List>
   }, [menu, openListItems])
+
 
 
 

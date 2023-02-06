@@ -5,7 +5,7 @@ import { ContentButtonBar } from './ContentButtonBar';
 export const BasePage = (props) => {
   return (
 
-    <Box className={classess.pageBox}>
+    <Box className={classess.pageBox} sx={{ paddingLeft: { sm: 0, md: '2px' } }}>
       <Box className={classess.content}>
         <Grid container className={classess.contentGrid}>
           <Grid item sx={{
