@@ -5,6 +5,7 @@ import { CardMedia, Typography } from '@mui/material'
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
 
+import { ContentImage } from '../components/ContentImage';
 export const EcrsSystemFinishRecord = () => {
   const pageInfo = {
     title: 'ECRS自墊費用報銷系統\\已安排自動轉賬或自動轉賬狀態(報銷)'
@@ -14,8 +15,8 @@ export const EcrsSystemFinishRecord = () => {
       <ContentPart title={"已安排自動轉賬或自動轉賬狀態"} sx={{ overflow: 'scroll' }}>
 
 
-        <CardMedia
-          sx={{ height: '100px', width: '400px', margin: '0 auto' }}
+        <ContentImage
+          sx={{ height: '100px'}}
           image={img1}
         />
 

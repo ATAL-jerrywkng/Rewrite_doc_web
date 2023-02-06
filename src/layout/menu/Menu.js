@@ -4,10 +4,15 @@ import {
   Tab,
   Tabs,
   Typography,
-  Box
+  Box,
+  Button,
+  Grid
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
+import UnfoldLessIcon from '@mui/icons-material/UnfoldLess';
+
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next';
 
@@ -19,6 +24,7 @@ import { MENU_TRANSLATION_PREFIX } from '../../utils/TranslationPrefixName';
 import closeBook from '../../asserts/mo-tree-c.gif';
 import openBook from '../../asserts/mo-tree-e.gif';
 import treeQs from '../../asserts/mo-tree-t.gif';
+import { ContentTopBarButton } from '../../components/ContentTopBarButton';
 
 
 
@@ -37,7 +43,7 @@ export const Menu = () => {
   // TreeView Control
   const [expanded, setExpanded] = useState([]);
   const handleToggle = (event, nodeIds) => {
-    // console.log("file: Menu.js:20 -> handleToggle -> nodeIds", nodeIds);
+    console.log("file: Menu.js:20 -> handleToggle -> nodeIds", nodeIds);
     // console.log("file: Menu.js:31 -> handleToggle -> event", event.target);
     // if (event.target.nodeName !== "svg" && event.target.nodeName !== "path") {
 
@@ -162,21 +168,58 @@ export const Menu = () => {
   }, [selectedTabNumber, expanded, menu, bookmarkToListByMenuList])
 
 
+  const handleExpandClick = useCallback(() => {
+
+    if (menu) {
+      // console.log("file: Menu.js:174 -> handleExpandClick -> menu", menu)
+      let findAllParent = [];
+      menu.forEach(each => {
+        if (each?.childrenLists) {
+          findAllParent?.push(each.id);
+        }
+      });
+      // console.log("file: Menu.js:176 -> handleExpandClick -> findAllParent", findAllParent)
+
+      let finalArr = null;
+      if (expanded?.length === 0) {
+        finalArr = findAllParent;
+      } else {
+        finalArr = [];
+      }
+      // console.log("file: Menu.js:191 -> handleExpandClick -> finalArr", finalArr)
+      setExpanded(finalArr);
+    }
+
+
+  }, [menu, expanded])
+
 
 
 
   return (
 
     <Box className={classess.menuContent}>
-      <Tabs
-        className={classess.tabs}
-        value={selectedTabNumber}
-        onChange={handleChange}
-      >
-        <Tab label="Contents" className={`${classess.tabItem} ${selectedTabNumber === 0 ? classess.selectedTab : ''}`} />
-        {/* <Tab label="Index" className={`${classess.tabItem} ${selectedTabNumber === 1 ? classess.selectedTab : ''}`} /> */}
-        <Tab label="Bookmarks" className={`${classess.tabItem} ${selectedTabNumber === 1 ? classess.selectedTab : ''}`} />
-      </Tabs>
+      <Grid container className={classess.content}>
+        <Grid item>
+          <Tabs
+            className={classess.tabs}
+            value={selectedTabNumber}
+            onChange={handleChange}
+          >
+            <Tab label="Contents" className={`${classess.tabItem} ${selectedTabNumber === 0 ? classess.selectedTab : ''}`} />
+            {/* <Tab label="Index" className={`${classess.tabItem} ${selectedTabNumber === 1 ? classess.selectedTab : ''}`} /> */}
+            <Tab label="Bookmarks" className={`${classess.tabItem} ${selectedTabNumber === 1 ? classess.selectedTab : ''}`} />
+
+          </Tabs>
+        </Grid>
+        <Grid item>
+          <ContentTopBarButton style={{ padding: 0 }} onClick={handleExpandClick}>
+            {expanded?.length === 0 ? <UnfoldMoreIcon /> : <UnfoldLessIcon />}
+          </ContentTopBarButton>
+        </Grid>
+      </Grid>
+
+
       {showTabContent}
     </Box>
   )

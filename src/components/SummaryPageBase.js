@@ -14,7 +14,10 @@ export const SummaryPageBase = (props) => {
     <Box className={classess.pageBox}>
       <Box className={classess.content}>
         <Grid container className={classess.contentGrid}>
-          <Grid item sx={{ flex: 'auto', maxWidth: { xs: '45%', sm: '100%' } }}>
+          <Grid item sx={{
+            flex: 'auto',
+            //  maxWidth: { xs: '45%', sm: '100%' } 
+          }}>
             <Typography variant='h6' sx={{ fontWeight: 600 }}>
               {props?.title}
             </Typography>

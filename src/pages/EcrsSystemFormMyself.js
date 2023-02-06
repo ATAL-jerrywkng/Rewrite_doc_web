@@ -10,6 +10,7 @@ import img3 from '../asserts/claim3.png'
 import img4 from '../asserts/ec_detail.png'
 import img5 from '../asserts/tc_4.png'
 import img6 from '../asserts/tc_3.png'
+import { ContentImage } from '../components/ContentImage';
 
 export const EcrsSystemFormMyself = () => {
   const pageInfo = {
@@ -23,14 +24,14 @@ export const EcrsSystemFormMyself = () => {
         <Typography variant='h6' textAlign={'LEFT'}>請注意: 你只能為自己填寫的報銷。不能為其他同事輸入。</Typography>
         <Typography variant='h6' textAlign={'LEFT'}>   </Typography>
         <Typography variant='h6' textAlign={'LEFT'}>1.    點擊右上角的{`<+>`}按鈕</Typography>
-        <CardMedia
-          sx={{ height: '1500px', width: '800px', margin: '0 auto' }}
+        <ContentImage
+          sx={{ }}
           image={img1}
         />
 
         <Typography variant='h6' textAlign={'LEFT'}>2.    選擇日子，完成後點擊{`<選擇日期>`}</Typography>
-        <CardMedia
-          sx={{ height: '1550px', width: '700px', margin: '0 auto' }}
+        <ContentImage
+          sx={{  }}
           image={img2}
         />
 
@@ -38,15 +39,15 @@ export const EcrsSystemFormMyself = () => {
         <Typography variant='h6' textAlign={'LEFT'}>4.    報銷類型: 自墊費用報銷，並輸入報銷的{`<性質與目的/支出描述>`}</Typography>
         <Typography variant='h6' textAlign={'LEFT'}>5.    點擊{`<+支出>`}進入另一版面填上相關資料</Typography>
         
-        <CardMedia
-          sx={{ height: '1100px', width: '900px', margin: '0 auto' }}
+        <ContentImage
+          sx={{  }}
           image={img3}
         />
 
         <Typography variant='h6' textAlign={'LEFT'}>6.    在{`<+支出>`}版面內，輸入 {`<成本類別>`}/{`<項目編碼>`}/{`<單件價格>`}及{`<數量>`}，完成後點擊{`<完成>`}</Typography>
         
-        <CardMedia
-          sx={{ height: '1100px', width: '900px', margin: '0 auto' }}
+        <ContentImage
+          sx={{}}
           image={img4}
         />
 
@@ -54,8 +55,8 @@ export const EcrsSystemFormMyself = () => {
 
         <Typography variant='h6' textAlign={'LEFT'}>9.    完成輸入所有資料後，點擊{`<儲存>`}先儲存此報銷紀錄或點擊{`<儲存並遞交>`}直接遞交</Typography>
 
-        <CardMedia
-          sx={{ height: '400px', width: '400px', margin: '0 auto' }}
+        <ContentImage
+          sx={{ }}
           image={img6}
         />
       </ContentPart>

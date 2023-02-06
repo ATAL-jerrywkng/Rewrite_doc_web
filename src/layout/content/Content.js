@@ -5,19 +5,22 @@ import { Menu } from '../menu/Menu';
 
 export const Content = (props) => {
     return (
-        <Grid container sx={{ height: '100%' }}>
-            <Grid className={classess.menuContent} item sm={0}
+        <Grid container sx={{ minHeight: '100%'  }}>
+            <Grid className={classess.menuContent} item sm={0} md={4} lg={3}
                 sx={{
                     display: { xs: 'none', sm: 'none', md: 'block' },
-                    width: { xs: '340px' },
-                    maxWidth: { md: '400px' }
+                    // width: { xs: '340px' },
+                    // maxWidth: { md: '400px' }
                 }}>
                 <Box className={classess.menuBox}>
                     <Menu />
                 </Box>
             </Grid>
-            <Grid item xs={12}
-                sx={{ flex: { md: 'auto' } }}
+            <Grid item xs={12} md={8} lg={9}
+                sx={{
+                    flex: { md: 'auto' }
+                    // , minWidth: { md: '100%' } 
+                }}
             >
                 {props.children}
             </Grid>

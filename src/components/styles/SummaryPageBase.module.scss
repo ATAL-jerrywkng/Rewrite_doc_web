@@ -4,11 +4,12 @@
 }
 
 .pageBox {
-    padding: 2px;
+    padding-top:  2px;
+    padding-left: 2px;
 
     .content {
         background-color: #eeeeee;
-        padding: 4px;
+        padding: 0 4px;
 
         .contentGrid {
             background: linear-gradient(180deg, rgb(255, 196, 0) 10%, rgb(246, 143, 40) 100%);
@@ -16,7 +17,7 @@
             align-items: center;
             color: white;
             font-weight: 600;
-            padding: 0 8px;
+            padding: 8px;
         }
 
         .contentBox {

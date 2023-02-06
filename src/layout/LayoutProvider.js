@@ -8,12 +8,12 @@ import { Outlet } from "react-router-dom";
 
 export const LayoutProvider = () => {
   return (
-    <>
+    <div style={{ minHeight: '100%' }}>
       <Header />
       <Content>
         <Outlet />
       </Content>
       <Footer />
-    </>
+    </div>
   );
 };

@@ -7,6 +7,7 @@ import img1 from '../asserts/img6.png'
 import img2 from '../asserts/hour_mode_1.png'
 import img3 from '../asserts/hour_mode_2.png'
 import img4 from '../asserts/hour_mode_3.png'
+import { ContentImage } from '../components/ContentImage';
 
 export const NewTimesheetClockMode = () => {
   const pageInfo = {
@@ -20,29 +21,30 @@ export const NewTimesheetClockMode = () => {
         <Typography variant='h6' textAlign={'LEFT'}>請注意: 你只能為自己填寫的考勤。不能為其他同事輸入。</Typography>
         <Typography variant='h6' textAlign={'left'}>   </Typography>
         <Typography variant='h6' textAlign={'left'}>1.    選擇日子，點擊右下方的按鈕   </Typography>
-        <CardMedia
-          sx={{ height: '800px', width: '400px', margin: '0 auto' }}
+        <ContentImage
+          sx={{ }}
           image={img1}
         />
 
+
         <Typography variant='h6' textAlign={'left'}>2.    選擇適合的{`<告假類型>`}，如非請假，可選擇N/A</Typography>
         <Typography variant='h6' textAlign={'left'}>3.    根據工作編號或名稱搜索，輸入相關工作資料</Typography>
-        <CardMedia
-          sx={{ height: '500px', width: '500px', margin: '0 auto' }}
+        <ContentImage
+          sx={{ }}
           image={img2}
         />
 
         <Typography variant='h6' textAlign={'left'}>4.    輸入{`<基本工時>`}，及是否{`<包括午餐時間>`}</Typography>
         <Typography variant='h6' textAlign={'left'}>5.    輸入加班時段 OT1 / OT2 / OT3 (如適用)，及是否{`<包括午餐時間>`}</Typography>
-        <CardMedia
-          sx={{ height: '550px', width: '500px', margin: '0 auto' }}
+        <ContentImage
+          sx={{ }}
           image={img3}
         />
 
         <Typography variant='h6' textAlign={'left'}>6.    如需附上圖片，可點擊{`<相片庫>`}或{`<相機>`}直接拍攝 (最多10張相片)</Typography>
         <Typography variant='h6' textAlign={'left'}>7.    完成輸入所有資料後，點擊{`<儲存>`}以保存此考勤紀錄</Typography>
-        <CardMedia
-          sx={{ height: '300px', width: '500px', margin: '0 auto' }}
+        <ContentImage
+          sx={{ }}
           image={img4}
         />
       </ContentPart>

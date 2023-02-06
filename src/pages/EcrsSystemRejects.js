@@ -6,6 +6,7 @@ import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
 import img1 from '../asserts/ec_reject.png'
 
+import { ContentImage } from '../components/ContentImage';
 export const EcrsSystemRejects = () => {
   const pageInfo = {
     title: 'ECRS自墊費用報銷系統\\被否決項目(報銷)'
@@ -15,8 +16,8 @@ export const EcrsSystemRejects = () => {
       <ContentPart title={"被否決項目"} sx={{ overflow: 'scroll' }}>
 
         
-        <CardMedia
-          sx={{  height: '100px', width: '400px', margin: '0 auto' }}
+        <ContentImage
+          sx={{  height: '100px' }}
           image={img1}
         />
 

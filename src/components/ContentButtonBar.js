@@ -115,16 +115,16 @@ export const ContentButtonBar = (props) => {
     }, [location, bookmark])
 
 
-    const buttonList = [
-        { id: 'btn01', name: 'bookmark', buttonElement: <StarIcon fontSize="small" sx={{ color: checkBookmarks ? '#248ef4' : 'orange' }} />, disabledControl: null },
+    const buttonList = useMemo(() => [
+        { id: 'btn01', name: 'bookmark', buttonElement: <StarIcon fontSize="small" sx={{ color: checkBookmarks ? '#248ef4' : 'orange', '&:hover': { color: 'white' } }} />, disabledControl: null },
         // { id: 'btn02', name: 'print', buttonElement: <PrintIcon fontSize="small" />, disabledControl: null },
         // { id: 'btn03', name: 'prevPage', buttonElement: <FirstPageIcon fontSize="small" />, disabledControl: null },
         // { id: 'btn04', name: 'parentPage', buttonElement: <VerticalAlignTopIcon fontSize="small" />, disabledControl: checkPageHaveParent() },
         // { id: 'btn05', name: 'nextPage', buttonElement: <LastPageIcon fontSize="small" />, disabledControl: null },
-    ]
+    ], [checkBookmarks])
 
 
-    const showBtns = useMemo(() => buttonList?.map(item => <ContentTopBarButton disabled={item?.disabledControl} key={item.id} onClick={(event) => clickHandler({ event, item })}>{item.buttonElement}</ContentTopBarButton>), [buttonList])
+    const showBtns = useMemo(() => buttonList?.map(item => <ContentTopBarButton style={item?.style} disabled={item?.disabledControl} key={item.id} onClick={(event) => clickHandler({ event, item })}>{item.buttonElement}</ContentTopBarButton>), [buttonList])
 
     return showBtns;
 }
