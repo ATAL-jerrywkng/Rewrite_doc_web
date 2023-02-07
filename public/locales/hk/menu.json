@@ -2,14 +2,15 @@
   "menu": {
     "cover": "Cover",
     "aboutECRS": "關於安樂考勤/自墊費用報銷系統 (ECRS-Timesheet System)",
-    "qs": "指引及注意事項",
     "installation": "安裝ECRS-TS手機應用程式",
-    "attendance": "考勤用戶注意事項",
     "loginSystem": "登入到系統",
     "hasAccount": "已擁有公司電郵地址的同事",
     "notHasAccount": "沒有公司電郵地址的同事",
     "createAccount": "啟動賬戶 ",
     "mySummary": "我的總覽",
+    "mySummaryTimeSheet": "考勤",
+    "mySummaryEcrs": "報銷",
+    "mySummaryHotNew": "最新消息",
     "timesheetSystem": "Timesheet考勤系統",
     "timesheetSummary": "考勤總覽",
     "newTimesheetClockMode": "新增考勤表(時鐘模式)",
@@ -22,7 +23,7 @@
     "ecrsSystemFormMyself": "新增「自墊費用報銷表」",
     "ecrsSystemViewApproval": "查閱「自墊費用」報銷審批歷程",
     "ecrsSystemRejects": "被否決項目",
-    "ecrsSystemFinishRecord": "已安排自動轉賬或自動轉賬狀態",
-    "permission": "授權"
+    "ecrsSystemFinishRecord": "已安排自動轉賬或自動轉賬狀態"
+    
   }
 }

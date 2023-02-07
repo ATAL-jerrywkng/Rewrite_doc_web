@@ -7,6 +7,8 @@ import img1 from '../asserts/img6.png'
 import img2 from '../asserts/hour_mode_1.png'
 import img3 from '../asserts/hour_mode_2.png'
 import img4 from '../asserts/hour_mode_3.png'
+import img5 from '../asserts/addClaimAfterTS.png'
+
 
 export const NewTimesheetClockMode = () => {
   const pageInfo = {
@@ -44,6 +46,11 @@ export const NewTimesheetClockMode = () => {
         <CardMedia
           sx={{ height: '300px', width: '500px', margin: '0 auto' }}
           image={img4}
+        />
+        <Typography variant='h6' textAlign={'left'}>8.    儲存後，如需新增有關工作的車費報銷，可以直接點擊{`<需要同時新增車費報銷?>`}，如沒有，可點擊{`<完成>`}離開</Typography>
+        <CardMedia
+          sx={{ height: '800px', width: '500px', margin: '0 auto' }}
+          image={img5}
         />
       </ContentPart>
     </BasePage >
