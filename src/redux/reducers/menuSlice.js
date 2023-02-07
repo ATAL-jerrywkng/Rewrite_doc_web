@@ -32,11 +32,12 @@ export const menuSlice = createSlice({
                     { id: 'menu18', name: 'EcrsSystemFilter', translateName: 'ecrsSystemFilter', url: '/ecrsSystemFilter', icon: <img src={treeQs} />, childrenLists: null },
                     { id: 'menu19', name: 'EcrsSystemFormCar', translateName: 'ecrsSystemFormCar', url: '/ecrsSystemFormCar', icon: <img src={treeQs} />, childrenLists: null },
                     { id: 'menu20', name: 'EcrsSystemFormMyself', translateName: 'ecrsSystemFormMyself', url: '/ecrsSystemFormMyself', icon: <img src={treeQs} />, childrenLists: null },
-                    { id: 'menu21', name: 'EcrsSystemRejects', translateName: 'ecrsSystemRejects', url: '/ecrsSystemRejects', icon: <img src={treeQs} />, childrenLists: null },
-                    { id: 'menu22', name: 'EcrsSystemFinishRecord', translateName: 'ecrsSystemFinishRecord', url: '/ecrsSystemFinishRecord', icon: <img src={treeQs} />, childrenLists: null },
+                    { id: 'menu21', name: 'EcrsSystemViewApproval', translateName: 'ecrsSystemViewApproval', url: '/ecrsSystemViewApproval', icon: <img src={treeQs} />, childrenLists: null },
+                    { id: 'menu22', name: 'EcrsSystemRejects', translateName: 'ecrsSystemRejects', url: '/ecrsSystemRejects', icon: <img src={treeQs} />, childrenLists: null },
+                    { id: 'menu23', name: 'EcrsSystemFinishRecord', translateName: 'ecrsSystemFinishRecord', url: '/ecrsSystemFinishRecord', icon: <img src={treeQs} />, childrenLists: null },
                 ]
             },
-            { id: 'menu23', name: 'Permission', translateName: 'permission', url: '/permission', icon: <img src={treeQs} />, childrenLists: null },
+            { id: 'menu24', name: 'Permission', translateName: 'permission', url: '/permission', icon: <img src={treeQs} />, childrenLists: null },
 
         ]
     },

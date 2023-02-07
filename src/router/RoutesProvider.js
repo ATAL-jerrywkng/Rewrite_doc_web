@@ -28,7 +28,8 @@ import { EcrsSystemSummary } from "../pages/EcrsSystemSummary";
 import { EcrsSystemFilter } from "../pages/EcrsSystemFilter";
 import { EcrsSystemFormCar } from "../pages/EcrsSystemFormCar";
 import { EcrsSystemFormMyself } from "../pages/EcrsSystemFormMyself";
-import { EcrsSystemRejects } from "../pages/EcrsSystemRejects";
+import { EcrsSystemViewApproval } from "../pages/EcrsSystemViewApproval";
+import { EcrsSystemRejects } from "../pages/EcrsSystemRejects"; 
 import { EcrsSystemFinishRecord } from "../pages/EcrsSystemFinishRecord";
 import { Permission } from "../pages/Permission";
 
@@ -57,6 +58,7 @@ export const RoutesProvider = () => {
         <Route path="/ecrsSystemFilter" element={<EcrsSystemFilter />} />
         <Route path="/ecrsSystemFormCar" element={<EcrsSystemFormCar />} />
         <Route path="/ecrsSystemFormMyself" element={<EcrsSystemFormMyself />} />
+        <Route path="/ecrsSystemViewApproval" element={<EcrsSystemViewApproval />} />
         <Route path="/ecrsSystemRejects" element={<EcrsSystemRejects />} />
         <Route path="/ecrsSystemFinishRecord" element={<EcrsSystemFinishRecord />} />
         <Route path="/permission" element={<Permission />} />
