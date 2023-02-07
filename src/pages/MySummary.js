@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import img1 from '../asserts/summary2.png'
 import { ContentImage } from '../components/ContentImage';
 
+
 export const MySummary = () => {
   const pageInfo = {
     title: '我的總覽'
@@ -21,7 +22,7 @@ export const MySummary = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}>報銷總覽: 顯示有關報銷紀錄遞交/批核及自動轉賬狀況</Typography>
           </li>
           <li>
-            <Typography variant='subtitle1' textAlign={'LEFT'}>公司消息: 顯示相關的公司消息</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>最新消息: 顯示相關公司最新消息</Typography>
           </li>
         </ol>
         <Typography variant='h6' textAlign={'left'}>  </Typography>
@@ -29,5 +30,6 @@ export const MySummary = () => {
         <ContentImage image={img1} />
       </ContentPart>
     </BasePage >
+
   )
 }

@@ -20,6 +20,7 @@
     "ecrsSystemFilter": "篩選",
     "ecrsSystemFormCar": "新增「交通費報銷表」",
     "ecrsSystemFormMyself": "新增「自墊費用報銷表」",
+    "ecrsSystemViewApproval": "查閱「自墊費用」報銷審批歷程",
     "ecrsSystemRejects": "被否決項目",
     "ecrsSystemFinishRecord": "已安排自動轉賬或自動轉賬狀態",
     "permission": "授權"

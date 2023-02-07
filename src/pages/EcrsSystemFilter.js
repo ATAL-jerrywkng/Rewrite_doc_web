@@ -7,8 +7,11 @@ import { Link } from 'react-router-dom';
 import img1 from '../asserts/claim_filter.png'
 import img2 from '../asserts/claim_filter_detail.png'
 import img3 from '../asserts/claim_filter_detail2.png'
+import img4 from '../asserts/claim_filter_detail3.PNG'
 
 import { ContentImage } from '../components/ContentImage';
+
+
 export const EcrsSystemFilter = () => {
   const pageInfo = {
     title: 'ECRS自墊費用報銷系統\\篩選'
@@ -31,12 +34,19 @@ export const EcrsSystemFilter = () => {
             image={img2}
           />
           <li>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>篩選功能生效時，其按鈕會轉為橙色{`<選擇>`}</Typography>
+          </li>
+          <ContentImage
+            image={img4}
+          />
+          <li>
             <Typography variant='subtitle1' textAlign={'LEFT'}>亦可自訂需要查詢之時段，完成後點擊{`<選擇日期>`}</Typography>
           </li>
           <ContentImage
             image={img3}
           />
         </ol>
+
       </ContentPart>
     </BasePage>
   )

@@ -16,8 +16,9 @@ export const Installation = () => {
     <BasePage  {...pageInfo}>
       <ContentPart title={"安裝AMA手機應用程式"} sx={{ overflow: 'scroll' }}>
 
-        <ContentImage image={img1} sx={{ height: '100px', width: '100px' }} />
-
+        <Link to="https://apps.apple.com/us/app/atal-mobile-access/id1660210682">
+          <ContentImage image={img1} sx={{ height: '100px', width: '100px' }} />
+        </Link>
         <Typography variant='h6' textAlign={'center'}>對於手機用戶，請到以下網址或掃描左邊的二維碼 下載手機應用程式：</Typography>
         <Typography variant='h6' textAlign={'center'}>http://ts.atal.com.hk/</Typography>
 
@@ -26,7 +27,7 @@ export const Installation = () => {
 
 
 
-      </ContentPart>
-    </BasePage>
+      </ContentPart >
+    </BasePage >
   )
 }
