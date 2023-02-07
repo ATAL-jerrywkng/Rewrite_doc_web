@@ -4,6 +4,7 @@ import { CardMedia, Typography } from '@mui/material'
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
 import img1 from '../asserts/summary5.png'
+import { ContentImage } from '../components/ContentImage';
 
 export const MySummaryHotNews = () => {
   const pageInfo = {
@@ -15,8 +16,7 @@ export const MySummaryHotNews = () => {
 
         <Typography variant='h6' textAlign={'LEFT'}>版面會顯示最新的三則公司最新消息，如需要查閱較早前的消息，可點擊{`<查看全部>`}</Typography>
 
-        <CardMedia
-          sx={{ height: '200px', width: '500px', margin: '0 auto' }}
+        <ContentImage
           image={img1}
         />
         

@@ -23,42 +23,62 @@ export const EcrsSystemFormMyself = () => {
         <Typography variant='h6' textAlign={'LEFT'}>在下方的功能選項表中，選擇報銷</Typography>
         <Typography variant='h6' textAlign={'LEFT'}>請注意: 你只能為自己填寫的報銷。不能為其他同事輸入。</Typography>
         <Typography variant='h6' textAlign={'LEFT'}>   </Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>1.    點擊右上角的{`<+>`}按鈕</Typography>
-        <ContentImage
-          sx={{ }}
-          image={img1}
-        />
+        <ol>
+          <li>
 
-        <Typography variant='h6' textAlign={'LEFT'}>2.    選擇日子，完成後點擊{`<選擇日期>`}</Typography>
-        <ContentImage
-          sx={{  }}
-          image={img2}
-        />
+            <Typography variant='subtitle1' textAlign={'LEFT'}>點擊右上角的{`<+>`}按鈕</Typography>
+          </li>
+          <ContentImage
+            image={img1}
+          />
+          <li>
 
-        <Typography variant='h6' textAlign={'LEFT'}>3.    根據工作編號或名稱搜索，輸入相關工作資料</Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>4.    報銷類型: 自墊費用報銷，並輸入報銷的{`<性質與目的/支出描述>`}</Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>5.    點擊{`<+支出>`}進入另一版面填上相關資料</Typography>
-        
-        <ContentImage
-          sx={{  }}
-          image={img3}
-        />
+            <Typography variant='subtitle1' textAlign={'LEFT'}>選擇日子，完成後點擊{`<選擇日期>`}</Typography>
+          </li>
+          <ContentImage
 
-        <Typography variant='h6' textAlign={'LEFT'}>6.    在{`<+支出>`}版面內，輸入 {`<成本類別>`}/{`<項目編碼>`}/{`<單件價格>`}及{`<數量>`}，完成後點擊{`<完成>`}</Typography>
-        
-        <ContentImage
-          sx={{}}
-          image={img4}
-        />
+            image={img2}
+          />
+          <li>
 
-        <Typography variant='h6' textAlign={'LEFT'}>8.    如需附上圖片，可點擊{`<相片庫>`}上載圖片或點擊{`<相機>`}直接拍攝(最多10張相片)</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>根據工作編號或名稱搜索，輸入相關工作資料</Typography>
+          </li>
+          <li>
 
-        <Typography variant='h6' textAlign={'LEFT'}>9.    完成輸入所有資料後，點擊{`<儲存>`}先儲存此報銷紀錄或點擊{`<儲存並遞交>`}直接遞交</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>報銷類型: 自墊費用報銷，並輸入報銷的{`<性質與目的/支出描述>`}</Typography>
+          </li>
+          <li>
 
-        <ContentImage
-          sx={{ }}
-          image={img6}
-        />
+            <Typography variant='subtitle1' textAlign={'LEFT'}>點擊{`<+支出>`}進入另一版面填上相關資料</Typography>
+          </li>
+
+          <ContentImage
+
+            image={img3}
+          />
+          <li>
+
+            <Typography variant='subtitle1' textAlign={'LEFT'}>在{`<+支出>`}版面內，輸入 {`<成本類別>`}/{`<項目編碼>`}/{`<單件價格>`}及{`<數量>`}，完成後點擊{`<完成>`}</Typography>
+          </li>
+
+          <ContentImage
+
+            image={img4}
+          />
+          <li>
+
+            <Typography variant='subtitle1' textAlign={'LEFT'}>如需附上圖片，可點擊{`<相片庫>`}上載圖片或點擊{`<相機>`}直接拍攝(最多10張相片)</Typography>
+          </li>
+          <li>
+
+            <Typography variant='subtitle1' textAlign={'LEFT'}>完成輸入所有資料後，點擊{`<儲存>`}先儲存此報銷紀錄或點擊{`<儲存並遞交>`}直接遞交</Typography>
+          </li>
+
+          <ContentImage
+
+            image={img6}
+          />
+        </ol>
       </ContentPart>
     </BasePage>
   )
