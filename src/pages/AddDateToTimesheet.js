@@ -14,17 +14,20 @@ export const AddDateToTimesheet = () => {
   return (
     <BasePage  {...pageInfo}>
       <ContentPart title={"長按選取日期添加到考勤表"} sx={{ overflow: 'scroll' }}>
-
-        <Typography variant='h6' textAlign={'LEFT'}>1.    長按選取相關日期(綠點:考勤, 黃點:報銷)</Typography>
-        <ContentImage
-          sx={{ }}
-          image={img1}
-        />
-        <Typography variant='h6' textAlign={'LEFT'}>2.    選擇拷貝到的日期(可多於一個日子)選擇拷貝(1)考勤或(2)考勤和報銷</Typography>
-        <ContentImage
-          sx={{ }}
-          image={img2}
-        />
+        <ol>
+          <li>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>長按選取相關日期(綠點:考勤, 黃點:報銷)</Typography>
+          </li>
+          <ContentImage
+            image={img1}
+          />
+          <li>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>選擇拷貝到的日期(可多於一個日子)選擇拷貝(1)考勤或(2)考勤和報銷</Typography>
+          </li>
+          <ContentImage
+            image={img2}
+          />
+        </ol>
 
       </ContentPart>
     </BasePage>

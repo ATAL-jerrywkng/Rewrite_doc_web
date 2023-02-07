@@ -23,47 +23,68 @@ export const EcrsSystemFormCar = () => {
         <Typography variant='h6' textAlign={'LEFT'}>在下方的功能選項表中，選擇報銷</Typography>
         <Typography variant='h6' textAlign={'LEFT'}>請注意: 你只能為自己填寫的報銷。不能為其他同事輸入。</Typography>
         <Typography variant='h6' textAlign={'LEFT'}>   </Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>1.    點擊右上角的{`<+>`}按鈕</Typography>
-        <ContentImage
-          sx={{}}
-          image={img1}
-        />
+        <ol>
+          <li>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>點擊右上角的{`<+>`}按鈕</Typography>
+          </li>
+          <ContentImage
 
-        <Typography variant='h6' textAlign={'LEFT'}>2.    選擇日子，完成後點擊{`<選擇日期>`}</Typography>
-        <ContentImage
-          sx={{}}
-          image={img2}
-        />
+            image={img1}
+          />
+          <li>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>選擇日子，完成後點擊{`<選擇日期>`}</Typography>
+          </li>
+          <ContentImage
 
-        <Typography variant='h6' textAlign={'LEFT'}>3.    根據工作編號或名稱搜索，輸入相關工作資料</Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>4.    選擇報銷類型: 交通費報銷，並輸入交通費類型/單雙程/地點</Typography>
-        <ContentImage
-          sx={{}}
-          image={img3}
-        />
+            image={img2}
+          />
+          <li>
 
-        <Typography variant='h6' textAlign={'LEFT'}>5.    輸入車程類型及車錢</Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>6.    如同一日有多於一程車程，可點擊{`<+行程>`}新增另一項車程資料，可報銷之款項會於{`<合共>`}顯示</Typography>
-        <ContentImage
-          sx={{}}
-          image={img4}
-        />
+            <Typography variant='subtitle1' textAlign={'LEFT'}>根據工作編號或名稱搜索，輸入相關工作資料</Typography>
+          </li>
+          <li>
 
-        <Typography variant='h6' textAlign={'LEFT'}>7.    如交通費類型為{`<直接由家出發>`}或{`<直接返家>`}，{`<扣除差額>`}會顯示{`<由家出發>`}/{`<直接返家>`}之交通費，而可報銷之款項(合共) = 該車程交通費 - 由家出發/返家之交通費</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>選擇報銷類型: 交通費報銷，並輸入交通費類型/單雙程/地點</Typography>
+          </li>
+          <ContentImage
 
-        <ContentImage
-          sx={{}}
-          image={img5}
-        />
+            image={img3}
+          />
+          <li>
 
-        <Typography variant='h6' textAlign={'LEFT'}>8.    如需附上圖片，可點擊{`<相片庫>`}上載圖片或點擊{`<相機>`}直接拍攝(最多10張相片)</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>輸入車程類型及車錢</Typography>
+          </li>
+          <li>
 
-        <Typography variant='h6' textAlign={'LEFT'}>9.    完成輸入所有資料後，點擊{`<儲存>`}先儲存此報銷紀錄或點擊{`<儲存並遞交>`}直接遞交</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>如同一日有多於一程車程，可點擊{`<+行程>`}新增另一項車程資料，可報銷之款項會於{`<合共>`}顯示</Typography>
+          </li>
+          <ContentImage
 
-        <ContentImage
-          sx={{}}
-          image={img6}
-        />
+            image={img4}
+          />
+          <li>
+
+            <Typography variant='subtitle1' textAlign={'LEFT'}>如交通費類型為{`<直接由家出發>`}或{`<直接返家>`}，{`<扣除差額>`}會顯示{`<由家出發>`}/{`<直接返家>`}之交通費，而可報銷之款項(合共) = 該車程交通費 - 由家出發/返家之交通費</Typography>
+          </li>
+
+          <ContentImage
+
+            image={img5}
+          />
+          <li>
+
+            <Typography variant='subtitle1' textAlign={'LEFT'}>如需附上圖片，可點擊{`<相片庫>`}上載圖片或點擊{`<相機>`}直接拍攝(最多10張相片)</Typography>
+          </li>
+          <li>
+
+            <Typography variant='subtitle1' textAlign={'LEFT'}>完成輸入所有資料後，點擊{`<儲存>`}先儲存此報銷紀錄或點擊{`<儲存並遞交>`}直接遞交</Typography>
+          </li>
+
+          <ContentImage
+
+            image={img6}
+          />
+        </ol>
       </ContentPart>
     </BasePage>
   )

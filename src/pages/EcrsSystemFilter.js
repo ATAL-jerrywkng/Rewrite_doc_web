@@ -16,24 +16,27 @@ export const EcrsSystemFilter = () => {
   return (
     <BasePage  {...pageInfo}>
       <ContentPart title={"篩選"} sx={{ overflow: 'scroll' }}>
+        <ol>
+          <li>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>點擊{`<篩選>`}後，進入{`<篩選>`}版面</Typography>
+          </li>
+          <ContentImage
 
-        <Typography variant='h6' textAlign={'LEFT'}>1.     點擊{`<篩選>`}後，進入{`<篩選>`}版面</Typography>
-        <ContentImage
-          sx={{ }}
-          image={img1}
-        />
-
-        <Typography variant='h6' textAlign={'LEFT'}> 2.     可按需要選擇需查閱的報銷紀錄類型或狀態，亦可自訂顯示排序，完成後點擊{`<選擇>`}</Typography>
-        <ContentImage
-          sx={{  }}
-          image={img2}
-        />
-
-        <Typography variant='h6' textAlign={'LEFT'}>     3.     亦可自訂需要查詢之時段，完成後點擊{`<選擇日期>`}</Typography>
-        <ContentImage
-          sx={{}}
-          image={img3}
-        />
+            image={img1}
+          />
+          <li>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>可按需要選擇需查閱的報銷紀錄類型或狀態，亦可自訂顯示排序，完成後點擊{`<選擇>`}</Typography>
+          </li>
+          <ContentImage
+            image={img2}
+          />
+          <li>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>亦可自訂需要查詢之時段，完成後點擊{`<選擇日期>`}</Typography>
+          </li>
+          <ContentImage
+            image={img3}
+          />
+        </ol>
       </ContentPart>
     </BasePage>
   )
