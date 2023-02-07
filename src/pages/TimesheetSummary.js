@@ -1,6 +1,9 @@
 import React from 'react'
 import { BasePage } from '../components/BasePage'
-import { CardMedia, Typography } from '@mui/material'
+import { CardMedia,
+   Grid
+  , Typography
+ } from '@mui/material'
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
 import img1 from '../asserts/threedots.png'
@@ -21,7 +24,24 @@ export const TimesheetSummary = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}>可查閱上月或下月(如有)之紀錄</Typography>
           </li>
           <li>
-            <Typography variant='subtitle1' textAlign={'LEFT'}>點選<CardMedia sx={{ height: '50px', width: '50px' }} image={img1} />後，可以點擊{`<遞交>`}<CardMedia sx={{ height: '50px', width: '50px' }} image={img2} />考勤紀錄或點擊{`<圖例>`}查詢圖例說明</Typography>
+            <Grid container alignItems={'center'}>
+              <Grid item >
+                <Typography variant='subtitle1' textAlign={'LEFT'}>點選</Typography>
+              </Grid>
+              <Grid item >
+                <CardMedia sx={{ height: '50px', width: '50px' }} image={img1} element="img" />
+              </Grid>
+              <Grid item >
+                <Typography variant='subtitle1' textAlign={'LEFT'}>後，可以點擊{`<遞交>`}</Typography>
+              </Grid>
+              <Grid item >
+                <CardMedia sx={{ height: '50px', width: '50px' }} image={img2} />
+              </Grid>
+              <Grid item >
+                <Typography variant='subtitle1' textAlign={'LEFT'}> 考勤紀錄或點擊{`<圖例>`}查詢圖例說明</Typography>
+              </Grid>
+            </Grid>
+
           </li>
         </ol>
 
