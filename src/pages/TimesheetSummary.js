@@ -21,7 +21,7 @@ export const TimesheetSummary = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}>可查閱上月或下月(如有)之紀錄</Typography>
           </li>
           <li>
-            <Typography variant='subtitle1' textAlign={'LEFT'}>點選<CardMedia sx={{ height: '20px', width: '20px', margin: '0' }} image={img1} />後，可以點擊{`<遞交>`}<CardMedia sx={{ height: '20px', width: '20px', margin: '0' }} image={img2} />考勤紀錄或點擊{`<圖例>`}查詢圖例說明</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>點選<CardMedia sx={{ height: '75px', width: '75px' }} image={img1} />後，可以點擊{`<遞交>`}<CardMedia sx={{ height: '75px', width: '75px' }} image={img2} />考勤紀錄或點擊{`<圖例>`}查詢圖例說明</Typography>
           </li>
         </ol>
 
