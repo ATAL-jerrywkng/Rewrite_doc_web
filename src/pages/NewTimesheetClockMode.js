@@ -9,6 +9,10 @@ import img3 from '../asserts/hour_mode_2.png'
 import img4 from '../asserts/hour_mode_3.png'
 import { ContentImage } from '../components/ContentImage';
 
+import img5 from '../asserts/addClaimAfterTS.png'
+
+
+
 export const NewTimesheetClockMode = () => {
   const pageInfo = {
     title: 'Timesheet考勤系統\\新增考勤表(時鐘模式)'
@@ -37,6 +41,7 @@ export const NewTimesheetClockMode = () => {
           </li>
           <ContentImage
 
+
             image={img2}
           />
           <li>
@@ -57,7 +62,12 @@ export const NewTimesheetClockMode = () => {
             <Typography variant='subtitle1' textAlign={'left'}>完成輸入所有資料後，點擊{`<儲存>`}以保存此考勤紀錄</Typography>
           </li>
           <ContentImage image={img4} />
+          <li>
+            <Typography variant='subtitle1' textAlign={'left'}>儲存後，如需新增有關工作的車費報銷，可以直接點擊{`<需要同時新增車費報銷?>`}，如沒有，可點擊{`<完成>`}離開</Typography>
+          </li>
+          <ContentImage image={img5} />
         </ol>
+
       </ContentPart>
     </BasePage >
   )

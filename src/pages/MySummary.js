@@ -3,10 +3,15 @@ import { BasePage } from '../components/BasePage'
 import { CardMedia, Typography } from '@mui/material'
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
-import img1 from '../asserts/summary2.png'
+
 import { ContentImage } from '../components/ContentImage';
 
-
+import img1 from '../asserts/summary4.PNG'
+import img2 from '../asserts/ec_reject.png'
+import img3 from '../asserts/TSNotSubmit.PNG'
+import img4 from '../asserts/TSApproving.png'
+import img5 from '../asserts/ECWaitingForApproval.PNG'
+import img6 from '../asserts/ECFin.PNG'
 export const MySummary = () => {
   const pageInfo = {
     title: '我的總覽'
@@ -30,6 +35,7 @@ export const MySummary = () => {
         <ContentImage image={img1} />
       </ContentPart>
     </BasePage >
+
 
   )
 }

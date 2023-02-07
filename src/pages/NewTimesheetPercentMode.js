@@ -8,6 +8,7 @@ import img2 from '../asserts/per_mode_1.png'
 import img3 from '../asserts/per_mode_3.png'
 import { ContentImage } from '../components/ContentImage';
 
+import img4 from '../asserts/addClaimAfterTS.png'
 
 export const NewTimesheetPercentMode = () => {
   const pageInfo = {
@@ -55,7 +56,16 @@ export const NewTimesheetPercentMode = () => {
 
             image={img3}
           />
+          <li>
+
+            <Typography variant='subtitle1' textAlign={'left'}>儲存後，如需新增有關工作的車費報銷，可以直接點擊{`<需要同時新增車費報銷?>`}，如沒有，可點擊{`<完成>`}離開</Typography>
+          </li>
+          <ContentImage
+
+            image={img4}
+          />
         </ol>
+
       </ContentPart>
     </BasePage>
   )
