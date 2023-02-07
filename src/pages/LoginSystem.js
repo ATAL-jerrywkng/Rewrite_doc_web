@@ -12,7 +12,7 @@ export const LoginSystem = () => {
     }
     return (
         <SummaryPageBase {...pageInfo}>
-            <ContentPart title={"登入到系統 "}>
+            <ContentPart title={"登入到系統 "} sx={{ overflow: 'scroll' }}>
                 <Typography variant='subtitle1'>「考勤/自墊費用報銷系統」主要分為兩類使用者.</Typography>
                 <ol>
                     <li>

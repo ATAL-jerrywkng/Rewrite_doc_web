@@ -5,7 +5,7 @@ import { Menu } from '../menu/Menu';
 
 export const Content = (props) => {
     return (
-        <Grid container sx={{ minHeight: '100%'  }}>
+        <Grid container sx={{ minHeight: '100%' }}>
             <Grid className={classess.menuContent} item sm={0} md={4} lg={3}
                 sx={{
                     display: { xs: 'none', sm: 'none', md: 'block' },
@@ -19,6 +19,7 @@ export const Content = (props) => {
             <Grid item xs={12} md={8} lg={9}
                 sx={{
                     flex: { md: 'auto' }
+                    , paddingTop: '2px'
                     // , minWidth: { md: '100%' } 
                 }}
             >

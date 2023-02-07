@@ -213,7 +213,7 @@ export const Menu = () => {
           </Tabs>
         </Grid>
         <Grid item>
-          <ContentTopBarButton style={{ padding: 0 }} onClick={handleExpandClick}>
+          <ContentTopBarButton style={{ padding: 0, margin: 0 }} onClick={handleExpandClick}>
             {expanded?.length === 0 ? <UnfoldMoreIcon /> : <UnfoldLessIcon />}
           </ContentTopBarButton>
         </Grid>
