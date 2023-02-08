@@ -13,13 +13,13 @@ export const LoginSystem = () => {
     return (
         <SummaryPageBase {...pageInfo}>
             <ContentPart title={"登入到系統 "} sx={{ overflow: 'scroll' }}>
-                <Typography variant='subtitle1'>「考勤/自墊費用報銷系統」主要分為兩類使用者.</Typography>
+                <Typography variant='subtitle1'>「考勤/自墊費用報銷系統」主要分為兩類使用者</Typography>
                 <ol>
                     <li>
-                        <Typography variant='subtitle1'>已擁有公司電郵的使用者;</Typography>
+                        <Typography variant='subtitle1'>已擁有公司電郵的使用者</Typography>
                     </li>
                     <li>
-                        <Typography variant='subtitle1'>沒有公司電郵的使用者;</Typography>
+                        <Typography variant='subtitle1'>沒有公司電郵的使用者</Typography>
                     </li>
                 </ol>
             </ContentPart>

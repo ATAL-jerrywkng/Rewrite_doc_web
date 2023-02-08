@@ -14,7 +14,7 @@ export const MySummaryHotNews = () => {
     <BasePage  {...pageInfo}>
       <ContentPart title={"最新消息"} sx={{ overflow: 'scroll' }}>
 
-        <Typography variant='h6' textAlign={'LEFT'}>版面會顯示最新的三則公司最新消息，如需要查閱較早前的消息，可點擊{`<查看全部>`}</Typography>
+        <Typography variant='h7' textAlign={'LEFT'}>版面會顯示最新的三則公司最新消息，如需要查閱較早前的消息，可點擊{`<查看全部>`}</Typography>
 
         <ContentImage
           image={img1}

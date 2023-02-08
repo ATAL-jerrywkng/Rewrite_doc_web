@@ -14,29 +14,29 @@ import img6 from '../asserts/tc_3.png'
 import { ContentImage } from '../components/ContentImage';
 export const EcrsSystemFormCar = () => {
   const pageInfo = {
-    title: 'ECRS自墊費用報銷系統\\新增報銷表(交通費)'
+    title: 'ECRS自墊費用報銷系統\\新增「交通費報銷表」'
   }
   return (
     <BasePage  {...pageInfo}>
       <ContentPart title={"新增「交通費報銷表」 "} sx={{ overflow: 'scroll' }}>
 
-        <Typography variant='h6' textAlign={'LEFT'}>在下方的功能選項表中，選擇報銷</Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>請注意: 你只能為自己填寫的報銷。不能為其他同事輸入。</Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>   </Typography>
+        <Typography variant='h7' textAlign={'LEFT'}>在下方的功能選項表中，選擇報銷</Typography>
+        <Typography variant='h7' textAlign={'LEFT'}display="block">請注意: 你只能為自己填寫的報銷。不能為其他同事輸入。</Typography>
+        <Typography variant='h7' textAlign={'LEFT'}>   </Typography>
         <ol>
           <li>
             <Typography variant='subtitle1' textAlign={'LEFT'}>點擊右上角的{`<+>`}按鈕</Typography>
           </li>
           <ContentImage
 
-            image={img1}
+sx={{ height: '1242px' }} image={img1}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'LEFT'}>選擇日子，完成後點擊{`<選擇日期>`}</Typography>
           </li>
           <ContentImage
 
-            image={img2}
+sx={{ height: '1242px' }} image={img2}
           />
           <li>
 
@@ -48,7 +48,7 @@ export const EcrsSystemFormCar = () => {
           </li>
           <ContentImage
 
-            image={img3}
+sx={{ height: '1242px' }} image={img3}
           />
           <li>
 
@@ -60,7 +60,7 @@ export const EcrsSystemFormCar = () => {
           </li>
           <ContentImage
 
-            image={img4}
+sx={{ height: '1242px' }} image={img4}
           />
           <li>
 
@@ -69,7 +69,7 @@ export const EcrsSystemFormCar = () => {
 
           <ContentImage
 
-            image={img5}
+sx={{ height: '1242px' }} image={img5}
           />
           <li>
 
@@ -82,7 +82,7 @@ export const EcrsSystemFormCar = () => {
 
           <ContentImage
 
-            image={img6}
+sx={{ height: '1242px' }} image={img6}
           />
         </ol>
       </ContentPart>

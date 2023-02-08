@@ -8,6 +8,10 @@ import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
 import img1 from '../asserts/threedots.png'
 import img2 from '../asserts/option.png'
+import img3 from '../asserts/ts_summary.png'
+import { ContentImage } from '../components/ContentImage';
+
+
 
 export const TimesheetSummary = () => {
   const pageInfo = {
@@ -43,6 +47,10 @@ export const TimesheetSummary = () => {
             </Grid>
 
           </li>
+          <ContentImage
+
+            sx={{ height: '1242px' }} image={img3}
+          />
         </ol>
 
       </ContentPart>

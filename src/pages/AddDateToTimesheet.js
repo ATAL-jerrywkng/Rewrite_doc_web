@@ -9,7 +9,7 @@ import img3 from '../asserts/per_mode_3.png'
 import { ContentImage } from '../components/ContentImage';
 export const AddDateToTimesheet = () => {
   const pageInfo = {
-    title: 'Timesheet考勤系統\\長按選取“日期”添加到考勤表'
+    title: 'Timesheet考勤系統\\長按選取日期添加到考勤表'
   }
   return (
     <BasePage  {...pageInfo}>
@@ -19,13 +19,13 @@ export const AddDateToTimesheet = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}>長按選取相關日期(綠點:考勤, 黃點:報銷)</Typography>
           </li>
           <ContentImage
-            image={img1}
+            sx={{ height: '1242px' }} image={img1}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'LEFT'}>選擇拷貝到的日期(可多於一個日子)選擇拷貝(1)考勤或(2)考勤和報銷</Typography>
           </li>
           <ContentImage
-            image={img2}
+            sx={{ height: '1242px' }} image={img2}
           />
         </ol>
 
