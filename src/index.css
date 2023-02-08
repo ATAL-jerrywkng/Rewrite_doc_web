@@ -26,6 +26,7 @@ body {
 ol {
   padding-left: 0;
 }
-ol li {
+ol li,
+ol a {
   margin-left: 16px;
 }
