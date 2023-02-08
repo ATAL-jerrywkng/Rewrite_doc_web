@@ -68,8 +68,7 @@ export const RoutesProvider = () => {
         <Route path="/ecrsSystemFormCar" element={<EcrsSystemFormCar />} />
         <Route path="/ecrsSystemFormMyself" element={<EcrsSystemFormMyself />} />
         <Route path="/ecrsSystemViewApproval" element={<EcrsSystemViewApproval />} />
-        <Route path="/ecrsSystemRejects" element={<EcrsSystemRejects />} />
-        <Route path="/ecrsSystemFinishRecord" element={<EcrsSystemFinishRecord />} />
+    
         
       </Route>
     ),

@@ -12,6 +12,7 @@ import img3 from '../asserts/TSNotSubmit.PNG'
 import img4 from '../asserts/TSApproving.png'
 import img5 from '../asserts/ECWaitingForApproval.PNG'
 import img6 from '../asserts/ECFin.PNG'
+import { SpaceBar } from '@mui/icons-material';
 export const MySummary = () => {
   const pageInfo = {
     title: '我的總覽'
@@ -21,17 +22,17 @@ export const MySummary = () => {
       <ContentPart title={"我的總覽"} sx={{ overflow: 'scroll' }}>
         <ol>
           <li>
-            <Typography variant='subtitle1' textAlign={'LEFT'}>考勤總覽: 顯示有關考勤紀錄遞交及批核狀況</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}><b>考勤總覽: </b>顯示有關考勤紀錄遞交及批核狀況</Typography>
           </li>
           <li>
-            <Typography variant='subtitle1' textAlign={'LEFT'}>報銷總覽: 顯示有關報銷紀錄遞交/批核及自動轉賬狀況</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}><b>報銷總覽: </b>顯示有關報銷紀錄遞交/批核及自動轉賬狀況</Typography>
           </li>
           <li>
-            <Typography variant='subtitle1' textAlign={'LEFT'}>最新消息: 顯示相關公司最新消息</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}><b>最新消息: </b>顯示相關公司最新消息</Typography>
           </li>
         </ol>
         <Typography variant='h6' textAlign={'left'}>  </Typography>
-        <Typography variant='h6' textAlign={'left'}>如有資料更新，可向下拉手機程式版面以刷新數據</Typography>
+        <Typography  variant='h7' textAlign={'left'}> 如有資料更新，可向下拉手機程式版面以刷新數據    </Typography>
         <ContentImage image={img1} />
       </ContentPart>
     </BasePage >

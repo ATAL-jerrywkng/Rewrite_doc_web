@@ -1,10 +1,15 @@
 import React from 'react'
 import { BasePage } from '../components/BasePage'
 import { CardMedia, Grid, Typography } from '@mui/material'
+
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
 import img1 from '../asserts/threedots.png'
 import img2 from '../asserts/option.png'
+import img3 from '../asserts/ts_summary.png'
+import { ContentImage } from '../components/ContentImage';
+
+
 
 export const TimesheetSummary = () => {
   const pageInfo = {
@@ -22,6 +27,7 @@ export const TimesheetSummary = () => {
           </li>
           <li>
             <Grid container alignItems={'center'} spacing={1}>
+
               <Grid item >
                 <Typography variant='subtitle1' textAlign={'LEFT'}>點選</Typography>
               </Grid>
@@ -39,6 +45,10 @@ export const TimesheetSummary = () => {
               </Grid>
             </Grid>
           </li>
+          <ContentImage
+
+            sx={{ height: '1242px' }} image={img3}
+          />
         </ol>
 
       </ContentPart>

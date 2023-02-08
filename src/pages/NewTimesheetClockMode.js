@@ -9,7 +9,7 @@ import img3 from '../asserts/hour_mode_2.png'
 import img4 from '../asserts/hour_mode_3.png'
 import { ContentImage } from '../components/ContentImage';
 
-import img5 from '../asserts/addClaimAfterTS.png'
+import img5 from '../asserts/addClaimAfterTSHour.png'
 
 
 
@@ -21,8 +21,9 @@ export const NewTimesheetClockMode = () => {
     <BasePage  {...pageInfo}>
       <ContentPart title={"新增考勤表(時鐘模式)"} sx={{ overflow: 'scroll' }}>
 
-        <Typography variant='h6' textAlign={'LEFT'}>在下方的功能選項表中，選擇考勤</Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>請注意: 你只能為自己填寫的考勤。不能為其他同事輸入。</Typography>
+
+        <Typography variant='h7' textAlign={'LEFT'}>在下方的功能選項表中，選擇考勤</Typography>
+        <Typography variant='h7' textAlign={'LEFT'} display="block">請注意: 你只能為自己填寫的考勤。不能為其他同事輸入。</Typography>
         <Typography variant='h6' textAlign={'left'}>   </Typography>
         <ol>
           <li>
@@ -30,7 +31,7 @@ export const NewTimesheetClockMode = () => {
           </li>
           <ContentImage
 
-            image={img1}
+            sx={{ height: '1242px' }} image={img1}
           />
 
           <li>
@@ -42,7 +43,7 @@ export const NewTimesheetClockMode = () => {
           <ContentImage
 
 
-            image={img2}
+            sx={{ height: '1242px' }} image={img2}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>輸入{`<基本工時>`}，及是否{`<包括午餐時間>`}</Typography>
@@ -52,7 +53,7 @@ export const NewTimesheetClockMode = () => {
           </li>
           <ContentImage
 
-            image={img3}
+            sx={{ height: '1242px' }} image={img3}
           />
 
           <li>
@@ -61,11 +62,11 @@ export const NewTimesheetClockMode = () => {
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>完成輸入所有資料後，點擊{`<儲存>`}以保存此考勤紀錄</Typography>
           </li>
-          <ContentImage image={img4} />
+          <ContentImage sx={{ height: '1242px' }} image={img4} />
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>儲存後，如需新增有關工作的車費報銷，可以直接點擊{`<需要同時新增車費報銷?>`}，如沒有，可點擊{`<完成>`}離開</Typography>
           </li>
-          <ContentImage image={img5} />
+          <ContentImage sx={{ height: '1242px' }} image={img5} />
         </ol>
 
       </ContentPart>

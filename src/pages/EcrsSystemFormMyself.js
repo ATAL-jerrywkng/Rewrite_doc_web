@@ -14,22 +14,22 @@ import { ContentImage } from '../components/ContentImage';
 
 export const EcrsSystemFormMyself = () => {
   const pageInfo = {
-    title: 'ECRS自墊費用報銷系統\\新增報銷表(自墊費用)'
+    title: 'ECRS自墊費用報銷系統\\新增「自墊費用報銷表」'
   }
   return (
     <BasePage  {...pageInfo}>
       <ContentPart title={"新增「自墊費用報銷表」 "} sx={{ overflow: 'scroll' }}>
 
-        <Typography variant='h6' textAlign={'LEFT'}>在下方的功能選項表中，選擇報銷</Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>請注意: 你只能為自己填寫的報銷。不能為其他同事輸入。</Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>   </Typography>
+        <Typography variant='h7' textAlign={'LEFT'}>在下方的功能選項表中，選擇報銷</Typography>
+        <Typography variant='h7' textAlign={'LEFT'} display="block">請注意: 你只能為自己填寫的報銷。不能為其他同事輸入。</Typography>
+        <Typography variant='h7' textAlign={'LEFT'}>   </Typography>
         <ol>
           <li>
 
             <Typography variant='subtitle1' textAlign={'LEFT'}>點擊右上角的{`<+>`}按鈕</Typography>
           </li>
           <ContentImage
-            image={img1}
+            sx={{ height: '1242px' }} image={img1}
           />
           <li>
 
@@ -37,7 +37,7 @@ export const EcrsSystemFormMyself = () => {
           </li>
           <ContentImage
 
-            image={img2}
+            sx={{ height: '1242px' }} image={img2}
           />
           <li>
 
@@ -54,7 +54,7 @@ export const EcrsSystemFormMyself = () => {
 
           <ContentImage
 
-            image={img3}
+            sx={{ height: '1242px' }} image={img3}
           />
           <li>
 
@@ -63,7 +63,7 @@ export const EcrsSystemFormMyself = () => {
 
           <ContentImage
 
-            image={img4}
+            sx={{ height: '1242px' }} image={img4}
           />
           <li>
 
@@ -76,7 +76,7 @@ export const EcrsSystemFormMyself = () => {
 
           <ContentImage
 
-            image={img6}
+            sx={{ height: '1242px' }} image={img6}
           />
         </ol>
       </ContentPart>

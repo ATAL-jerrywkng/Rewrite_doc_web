@@ -8,7 +8,7 @@ import img2 from '../asserts/per_mode_1.png'
 import img3 from '../asserts/per_mode_3.png'
 import { ContentImage } from '../components/ContentImage';
 
-import img4 from '../asserts/addClaimAfterTS.png'
+import img4 from '../asserts/addClaimAfterTSPer.png'
 
 export const NewTimesheetPercentMode = () => {
   const pageInfo = {
@@ -18,9 +18,9 @@ export const NewTimesheetPercentMode = () => {
     <BasePage  {...pageInfo}>
       <ContentPart title={"新增考勤表(Percent模式)"} sx={{ overflow: 'scroll' }}>
 
-        <Typography variant='h6' textAlign={'LEFT'}>在下方的功能選項表中，選擇考勤</Typography>
-        <Typography variant='h6' textAlign={'LEFT'}>請注意: 你只能為自己填寫的考勤。不能為其他同事輸入。</Typography>
-        <Typography variant='h6' textAlign={'left'}>   </Typography>
+        <Typography variant='h7' textAlign={'LEFT'}>在下方的功能選項表中，選擇考勤</Typography>
+        <Typography variant='h7' textAlign={'LEFT'} display="block">請注意: 你只能為自己填寫的考勤。不能為其他同事輸入。</Typography>
+        <Typography variant='h7' textAlign={'left'}>   </Typography>
         <ol>
 
           <li>
@@ -28,7 +28,7 @@ export const NewTimesheetPercentMode = () => {
           </li>
           <ContentImage
 
-            image={img1}
+            sx={{ height: '1242px' }} image={img1}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>選擇適合的{`<告假類型>`}，如非請假，可選擇N/A</Typography>
@@ -42,7 +42,7 @@ export const NewTimesheetPercentMode = () => {
 
           <ContentImage
 
-            image={img2}
+            sx={{ height: '1242px' }} image={img2}
           />
           <li>
 
@@ -54,7 +54,7 @@ export const NewTimesheetPercentMode = () => {
           </li>
           <ContentImage
 
-            image={img3}
+sx={{ height: '1242px' }} image={img3}
           />
           <li>
 
@@ -62,7 +62,7 @@ export const NewTimesheetPercentMode = () => {
           </li>
           <ContentImage
 
-            image={img4}
+sx={{ height: '1242px' }} image={img4}
           />
         </ol>
 
