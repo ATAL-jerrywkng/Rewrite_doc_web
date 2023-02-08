@@ -32,13 +32,13 @@ export const TimesheetSummary = () => {
                 <Typography variant='subtitle1' textAlign={'LEFT'}>點選</Typography>
               </Grid>
               <Grid item >
-                <CardMedia sx={{ height: '50px', width: '50px' }} image={img1} element="img" />
+                <ContentImage sx={{ height: '50px', width: '50px' }} image={img1} />
               </Grid>
               <Grid item >
                 <Typography variant='subtitle1' textAlign={'LEFT'}>後，可以點擊{`<遞交>`}</Typography>
               </Grid>
               <Grid item >
-                <CardMedia sx={{ height: '50px', width: '50px' }} image={img2} />
+                <ContentImage sx={{ height: '50px', width: '50px' }} image={img2} />
               </Grid>
               <Grid item >
                 <Typography variant='subtitle1' textAlign={'LEFT'}> 考勤紀錄或點擊{`<圖例>`}查詢圖例說明</Typography>
@@ -46,8 +46,8 @@ export const TimesheetSummary = () => {
             </Grid>
           </li>
           <ContentImage
-
-            sx={{ height: '1242px' }} image={img3}
+            // sx={{ height: '1242px' }} 
+            image={img3}
           />
         </ol>
 

@@ -19,13 +19,15 @@ export const AddDateToTimesheet = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}>長按選取相關日期(綠點:考勤, 黃點:報銷)</Typography>
           </li>
           <ContentImage
-            sx={{ height: '1242px' }} image={img1}
+            // sx={{ height: '1242px' }} 
+            image={img1}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'LEFT'}>選擇拷貝到的日期(可多於一個日子)選擇拷貝(1)考勤或(2)考勤和報銷</Typography>
           </li>
           <ContentImage
-            sx={{ height: '1242px' }} image={img2}
+            // sx={{ height: '1242px' }} 
+            image={img2}
           />
         </ol>
 

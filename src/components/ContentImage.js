@@ -6,9 +6,13 @@ export const ContentImage = (props) => {
 
         <CardMedia
             sx={{
-                padding: '8px 0 ',
-                height: { xs: '100%', md: '500px', lg: '700px' },
-                width: { xs: '100%', md: '500px', lg: '700px' },
+                padding: '8px 0 16px 0',
+                height: {
+                    xs: '100%' //, md: '500px', lg: '700px'
+                },
+                width: {
+                    xs: '100%' //, md: '500px', lg: '700px'
+                },
                 margin: '0 auto',
                 objectFit: 'contain',
                 ...props?.sx

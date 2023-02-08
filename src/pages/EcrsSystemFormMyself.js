@@ -29,7 +29,8 @@ export const EcrsSystemFormMyself = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}>點擊右上角的{`<+>`}按鈕</Typography>
           </li>
           <ContentImage
-            sx={{ height: '1242px' }} image={img1}
+            // sx={{ height: '1242px' }} 
+            image={img1}
           />
           <li>
 
@@ -37,7 +38,8 @@ export const EcrsSystemFormMyself = () => {
           </li>
           <ContentImage
 
-            sx={{ height: '1242px' }} image={img2}
+            // sx={{ height: '1242px' }} 
+            image={img2}
           />
           <li>
 
@@ -54,7 +56,8 @@ export const EcrsSystemFormMyself = () => {
 
           <ContentImage
 
-            sx={{ height: '1242px' }} image={img3}
+            // sx={{ height: '1242px' }} 
+            image={img3}
           />
           <li>
 
@@ -63,7 +66,8 @@ export const EcrsSystemFormMyself = () => {
 
           <ContentImage
 
-            sx={{ height: '1242px' }} image={img4}
+            // sx={{ height: '1242px' }} 
+            image={img4}
           />
           <li>
 
@@ -76,7 +80,8 @@ export const EcrsSystemFormMyself = () => {
 
           <ContentImage
 
-            sx={{ height: '1242px' }} image={img6}
+            // sx={{ height: '1242px' }} 
+            image={img6}
           />
         </ol>
       </ContentPart>

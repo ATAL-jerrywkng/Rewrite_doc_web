@@ -28,7 +28,8 @@ export const NewTimesheetPercentMode = () => {
           </li>
           <ContentImage
 
-            sx={{ height: '1242px' }} image={img1}
+            // sx={{ height: '1242px' }}
+            image={img1}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>選擇適合的{`<告假類型>`}，如非請假，可選擇N/A</Typography>
@@ -42,7 +43,8 @@ export const NewTimesheetPercentMode = () => {
 
           <ContentImage
 
-            sx={{ height: '1242px' }} image={img2}
+            // sx={{ height: '1242px' }}
+            image={img2}
           />
           <li>
 
@@ -54,7 +56,8 @@ export const NewTimesheetPercentMode = () => {
           </li>
           <ContentImage
 
-sx={{ height: '1242px' }} image={img3}
+            // sx={{ height: '1242px' }}
+            image={img3}
           />
           <li>
 
@@ -62,7 +65,8 @@ sx={{ height: '1242px' }} image={img3}
           </li>
           <ContentImage
 
-sx={{ height: '1242px' }} image={img4}
+            // sx={{ height: '1242px' }}
+            image={img4}
           />
         </ol>
 

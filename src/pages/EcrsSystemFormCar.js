@@ -21,7 +21,7 @@ export const EcrsSystemFormCar = () => {
       <ContentPart title={"新增「交通費報銷表」 "} sx={{ overflow: 'scroll' }}>
 
         <Typography variant='h7' textAlign={'LEFT'}>在下方的功能選項表中，選擇報銷</Typography>
-        <Typography variant='h7' textAlign={'LEFT'}display="block">請注意: 你只能為自己填寫的報銷。不能為其他同事輸入。</Typography>
+        <Typography variant='h7' textAlign={'LEFT'} display="block">請注意: 你只能為自己填寫的報銷。不能為其他同事輸入。</Typography>
         <Typography variant='h7' textAlign={'LEFT'}>   </Typography>
         <ol>
           <li>
@@ -29,14 +29,16 @@ export const EcrsSystemFormCar = () => {
           </li>
           <ContentImage
 
-sx={{ height: '1242px' }} image={img1}
+            // sx={{ height: '1242px' }} 
+            image={img1}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'LEFT'}>選擇日子，完成後點擊{`<選擇日期>`}</Typography>
           </li>
           <ContentImage
 
-sx={{ height: '1242px' }} image={img2}
+            // sx={{ height: '1242px' }} 
+            image={img2}
           />
           <li>
 
@@ -48,7 +50,8 @@ sx={{ height: '1242px' }} image={img2}
           </li>
           <ContentImage
 
-sx={{ height: '1242px' }} image={img3}
+            // sx={{ height: '1242px' }} 
+            image={img3}
           />
           <li>
 
@@ -60,7 +63,8 @@ sx={{ height: '1242px' }} image={img3}
           </li>
           <ContentImage
 
-sx={{ height: '1242px' }} image={img4}
+            // sx={{ height: '1242px' }} 
+            image={img4}
           />
           <li>
 
@@ -69,7 +73,8 @@ sx={{ height: '1242px' }} image={img4}
 
           <ContentImage
 
-sx={{ height: '1242px' }} image={img5}
+            // sx={{ height: '1242px' }} 
+            image={img5}
           />
           <li>
 
@@ -82,7 +87,8 @@ sx={{ height: '1242px' }} image={img5}
 
           <ContentImage
 
-sx={{ height: '1242px' }} image={img6}
+            // sx={{ height: '1242px' }} 
+            image={img6}
           />
         </ol>
       </ContentPart>

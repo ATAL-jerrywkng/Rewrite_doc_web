@@ -25,25 +25,29 @@ export const EcrsSystemFilter = () => {
           </li>
           <ContentImage
 
-            sx={{ height: '1242px' }} image={img1}
+            // sx={{ height: '1242px' }} 
+            image={img1}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'LEFT'}>可按需要選擇需查閱的報銷紀錄類型或狀態，亦可自訂顯示排序，完成後點擊{`<選擇>`}</Typography>
           </li>
           <ContentImage
-            sx={{ height: '1242px' }} image={img2}
+            // sx={{ height: '1242px' }} 
+            image={img2}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'LEFT'}>篩選功能生效時，其按鈕會轉為橙色{`<選擇>`}</Typography>
           </li>
           <ContentImage
-            sx={{ height: '1242px' }} image={img4}
+            // sx={{ height: '1242px' }} 
+            image={img4}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'LEFT'}>亦可自訂需要查詢之時段，完成後點擊{`<選擇日期>`}</Typography>
           </li>
           <ContentImage
-            sx={{ height: '1242px' }} image={img3}
+            // sx={{ height: '1242px' }} 
+            image={img3}
           />
         </ol>
 

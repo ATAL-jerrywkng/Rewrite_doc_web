@@ -30,8 +30,8 @@ export const NewTimesheetClockMode = () => {
             <Typography variant='subtitle1' textAlign={'left'}>選擇日子，點擊右下方的按鈕</Typography>
           </li>
           <ContentImage
-
-            sx={{ height: '1242px' }} image={img1}
+            // sx={{ height: '1242px' }} 
+            image={img1}
           />
 
           <li>
@@ -41,9 +41,8 @@ export const NewTimesheetClockMode = () => {
             <Typography variant='subtitle1' textAlign={'left'}>根據工作編號或名稱搜索，輸入相關工作資料</Typography>
           </li>
           <ContentImage
-
-
-            sx={{ height: '1242px' }} image={img2}
+            // sx={{ height: '1242px' }} 
+            image={img2}
           />
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>輸入{`<基本工時>`}，及是否{`<包括午餐時間>`}</Typography>
@@ -52,8 +51,8 @@ export const NewTimesheetClockMode = () => {
             <Typography variant='subtitle1' textAlign={'left'}>輸入加班時段 OT1 / OT2 / OT3 (如適用)，及是否{`<包括午餐時間>`}</Typography>
           </li>
           <ContentImage
-
-            sx={{ height: '1242px' }} image={img3}
+            // sx={{ height: '1242px' }} 
+            image={img3}
           />
 
           <li>
@@ -62,11 +61,15 @@ export const NewTimesheetClockMode = () => {
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>完成輸入所有資料後，點擊{`<儲存>`}以保存此考勤紀錄</Typography>
           </li>
-          <ContentImage sx={{ height: '1242px' }} image={img4} />
+          <ContentImage 
+          // sx={{ height: '1242px' }} 
+          image={img4} />
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>儲存後，如需新增有關工作的車費報銷，可以直接點擊{`<需要同時新增車費報銷?>`}，如沒有，可點擊{`<完成>`}離開</Typography>
           </li>
-          <ContentImage sx={{ height: '1242px' }} image={img5} />
+          <ContentImage 
+          // sx={{ height: '1242px' }} 
+          image={img5} />
         </ol>
 
       </ContentPart>
