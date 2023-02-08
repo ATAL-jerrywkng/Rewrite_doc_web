@@ -116,7 +116,7 @@ export const ContentButtonBar = (props) => {
 
 
     const buttonList = useMemo(() => [
-        { id: 'btn01', name: 'bookmark', buttonElement: <StarIcon fontSize="small" sx={{ color: checkBookmarks ? '#248ef4' : 'orange', '&:hover': { color: 'white' } }} />, disabledControl: null },
+        { id: 'btn01', name: 'bookmark', buttonElement: <StarIcon fontSize="small" sx={{ color: checkBookmarks ? '#248ef4' : 'orange', '&:hover': { color: checkBookmarks ? '#248ef4' : 'white' } }} />, disabledControl: null },
         // { id: 'btn02', name: 'print', buttonElement: <PrintIcon fontSize="small" />, disabledControl: null },
         // { id: 'btn03', name: 'prevPage', buttonElement: <FirstPageIcon fontSize="small" />, disabledControl: null },
         // { id: 'btn04', name: 'parentPage', buttonElement: <VerticalAlignTopIcon fontSize="small" />, disabledControl: checkPageHaveParent() },

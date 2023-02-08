@@ -21,8 +21,7 @@ export const TimesheetSummary = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}>可查閱上月或下月(如有)之紀錄</Typography>
           </li>
           <li>
-
-            <Grid container alignItems={'center'} spacing={2}>
+            <Grid container alignItems={'center'} spacing={1}>
               <Grid item >
                 <Typography variant='subtitle1' textAlign={'LEFT'}>點選</Typography>
               </Grid>

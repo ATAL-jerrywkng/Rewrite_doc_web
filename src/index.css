@@ -20,3 +20,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.MuiDrawer-paperAnchorRight{
+width: 100%;    
+}
