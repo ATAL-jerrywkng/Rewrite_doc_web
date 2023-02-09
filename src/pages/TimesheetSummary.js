@@ -32,7 +32,7 @@ export const TimesheetSummary = () => {
                 <Typography variant='subtitle1' textAlign={'LEFT'}>點選</Typography>
               </Grid>
               <Grid item >
-                <ContentImage sx={{ height: '20px', width: '20px' }} image={img1} />
+                <ContentImage sx={{ height: '20px', width: '20px' }}  image={img1} />
               </Grid>
               <Grid item >
                 <Typography variant='subtitle1' textAlign={'LEFT'}>後，可以點擊{`<遞交>`}</Typography>
@@ -53,6 +53,7 @@ export const TimesheetSummary = () => {
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img3}
           />
         </ol>

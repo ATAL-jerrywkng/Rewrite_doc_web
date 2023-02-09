@@ -21,20 +21,20 @@ export const EcrsSystemViewApproval = () => {
       <ContentPart title={"查閱「自墊費用」報銷審批歷程"} sx={{ overflow: 'scroll' }}>
 
         <ol>
-          
-            <Grid container alignItems={'center'}>
-              <Grid item >
-                <Typography variant='subtitle1' textAlign={'LEFT'}>點擊需要查閱的自墊費用報銷，並點擊右上角的</Typography>
-              </Grid>
-              <Grid item >
-                <ContentImage sx={{ height: '20px', width: '20px' }} image={img3} />
-              </Grid>
-              <Grid item ><Typography variant='subtitle1' textAlign={'LEFT'}>後，再點擊{`<審批歷程>`}，</Typography>
-              </Grid>
-              <Grid item ><Typography variant='subtitle1' textAlign={'LEFT'}>自墊費用報銷的審批歷程會於此版面顯示</Typography>
-              </Grid>
+
+          <Grid container alignItems={'center'}>
+            <Grid item >
+              <Typography variant='subtitle1' textAlign={'LEFT'}>點擊需要查閱的自墊費用報銷，並點擊右上角的</Typography>
             </Grid>
-          
+            <Grid item >
+              <ContentImage sx={{ height: '20px', width: '20px' }} image={img3} />
+            </Grid>
+            <Grid item ><Typography variant='subtitle1' textAlign={'LEFT'}>後，再點擊{`<審批歷程>`}，自墊費用報銷的審批</Typography>
+            </Grid>
+            <Grid item ><Typography variant='subtitle1' textAlign={'LEFT'}>歷程會於此版面顯示</Typography>
+            </Grid>
+          </Grid>
+
 
           <ContentImage image={img1} />
 
