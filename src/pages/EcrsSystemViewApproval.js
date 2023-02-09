@@ -27,7 +27,7 @@ export const EcrsSystemViewApproval = () => {
                 <Typography variant='subtitle1' textAlign={'LEFT'}>點擊需要查閱的自墊費用報銷，並點擊右上角的</Typography>
               </Grid>
               <Grid item >
-                <CardMedia sx={{ height: '50px', width: '50px', margin: '0' }} image={img3} element="img" />
+                <ContentImage sx={{ height: '20px', width: '20px' }} image={img3} />
               </Grid>
               <Grid item ><Typography variant='subtitle1' textAlign={'LEFT'}>後，再點擊{`<審批歷程>`}，</Typography>
               </Grid>

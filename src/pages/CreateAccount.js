@@ -17,7 +17,7 @@ export const CreateAccount = () => {
         <Typography variant='h7' textAlign={'LEFT'}>而你的登入ID應為你的員工編號。新申請的賬戶，必須進行簡單啟動程序方可生效。有關啟動程序為:</Typography>
         <ol>
           <li>
-            <Typography variant='subtitle1' textAlign={'left'}>登入到<Link to="http://ts.atal.com.hk/web"></Link>http://ts.atal.com.hk/web</Typography>
+            <Typography variant='subtitle1' textAlign={'left'}>登入到 <a id="myLink" href="http://ts.atal.com.hk/web" target="_blank">http://ts.atal.com.hk/web</a></Typography>
           </li>
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>輸入員工編號及首次登入密碼</Typography>

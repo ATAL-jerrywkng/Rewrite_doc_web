@@ -28,7 +28,8 @@ export const AboutEcrs = () => {
             <Typography variant='h7' textAlign={'left'}>在每月15日前完成部門審批之申請，財務部會作最後審查。</Typography>
             <Typography variant='h7' textAlign={'left'}>所有完成審查的申請均會於7個工作天內，以自動轉賬方式放數。</Typography>
           </li>
-          <Link to="http://ts.atal.com.hk/gl" >http://ts.atal.com.hk/gl</Link>
+         
+          <a id="myLink" href="http://ts.atal.com.hk/gl" target="_blank">http://ts.atal.com.hk/gl</a>
           <li><Typography variant='subtitle1' textAlign={'left'}> <b>考勤系統</b></Typography>
             <Typography variant='h7' textAlign={'left'}> 登記和提交工作考勤紀錄</Typography>
           </li>
