@@ -120,7 +120,7 @@ export const ContentButtonBar = (props) => {
                 break;
             }
             case 'print': {
-                window.print()
+                // window.print()
                 break;
             }
             case 'prevPage': {
@@ -210,7 +210,7 @@ export const ContentButtonBar = (props) => {
 
     const buttonList = useMemo(() => [
         { id: 'btn01', name: 'bookmark', buttonElement: <StarIcon fontSize="small" sx={{ color: checkBookmarks ? '#248ef4' : 'orange', '&:hover': { color: checkBookmarks ? '#248ef4' : 'white' } }} />, disabledControl: null },
-        { id: 'btn02', name: 'print', buttonElement: <PrintIcon fontSize="small" />, disabledControl: null },
+        // { id: 'btn02', name: 'print', buttonElement: <PrintIcon fontSize="small" />, disabledControl: null },
         { id: 'btn03', name: 'prevPage', buttonElement: <FirstPageIcon fontSize="small" />, disabledControl: checkCanClickPrevBtn() },
         { id: 'btn04', name: 'parentPage', buttonElement: <VerticalAlignTopIcon fontSize="small" />, disabledControl: checkPageHaveParent() },
         { id: 'btn05', name: 'nextPage', buttonElement: <LastPageIcon fontSize="small" />, disabledControl: checkCanClickNextBtn() },
