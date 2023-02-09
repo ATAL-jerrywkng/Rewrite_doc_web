@@ -17,7 +17,7 @@ import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next';
 
 import classess from './Menu.module.scss';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { MENU_TRANSLATION_PREFIX } from '../../utils/TranslationPrefixName';
 
 
@@ -39,11 +39,13 @@ export const Menu = () => {
 
   // navigate for page change
   const navigate = useNavigate();
+  const location = useLocation();
 
   // TreeView Control
   const [expanded, setExpanded] = useState([]);
+  const [selected, setSelected] = useState([]);
   const handleToggle = (event, nodeIds) => {
-    console.log("file: Menu.js:20 -> handleToggle -> nodeIds", nodeIds);
+    // console.log("file: Menu.js:20 -> handleToggle -> nodeIds", nodeIds);
     // console.log("file: Menu.js:31 -> handleToggle -> event", event.target);
     // if (event.target.nodeName !== "svg" && event.target.nodeName !== "path") {
 
@@ -58,6 +60,42 @@ export const Menu = () => {
       navigate(item.url);
     }
   }
+  // handle TreeView update when location update
+  useEffect(() => {
+    // console.log("file: Menu.js:65 -> handleTreeViewUpdate -> menu", menu)
+    if (menu && location) {
+      let pathname = location?.pathname;
+      // console.log("file: Menu.js:70 -> useEffect -> each?.url === selected", selected)
+      menu.forEach(each => {
+        if (each?.url === pathname) {
+          //  console.log("file: Menu.js:70 -> useEffect -> each", each)
+          // console.log("file: Menu.js:70 -> useEffect -> each?.url === selected", selected)
+          setSelected([each?.id]);
+          if (each?.childrenLists) {
+            setExpanded([...expanded, each?.id]);
+          }
+          // else{
+          //   let temp = [...expanded];
+          //    setExpanded(prevState => prevState?.splice(temp?.indexOf(each?.id), 1));
+          // }
+        } else {
+          if (each?.childrenLists) {
+            // console.log("file: Menu.js:82 -> useEffect -> each?.childrenLists", each?.childrenLists)
+            let findChild = each?.childrenLists?.find(find => find?.url === pathname);
+            if (findChild) {
+              setSelected([findChild?.id]);
+              setExpanded([...expanded, each?.id]);
+            }
+          } else {
+            // console.log("file: Menu.js:89 -> useEffect -> else")
+            let temp = [...selected];
+            // setSelected([each?.id]);
+            setSelected(prevState => prevState?.splice(temp?.indexOf(each?.id), 1));
+          }
+        }
+      })
+    }
+  }, [menu, location])
 
 
 
@@ -102,10 +140,8 @@ export const Menu = () => {
   }, [menu, bookmark])
 
 
-  // show Index
-  // const indexByMenuList = useMemo(() => {
 
-  // }, [menu])
+
 
 
   const showTabContent = useMemo(() => {
@@ -116,6 +152,7 @@ export const Menu = () => {
           defaultCollapseIcon={<img src={openBook} />}
           defaultExpandIcon={<img src={closeBook} />}
           expanded={expanded}
+          selected={selected}
           onNodeToggle={handleToggle}
           multiSelect
         >
@@ -126,6 +163,7 @@ export const Menu = () => {
               nodeId={item.id}
               label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
               onClick={(event) => clickHandler({ event, item })}
+              sx={{ backgroundColor: !item?.childrenLists && item?.url === location?.pathname ? 'rgba(25, 118, 210, 0.08)' : 'initial' }}
             >
               {item?.childrenLists?.map(item =>
                 <TreeItem
@@ -165,7 +203,7 @@ export const Menu = () => {
         </TreeView>
       }
     }
-  }, [selectedTabNumber, expanded, menu, bookmarkToListByMenuList])
+  }, [selectedTabNumber, expanded, menu, bookmarkToListByMenuList, location])
 
 
   const handleExpandClick = useCallback(() => {
