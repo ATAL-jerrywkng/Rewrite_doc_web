@@ -51,7 +51,7 @@ export const EcrsSystemFormCar = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}>選擇報銷類型: 交通費報銷，並輸入交通費類型/單雙程/地點</Typography>
           </li>
           <ContentImage
-
+ imageType="y" yWidth="500px"
             // sx={{ height: '1242px' }} 
             image={img3}
           />
@@ -64,7 +64,7 @@ export const EcrsSystemFormCar = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}>如同一日有多於一程車程，可點擊{`<+行程>`}新增另一項車程資料，可報銷之款項會於{`<合共>`}顯示</Typography>
           </li>
           <ContentImage
-
+ imageType="y" yWidth="500px"
             // sx={{ height: '1242px' }} 
             image={img4}
           />

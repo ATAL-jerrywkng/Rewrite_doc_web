@@ -33,7 +33,7 @@ export const MySummary = () => {
         </ol>
         <Typography variant='h6' textAlign={'left'}>  </Typography>
         <Typography  variant='h7' textAlign={'left'}> 如有資料更新，可向下拉手機程式版面以刷新數據    </Typography>
-        <ContentImage image={img1} />
+        <ContentImage image={img1}   imageType="y" yWidth="500px" />
       </ContentPart>
     </BasePage >
 
