@@ -8,6 +8,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { ContentTopBarButton } from './ContentTopBarButton';
 import { addBookmark, removeBookmark, saveBookmarksToLocalStorage } from '../redux/reducers/bookmarkSlice';
+import { setFirstSearch } from '../redux/reducers/menuSlice';
 
 export const ContentButtonBar = (props) => {
     const location = useLocation();
@@ -15,6 +16,7 @@ export const ContentButtonBar = (props) => {
     const navigate = useNavigate();
     const menu = useSelector(state => state.menu.menuLists);
     const bookmark = useSelector(state => state.bookmark.bookmarks);
+    const firstSearch = useSelector(state => state.menu.firstSearch);
 
 
 
@@ -124,6 +126,7 @@ export const ContentButtonBar = (props) => {
                 break;
             }
             case 'prevPage': {
+                dispatch(setFirstSearch(true));
                 handlePageButtonClick({ action: item?.name });
                 break;
             }
@@ -136,6 +139,7 @@ export const ContentButtonBar = (props) => {
                 break;
             }
             case 'nextPage': {
+                dispatch(setFirstSearch(true));
                 handlePageButtonClick({ action: item?.name });
                 break;
             }
