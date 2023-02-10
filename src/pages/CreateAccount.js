@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export const CreateAccount = () => {
   const pageInfo = {
-    title: '登入到系統\\啟動賬戶'
+    title: '登入到AMA手機應用程式\\啟動賬戶'
   }
   return (
     <BasePage  {...pageInfo}>

@@ -15,7 +15,7 @@ export const AboutEcrs = () => {
 
 
 
-        <Typography variant='h6' textAlign={'left'}>ATAL Mobile Access (AMA)已經投入服務了。AMA 是一個為安樂同事建立的手機平台，你可以找到內聯網的熱門資訊，費用報銷和考勤系統。</Typography>
+        <Typography variant='h6' textAlign={'left'}>ATAL Mobile Access (AMA)已經投入服務了。AMA 是一個為安樂同事建立的手機平台，你可以找到內聯網的熱門資訊，費用報銷和考勤紀錄。</Typography>
         <ol>
 
 
@@ -30,7 +30,7 @@ export const AboutEcrs = () => {
           </li>
          
           <a id="myLink" href="http://ts.atal.com.hk/gl" target="_blank">http://ts.atal.com.hk/gl</a>
-          <li><Typography variant='subtitle1' textAlign={'left'}> <b>考勤系統</b></Typography>
+          <li><Typography variant='subtitle1' textAlign={'left'}> <b>考勤紀錄</b></Typography>
             <Typography variant='h7' textAlign={'left'}> 登記和提交工作考勤紀錄</Typography>
           </li>
         </ol>
