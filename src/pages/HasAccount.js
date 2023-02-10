@@ -8,7 +8,7 @@ import img1 from '../asserts/login_email.png'
 
 export const HasAccount = () => {
   const pageInfo = {
-    title: '登入到系統\\已擁有公司電郵地址的同事'
+    title: '登入到AMA手機應用程式\\已擁有公司電郵地址的同事'
   }
   return (
     <BasePage  {...pageInfo}>

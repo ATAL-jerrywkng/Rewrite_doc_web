@@ -7,7 +7,7 @@ import img1 from '../asserts/login_staffID1.png'
 import { ContentImage } from '../components/ContentImage';
 export const NotHasAccount = () => {
   const pageInfo = {
-    title: '登入到系統\\沒有公司電郵地址的同事'
+    title: '登入到AMA手機應用程式\\沒有公司電郵地址的同事'
   }
   return (
     <BasePage  {...pageInfo}>
