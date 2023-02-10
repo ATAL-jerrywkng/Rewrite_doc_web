@@ -20,17 +20,17 @@ export const MySummaryTimeSheet = () => {
         <ol>
           <Typography variant='h7' textAlign={'LEFT'}>狀態1: 被拒絕</Typography>
           <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在這個考勤時段內，被否決的考勤紀錄數量</Typography>
-          <ContentImage image={img2} imageType="x" xWidth="300px" />
+          <ContentImage image={img2} imageType="x" xWidth="150px" />
 
 
 
           <Typography variant='h7' textAlign={'LEFT'}>狀態2: 未遞交</Typography>
           <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在這個考勤時段內，仍未遞交的考勤紀錄數量</Typography>
-          <ContentImage image={img3} imageType="x" xWidth="300px"/>
+          <ContentImage image={img3} imageType="x" xWidth="150px"/>
 
           <Typography variant='h7' textAlign={'LEFT'}>狀態3: 批核中</Typography>
           <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在這個考勤時段內，仍在等待批核的考勤紀錄數量</Typography>
-          <ContentImage image={img4} imageType="x" xWidth="300px"/>
+          <ContentImage image={img4} imageType="x" xWidth="150px"/>
         </ol>
 
       </ContentPart>
