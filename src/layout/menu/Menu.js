@@ -210,7 +210,7 @@ export const Menu = () => {
               key={item.id}
               icon={<img src={treeQs} />} nodeId={item.id}
               label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
-              onClick={(event) => clickHandler({ event, item }, setSelectedTabNumber(0))}
+              onClick={(event) => clickHandler({ event, item }, setSelectedTabNumber(0), dispatch(setFirstSearch(true)))}
             ></TreeItem>
           })}
         </TreeView>
