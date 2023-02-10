@@ -1,8 +1,8 @@
 {
   "menu": {
     "cover": "Cover",
-    "aboutECRS": "關於安樂考勤/自墊費用報銷系統 (ECRS-Timesheet System)",
-    "installation": "安裝ECRS-TS手機應用程式",
+    "aboutECRS": "關於ATAL Mobile Access (AMA)",
+    "installation": "安裝AMA手機應用程式",
     "loginSystem": "登入到系統",
     "hasAccount": "已擁有公司電郵地址的同事",
     "notHasAccount": "沒有公司電郵地址的同事",
