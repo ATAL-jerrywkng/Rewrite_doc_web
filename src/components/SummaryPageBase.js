@@ -23,7 +23,7 @@ export const SummaryPageBase = (props) => {
             </Typography>
           </Grid>
           <Grid item >
-            <ContentButtonBar />
+            {props?.NotTopBarButton ? null : <ContentButtonBar />}
           </Grid>
         </Grid>
         <Box className={classess.contentBox}>

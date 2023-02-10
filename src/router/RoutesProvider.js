@@ -2,6 +2,7 @@ import React from "react";
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Navigate,
   Route,
   RouterProvider,
 } from "react-router-dom";
@@ -32,8 +33,9 @@ import { EcrsSystemFilter } from "../pages/EcrsSystemFilter";
 import { EcrsSystemFormCar } from "../pages/EcrsSystemFormCar";
 import { EcrsSystemFormMyself } from "../pages/EcrsSystemFormMyself";
 import { EcrsSystemViewApproval } from "../pages/EcrsSystemViewApproval";
-import { EcrsSystemRejects } from "../pages/EcrsSystemRejects"; 
+import { EcrsSystemRejects } from "../pages/EcrsSystemRejects";
 import { EcrsSystemFinishRecord } from "../pages/EcrsSystemFinishRecord";
+import { NotFind } from "../pages/NotFind";
 
 
 
@@ -46,9 +48,9 @@ export const RoutesProvider = () => {
         <Route index path="/" element={<Home />} />
         <Route path="/cover" element={<Cover />} />
         <Route path="/aboutEcrs" element={<AboutEcrs />} />
-        
+
         <Route path="/installation" element={<Installation />} />
-        
+
         <Route path="/loginSystem" element={<LoginSystem />} />
         <Route path="/hasAccount" element={<HasAccount />} />
         <Route path="/notHasAccount" element={<NotHasAccount />} />
@@ -68,8 +70,8 @@ export const RoutesProvider = () => {
         <Route path="/ecrsSystemFormCar" element={<EcrsSystemFormCar />} />
         <Route path="/ecrsSystemFormMyself" element={<EcrsSystemFormMyself />} />
         <Route path="/ecrsSystemViewApproval" element={<EcrsSystemViewApproval />} />
-    
-        
+
+        <Route path="*" element={<NotFind />} />
       </Route>
     ),
     { basename: "/help2" }
