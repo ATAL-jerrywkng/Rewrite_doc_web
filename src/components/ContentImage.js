@@ -14,7 +14,7 @@ export const ContentImage = (props) => {
                 width: {
                     xs: '100%', sm: imageType === 'x' ? props?.xWidth : imageType === 'y' ? props?.yWidth : '100%'//, md: '500px', lg: '700px'
                 },
-                margin: '0 auto',
+                margin: { xs: "0", sm: imageType === 'x' ? '0' : '0 auto' },
                 objectFit: 'contain',
                 ...props?.sx
             }}

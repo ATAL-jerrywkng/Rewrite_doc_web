@@ -20,6 +20,7 @@ export const EcrsSystemSummary = () => {
         <Typography variant='h7' textAlign={'LEFT'}>    顯示所選時段之報銷紀錄，可以點擊相關紀錄以查閱詳細資料</Typography>
         <ContentImage
           // sx={{ height: '1242px' }} 
+          imageType="y" yWidth="500px"
           image={img1}
         />
         

@@ -17,9 +17,10 @@ export const MySummaryHotNews = () => {
         <Typography variant='h7' textAlign={'LEFT'}>版面會顯示最新的三則公司最新消息，如需要查閱較早前的消息，可點擊{`<查看全部>`}</Typography>
 
         <ContentImage
+          imageType="y" yWidth="500px"
           image={img1}
         />
-        
+
 
       </ContentPart>
     </BasePage >

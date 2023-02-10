@@ -20,6 +20,7 @@ export const AddDateToTimesheet = () => {
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img1}
           />
           <li>
@@ -27,6 +28,7 @@ export const AddDateToTimesheet = () => {
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img2}
           />
         </ol>

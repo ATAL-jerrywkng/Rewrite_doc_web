@@ -23,11 +23,11 @@ export const NotHasAccount = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}>使用「員工編號」及所提供之「首次登入密碼」登入。並進行簡單啟動程序即可使用。</Typography>
           </li>
           <ContentImage
-
-          image={img1}
-        />
+            imageType="y" yWidth="500px"
+            image={img1}
+          />
         </ol>
-        
+
       </ContentPart>
     </BasePage >
   )

@@ -21,14 +21,15 @@ export const NewTimesheetPercentMode = () => {
         <Typography variant='h7' textAlign={'LEFT'}>在下方的功能選項表中，選擇考勤</Typography>
         <Typography variant='h7' textAlign={'LEFT'} display="block">請注意: 你只能為自己填寫的考勤。不能為其他同事輸入。</Typography>
         <Typography variant='h7' textAlign={'left'}>   </Typography>
-        
-<ol>
+
+        <ol>
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>選擇日子，點擊右下方的按鈕   </Typography>
           </li>
           <ContentImage
 
             // sx={{ height: '1242px' }}
+            imageType="y" yWidth="500px"
             image={img1}
           />
           <li>
@@ -44,6 +45,7 @@ export const NewTimesheetPercentMode = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }}
+            imageType="y" yWidth="500px"
             image={img2}
           />
           <li>
@@ -57,6 +59,7 @@ export const NewTimesheetPercentMode = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }}
+            imageType="y" yWidth="500px"
             image={img3}
           />
           <li>
@@ -66,9 +69,10 @@ export const NewTimesheetPercentMode = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }}
+            imageType="y" yWidth="500px"
             image={img4}
           />
-        
+
         </ol>
       </ContentPart>
     </BasePage>

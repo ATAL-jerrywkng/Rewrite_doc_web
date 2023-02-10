@@ -36,10 +36,14 @@ export const EcrsSystemViewApproval = () => {
           </Grid>
 
 
-          <ContentImage image={img1} />
+          <ContentImage image={img1}
+            imageType="y" yWidth="500px"
+          />
 
 
-          <ContentImage image={img2} />
+          <ContentImage image={img2}
+            imageType="y" yWidth="500px"
+          />
         </ol>
 
       </ContentPart>

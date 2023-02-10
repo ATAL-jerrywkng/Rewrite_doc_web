@@ -31,6 +31,7 @@ export const NewTimesheetClockMode = () => {
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img1}
           />
 
@@ -42,6 +43,7 @@ export const NewTimesheetClockMode = () => {
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img2}
           />
           <li>
@@ -52,6 +54,7 @@ export const NewTimesheetClockMode = () => {
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img3}
           />
 
@@ -61,15 +64,17 @@ export const NewTimesheetClockMode = () => {
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>完成輸入所有資料後，點擊{`<儲存>`}以保存此考勤紀錄</Typography>
           </li>
-          <ContentImage 
-          // sx={{ height: '1242px' }} 
-          image={img4} />
+          <ContentImage
+            // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
+            image={img4} />
           <li>
             <Typography variant='subtitle1' textAlign={'left'}>儲存後，如需新增有關工作的車費報銷，可以直接點擊{`<需要同時新增車費報銷?>`}，如沒有，可點擊{`<完成>`}離開</Typography>
           </li>
-          <ContentImage 
-          // sx={{ height: '1242px' }} 
-          image={img5} />
+          <ContentImage
+            // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
+            image={img5} />
         </ol>
 
       </ContentPart>

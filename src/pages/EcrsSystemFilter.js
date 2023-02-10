@@ -26,6 +26,7 @@ export const EcrsSystemFilter = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img1}
           />
           <li>
@@ -33,6 +34,7 @@ export const EcrsSystemFilter = () => {
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img2}
           />
           <li>
@@ -40,6 +42,7 @@ export const EcrsSystemFilter = () => {
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img4}
           />
           <li>
@@ -47,6 +50,7 @@ export const EcrsSystemFilter = () => {
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img3}
           />
         </ol>

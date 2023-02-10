@@ -30,6 +30,7 @@ export const EcrsSystemFormMyself = () => {
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img1}
           />
           <li>
@@ -39,6 +40,7 @@ export const EcrsSystemFormMyself = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img2}
           />
           <li>
@@ -57,6 +59,7 @@ export const EcrsSystemFormMyself = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img3}
           />
           <li>
@@ -67,6 +70,7 @@ export const EcrsSystemFormMyself = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img4}
           />
           <li>
@@ -81,6 +85,7 @@ export const EcrsSystemFormMyself = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img6}
           />
         </ol>

@@ -30,6 +30,7 @@ export const EcrsSystemFormCar = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img1}
           />
           <li>
@@ -38,6 +39,7 @@ export const EcrsSystemFormCar = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img2}
           />
           <li>
@@ -74,6 +76,7 @@ export const EcrsSystemFormCar = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img5}
           />
           <li>
@@ -88,6 +91,7 @@ export const EcrsSystemFormCar = () => {
           <ContentImage
 
             // sx={{ height: '1242px' }} 
+            imageType="y" yWidth="500px"
             image={img6}
           />
         </ol>
