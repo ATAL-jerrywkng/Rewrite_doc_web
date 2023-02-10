@@ -155,6 +155,7 @@ export const Menu = () => {
           selected={selected}
           onNodeToggle={handleToggle}
           // multiSelect
+          sx={{ overflow: 'hidden' }}
         >
           {menu?.map(item => {
             return <TreeItem
@@ -163,7 +164,10 @@ export const Menu = () => {
               nodeId={item.id}
               label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
               onClick={(event) => clickHandler({ event, item })}
-              sx={{ backgroundColor:  item?.url === location?.pathname ? 'rgba(25, 118, 210, 0.08)' : 'rgba(255, 255, 255, 0)' }}
+              sx={{
+
+                backgroundColor: item?.url === location?.pathname ? 'rgba(25, 118, 210, 0.08)' : 'rgba(255, 255, 255, 0)'
+              }}
             >
               {item?.childrenLists?.map(item =>
                 <TreeItem
@@ -172,7 +176,10 @@ export const Menu = () => {
                   nodeId={item.id}
                   label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
                   onClick={(event) => clickHandler({ event, item })}
-                  sx={{ backgroundColor:  item?.url === location?.pathname ? 'rgba(25, 118, 210, 0.08)' : 'rgba(255, 255, 255, 0)' }}
+                  sx={{
+
+                    backgroundColor: item?.url === location?.pathname ? 'rgba(25, 118, 210, 0.08)' : 'rgba(255, 255, 255, 0)'
+                  }}
                 />)}
             </TreeItem>
           }
