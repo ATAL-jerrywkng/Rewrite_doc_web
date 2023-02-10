@@ -66,6 +66,7 @@ export const Menu = () => {
   const firstSearch = useSelector(state => state.menu.firstSearch)
   useEffect(() => {
     // console.log("file: Menu.js:65 -> handleTreeViewUpdate -> menu", menu)
+
     if (menu && location && firstSearch) {
       let pathname = location?.pathname;
       // console.log("file: Menu.js:70 -> useEffect -> each?.url === selected", selected)
@@ -209,7 +210,7 @@ export const Menu = () => {
               key={item.id}
               icon={<img src={treeQs} />} nodeId={item.id}
               label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
-              onClick={(event) => clickHandler({ event, item })}
+              onClick={(event) => clickHandler({ event, item }, setSelectedTabNumber(0))}
             ></TreeItem>
           })}
         </TreeView>
