@@ -18,31 +18,31 @@ export const MySummaryEcrs = () => {
   return (
     <BasePage  {...pageInfo}>
       <ContentPart title={"報銷紀錄"} sx={{ overflow: 'scroll' }}>
-      <ol>
-        <Typography variant='h7' textAlign={'LEFT'}>狀態1: 未遞交</Typography>
-        <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在過去的90天內，仍未遞交的報銷紀錄數量</Typography>
-        <ContentImage image={img3} imageType="x" xWidth="150px" />
-        
+        <ol>
+          <Typography variant='h7' textAlign={'LEFT'}>狀態1: 未遞交</Typography>
+          <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在過去的90天內，仍未遞交的報銷紀錄數量</Typography>
+          <ContentImage image={img3} imageType="x" xWidth="150px" sx={{ height: '68px',backgroundColor:'white',margin:'0 0 16px 0 ' }} />
 
-        <Typography variant='h7' textAlign={'LEFT'}>狀態2: 等待批核</Typography>
 
-        <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在過去的90天內，仍在等待批核的報銷紀錄數量</Typography>
-        <ContentImage image={img5} imageType="x" xWidth="150px" />
-        
+          <Typography variant='h7' textAlign={'LEFT'}>狀態2: 等待批核</Typography>
 
-        <Typography variant='h7' textAlign={'LEFT'}>狀態3: 被拒絕</Typography>
-        <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在過去的90天內，被否決的報銷紀錄數量</Typography>
-        <ContentImage image={img2} imageType="x" xWidth="150px" />
-        
-        <Typography variant='h7' textAlign={'LEFT'}>狀態4: 已審閱(會計)</Typography>
-        <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在過去的90天內，會計部已審閱的報銷紀錄數量</Typography>
-        <ContentImage image={img6} imageType="x" xWidth="150px" />
-        
+          <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在過去的90天內，仍在等待批核的報銷紀錄數量</Typography>
+          <ContentImage image={img5} imageType="x" xWidth="150px" sx={{ height: '68px',backgroundColor:'white',margin:'0 0 16px 0 ' }} />
 
-        <Typography variant='h7' textAlign={'LEFT'}>狀態5: 自動轉賬(最近90日)</Typography>
-        <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在過去的90天內，已自動轉賬的報銷紀錄數量</Typography>
-        <ContentImage image={img7} imageType="x" xWidth="150px" />
-        
+
+          <Typography variant='h7' textAlign={'LEFT'}>狀態3: 被拒絕</Typography>
+          <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在過去的90天內，被否決的報銷紀錄數量</Typography>
+          <ContentImage image={img2} imageType="x" xWidth="150px" sx={{ height: '68px',backgroundColor:'white',margin:'0 0 16px 0 ' }} />
+
+          <Typography variant='h7' textAlign={'LEFT'}>狀態4: 已審閱(會計)</Typography>
+          <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在過去的90天內，會計部已審閱的報銷紀錄數量</Typography>
+          <ContentImage image={img6} imageType="x" xWidth="150px" sx={{ height: '68px',backgroundColor:'white',margin:'0 0 16px 0 ' }} />
+
+
+          <Typography variant='h7' textAlign={'LEFT'}>狀態5: 自動轉賬(最近90日)</Typography>
+          <Typography variant='subtitle1' textAlign={'LEFT'}>這個顯示你在過去的90天內，已自動轉賬的報銷紀錄數量</Typography>
+          <ContentImage image={img7} imageType="x" xWidth="150px" sx={{ height: '68px',backgroundColor:'white',margin:'0 0 16px 0 ' }} />
+
         </ol>
       </ContentPart>
     </BasePage >
