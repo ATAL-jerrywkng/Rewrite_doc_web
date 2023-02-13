@@ -13,7 +13,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import UnfoldLessIcon from '@mui/icons-material/UnfoldLess';
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next';
 
 import classess from './Menu.module.scss';
@@ -25,6 +25,7 @@ import closeBook from '../../asserts/mo-tree-c.gif';
 import openBook from '../../asserts/mo-tree-e.gif';
 import treeQs from '../../asserts/mo-tree-t.gif';
 import { ContentTopBarButton } from '../../components/ContentTopBarButton';
+import { setFirstSearch } from '../../redux/reducers/menuSlice';
 
 
 
@@ -40,6 +41,7 @@ export const Menu = () => {
   // navigate for page change
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
 
   // TreeView Control
   const [expanded, setExpanded] = useState([]);
@@ -61,9 +63,11 @@ export const Menu = () => {
     }
   }
   // handle TreeView update when location update
+  const firstSearch = useSelector(state => state.menu.firstSearch)
   useEffect(() => {
     // console.log("file: Menu.js:65 -> handleTreeViewUpdate -> menu", menu)
-    if (menu && location) {
+
+    if (menu && location && firstSearch) {
       let pathname = location?.pathname;
       // console.log("file: Menu.js:70 -> useEffect -> each?.url === selected", selected)
       menu.forEach(each => {
@@ -94,8 +98,9 @@ export const Menu = () => {
           }
         }
       })
+      dispatch(setFirstSearch(false));
     }
-  }, [menu, location])
+  }, [menu, location, firstSearch])
 
 
 
@@ -155,6 +160,7 @@ export const Menu = () => {
           selected={selected}
           onNodeToggle={handleToggle}
           // multiSelect
+          sx={{ overflow: 'hidden' }}
         >
           {menu?.map(item => {
             return <TreeItem
@@ -163,7 +169,10 @@ export const Menu = () => {
               nodeId={item.id}
               label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
               onClick={(event) => clickHandler({ event, item })}
-              sx={{ backgroundColor:  item?.url === location?.pathname ? 'rgba(25, 118, 210, 0.08)' : 'rgba(255, 255, 255, 0)' }}
+              sx={{
+
+                backgroundColor: item?.url === location?.pathname ? 'rgba(25, 118, 210, 0.08)' : 'rgba(255, 255, 255, 0)'
+              }}
             >
               {item?.childrenLists?.map(item =>
                 <TreeItem
@@ -172,7 +181,10 @@ export const Menu = () => {
                   nodeId={item.id}
                   label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
                   onClick={(event) => clickHandler({ event, item })}
-                  sx={{ backgroundColor:  item?.url === location?.pathname ? 'rgba(25, 118, 210, 0.08)' : 'rgba(255, 255, 255, 0)' }}
+                  sx={{
+
+                    backgroundColor: item?.url === location?.pathname ? 'rgba(25, 118, 210, 0.08)' : 'rgba(255, 255, 255, 0)'
+                  }}
                 />)}
             </TreeItem>
           }
@@ -198,7 +210,7 @@ export const Menu = () => {
               key={item.id}
               icon={<img src={treeQs} />} nodeId={item.id}
               label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
-              onClick={(event) => clickHandler({ event, item })}
+              onClick={(event) => clickHandler({ event, item }, setSelectedTabNumber(0), dispatch(setFirstSearch(true)))}
             ></TreeItem>
           })}
         </TreeView>

@@ -7,7 +7,7 @@ export const Home = () => {
         title: 'Home'
       }
     return (
-        <BasePage {...pageInfo}>
+        <BasePage {...pageInfo} NotTopBarButton>
             <ContentPart title={"Home"}></ContentPart>
         </BasePage>
        

@@ -41,19 +41,22 @@ export const menuSlice = createSlice({
                     { id: 'menu20', name: 'EcrsSystemFormCar', translateName: 'ecrsSystemFormCar', url: '/ecrsSystemFormCar', icon: 'treeQs', childrenLists: null },
                     { id: 'menu21', name: 'EcrsSystemFormMyself', translateName: 'ecrsSystemFormMyself', url: '/ecrsSystemFormMyself', icon: 'treeQs', childrenLists: null },
                     { id: 'menu22', name: 'EcrsSystemViewApproval', translateName: 'ecrsSystemViewApproval', url: '/ecrsSystemViewApproval', icon: 'treeQs', childrenLists: null },
-                   // { id: 'menu23', name: 'EcrsSystemRejects', translateName: 'ecrsSystemRejects', url: '/ecrsSystemRejects', icon: 'treeQs', childrenLists: null },
-                  //  { id: 'menu24', name: 'EcrsSystemFinishRecord', translateName: 'ecrsSystemFinishRecord', url: '/ecrsSystemFinishRecord', icon: 'treeQs', childrenLists: null },
+                    // { id: 'menu23', name: 'EcrsSystemRejects', translateName: 'ecrsSystemRejects', url: '/ecrsSystemRejects', icon: 'treeQs', childrenLists: null },
+                    //  { id: 'menu24', name: 'EcrsSystemFinishRecord', translateName: 'ecrsSystemFinishRecord', url: '/ecrsSystemFinishRecord', icon: 'treeQs', childrenLists: null },
                 ]
             },
             // { id: 'menu25', name: 'Permission', translateName: 'permission', url: '/permission', icon: 'treeQs', childrenLists: null },
 
 
-        ]
+        ],
+        firstSearch: true
     },
     reducers: {
-
+        setFirstSearch: (state, action) => {
+            state.firstSearch = action.payload;
+        }
     }
 });
 
-export const { } = menuSlice.actions;
+export const { setFirstSearch } = menuSlice.actions;
 export default menuSlice.reducer;

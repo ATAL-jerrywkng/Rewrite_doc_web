@@ -18,15 +18,17 @@ export const Installation = () => {
       <ContentPart title={"安裝AMA手機應用程式"} sx={{ overflow: 'scroll' }}>
         
         <Box sx={{ textAlign: 'center' }}>
+
           <Link to="https://apps.apple.com/us/app/atal-mobile-access/id1660210682" style={{ display: 'inline-block' }}>
             <ContentImage image={img1} sx={{ height: '100px', width: '100px' }} />IOS download
           </Link>
           <Link to="https://ts.atal.com.hk/dl/ATALMobileAccess.apk" style={{ display: 'inline-block' }}>
-            <ContentImage image={img2} sx={{ height: '95px', width: '95px' }} />Android download
+            <ContentImage image={img2} sx={{ height: '100px', width: '100px' }} />Android download
           </Link>
+          
         </Box>
         <Typography variant='h6' textAlign={'center'}>對於手機用戶，請到以下網址或掃描上方的二維碼下載手機應用程式：</Typography>
-        <a id="myLink" href="http://ts.atal.com.hk/" target="_blank" ><Typography variant='h6' textAlign={'center'}>http://ts.atal.com.hk/</Typography></a>
+        <a id="myLink" href="https://ts.atal.com.hk/dl/" target="_blank" ><Typography variant='h6' textAlign={'center'}>https://ts.atal.com.hk/dl/</Typography></a>
         <Typography variant='h6' textAlign={'center'}>* AMA手機應用程式支援iOS和Android平台。</Typography>
 
 

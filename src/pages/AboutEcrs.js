@@ -20,13 +20,12 @@ export const AboutEcrs = () => {
 
 
           <li><Typography variant='subtitle1' textAlign={'left'}><b>公司熱門資訊</b></Typography>
-            <Typography variant='h7' textAlign={'left'}>包括內聯網資訊,通告,安全提示等</Typography>
+            <Typography variant='h7' textAlign={'left'}>包括內聯網資訊，通告，安全提示等</Typography>
           </li>
           <li><Typography variant='subtitle1' textAlign={'left'}> <b>費用報銷</b></Typography>
-            <Typography variant='h7' textAlign={'left'}>提交和追蹤交通及費用報銷申請</Typography>
-            <Typography variant='h7' textAlign={'left'}>ECRS 沒有指定遞交日期。但必須於自墊資事件發日起計90天內遞交給上級作審批。而財務部截數日期則為每月15日。</Typography>
-            <Typography variant='h7' textAlign={'left'}>在每月15日前完成部門審批之申請，財務部會作最後審查。</Typography>
-            <Typography variant='h7' textAlign={'left'}>所有完成審查的申請均會於7個工作天內，以自動轉賬方式放數。</Typography>
+            <Typography variant='h7' textAlign={'left'}>提交和追蹤交通及費用報銷申請。</Typography>
+            <Typography variant='h7' textAlign={'left'}>詳情請參閱</Typography>
+         
           </li>
          
           <a id="myLink" href="http://ts.atal.com.hk/gl" target="_blank">http://ts.atal.com.hk/gl</a>
