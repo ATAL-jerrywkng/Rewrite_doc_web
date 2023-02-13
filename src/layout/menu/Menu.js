@@ -169,10 +169,7 @@ export const Menu = () => {
               nodeId={item.id}
               label={t(MENU_TRANSLATION_PREFIX + item.translateName)}
               onClick={(event) => clickHandler({ event, item })}
-              sx={{
-
-                backgroundColor: item?.url === location?.pathname ? 'rgba(25, 118, 210, 0.08)' : 'rgba(255, 255, 255, 0)'
-              }}
+              className={item?.childrenLists && item?.url === location?.pathname ? classess.selectParentMenuHaveChild : item?.url === location?.pathname ? classess.selectParentMenuNotHaveChild : ''}
             >
               {item?.childrenLists?.map(item =>
                 <TreeItem
@@ -264,7 +261,11 @@ export const Menu = () => {
           </Tabs>
         </Grid>
         <Grid item>
-          <ContentTopBarButton style={{ padding: '4px', margin: 0 }} onClick={handleExpandClick}>
+          <ContentTopBarButton
+            style={{ padding: '4px', margin: 0 }}
+            onClick={handleExpandClick}
+            disabled={selectedTabNumber !== 0}
+          >
             {expanded?.length === 0 ? <UnfoldMoreIcon /> : <UnfoldLessIcon />}
           </ContentTopBarButton>
         </Grid>

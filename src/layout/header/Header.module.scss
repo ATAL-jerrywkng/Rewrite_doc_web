@@ -25,5 +25,12 @@
         border-bottom: 1px solid #e3e3e3;
         // margin: 0px 5px;
         width: 100%;
+        .selectedMenu {
+            background-color: rgba(25, 118, 210, 0.08);
+        }
+    }
+
+    .selectedMenu {
+        background-color: rgba(25, 118, 210, 0.08);
     }
 }

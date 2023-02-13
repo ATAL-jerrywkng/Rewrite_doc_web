@@ -25,7 +25,7 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
 import Logo from '../../asserts/logo.png';
 import InputElement from '../../components/InputElement';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { HEADER_TRANSLATION_PREFIX, MENU_TRANSLATION_PREFIX } from '../../utils/TranslationPrefixName';
 import { removeBookmark } from '../../redux/reducers/bookmarkSlice';
@@ -38,10 +38,13 @@ export const Header = () => {
   // navigate for page change
   const navigate = useNavigate();
 
+  const location = useLocation();
+
   const dispatch = useDispatch();
 
   const bookmark = useSelector(state => state.bookmark.bookmarks);
   const menu = useSelector(state => state.menu.menuLists);
+  const firstSearch = useSelector(state => state.menu.firstSearch);
 
   // Search Bar
   const searchChange = (event) => {
@@ -194,17 +197,21 @@ export const Header = () => {
       {
         menu?.map(item => {
           if (item?.childrenLists) {
-            return <Box key={item.id} className={classess.ListItem}>
-              <ListItemButton onClick={(event) => handleClick({ event, item })}>
+            return <Box key={item.id} className={`${classess.ListItem} `}>
+              <ListItemButton onClick={(event) => handleClick({ event, item })} className={`${location?.pathname === item?.url ? classess.selectedMenu : ''}`}>
                 <ListItemText>
                   {t(MENU_TRANSLATION_PREFIX + item.translateName, { ns: 'menu' })}
                 </ListItemText>
                 {checkListItemOpen(item) ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
               <Collapse in={checkListItemOpen(item)} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
+                <List component="div" disablePadding >
                   {item?.childrenLists?.map(subItem => {
-                    return <ListItemButton key={subItem.id} sx={{ pl: 4 }} onClick={(event) => handleClick({ event, item: subItem })}>
+                    return <ListItemButton
+                      key={subItem.id}
+                      className={`${location?.pathname === subItem?.url ? classess.selectedMenu : ''}`}
+                      sx={{ pl: 4 }} onClick={(event) => handleClick({ event, item: subItem })}
+                    >
                       <ListItemText>
                         {t(MENU_TRANSLATION_PREFIX + subItem.translateName, { ns: 'menu' })}
                       </ListItemText>
@@ -215,7 +222,7 @@ export const Header = () => {
               </Collapse>
             </Box>
           } else {
-            return <Box key={item.id} className={classess.ListItem}>
+            return <Box key={item.id} className={`${classess.ListItem} ${location?.pathname === item?.url ? classess.selectedMenu : ''}`}>
               <ListItemButton onClick={(event) => handleClick({ event, item })} >
                 <ListItemText>
                   {t(MENU_TRANSLATION_PREFIX + item.translateName, { ns: 'menu' })}
@@ -227,7 +234,34 @@ export const Header = () => {
 
       }
     </List>
-  }, [menu, openListItems])
+  }, [menu, openListItems, location])
+
+
+  // Check Menu List Open
+  useEffect(() => {
+    if (firstSearch && menu) {
+      let pathname = location?.pathname;
+      if (menu) {
+        let findMenu = menu?.forEach(each => {
+          if (each?.url === pathname) {
+            return each;
+          } else {
+            if (each?.childrenLists) {
+              each?.childrenLists?.forEach(child => {
+                if (child?.url === pathname) {
+                  return child;
+                }
+              })
+            }
+            return false;
+          }
+        });
+        if (findMenu) {
+          
+        }
+      }
+    }
+  }, [firstSearch, menu])
 
 
   return (
@@ -287,16 +321,25 @@ export const Header = () => {
             //  padding: '8px 16px' 
             width: '100%'
           }}>
-            <ClearIcon
-              fontSize="large"
-              sx={{
-                padding: '6px 11px 0 0 ', '&:hover': { cursor: 'pointer' }
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                closeBookmarkDrawer();
-              }}
-            />
+            <Grid container justifyContent={"space-between"} alignItems={"center"}>
+              <Grid item sx={{ padding: '6px 0 0 16px' }}>
+
+                <Typography variant='h5' sx={{ fontWeight: '600' }}>Bookmarks</Typography>
+              </Grid>
+              <Grid item >
+
+                <ClearIcon
+                  fontSize="large"
+                  sx={{
+                    padding: '6px 11px 0 0 ', '&:hover': { cursor: 'pointer' }
+                  }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    closeBookmarkDrawer();
+                  }}
+                />
+              </Grid>
+            </Grid>
 
           </Box>
           <Box sx={{ width: '100%' }}>
