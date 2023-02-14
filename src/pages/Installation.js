@@ -31,7 +31,7 @@ export const Installation = () => {
           <Grid item >
 
             <Link to="https://apps.apple.com/us/app/atal-mobile-access/id1660210682" style={{ display: 'inline-block', width: '131px' }}>
-              <ContentImage image={img1} sx={{ height: '100px', width: '100px' }} />IOS download
+              <ContentImage image={img1} sx={{ height: '100px', width: '100px', margin: "0 auto" }} />IOS download
             </Link>
           </Grid>
           <Grid item>
@@ -40,7 +40,7 @@ export const Installation = () => {
           <Grid item>
 
             <Link to="https://ts.atal.com.hk/dl/ATALMobileAccess.apk" style={{ display: 'inline-block' }}>
-              <ContentImage image={img2} sx={{ height: '100px', width: '100px' }} />Android download
+              <ContentImage image={img2} sx={{ height: '100px', width: '100px', margin: "0 auto" }} />Android download
             </Link>
           </Grid>
 

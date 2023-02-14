@@ -242,26 +242,25 @@ export const Header = () => {
     if (firstSearch && menu) {
       let pathname = location?.pathname;
       if (menu) {
-        let findMenu = menu?.forEach(each => {
+        menu?.forEach(each => {
           if (each?.url === pathname) {
-            return each;
+            handleClick({ item: each })
+            // return each;
           } else {
             if (each?.childrenLists) {
               each?.childrenLists?.forEach(child => {
                 if (child?.url === pathname) {
-                  return child;
+
+                  handleClick({ item: each })
+                  // return child;
                 }
               })
             }
-            return false;
           }
         });
-        if (findMenu) {
-          
-        }
       }
     }
-  }, [firstSearch, menu])
+  }, [firstSearch, menu, location])
 
 
   return (
