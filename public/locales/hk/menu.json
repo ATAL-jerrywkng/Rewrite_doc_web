@@ -21,7 +21,9 @@
     "ecrsSystemFilter": "篩選",
     "ecrsSystemFormCar": "新增「交通費報銷表」",
     "ecrsSystemFormMyself": "新增「自墊費用報銷表」",
+    "ecrsSystemBatchSubmit": "一次遞交多條報銷紀錄",
     "ecrsSystemViewApproval": "查閱「自墊費用」報銷審批歷程"
+   
     
   }
 }
