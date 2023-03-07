@@ -116,30 +116,34 @@ export const Menu = () => {
     let tempBookmarks = [...bookmark];
     let tempList = [];
     if (menu) {
-      // console.log("file: Menu.js:65 -> bookmarkToListByMenuList -> tempBookmarks", tempBookmarks)
-      menu.forEach(item => {
-        let findMenuItem = tempBookmarks?.find(find => find === item?.url);
-        if (findMenuItem) {
-          tempList?.push(item);
-          tempBookmarks = tempBookmarks?.filter(filter => filter !== findMenuItem);
-        }
-        if (item?.childrenLists) {
-          let findMenuItemChildren = item?.childrenLists?.find(find => {
-            let findChild = tempBookmarks.find(marks => marks === find?.url);
-            if (findChild) {
-              return find;
-            }
-            return false;
-          })
-          if (findMenuItemChildren) {
+      // console.log("file: Menu.js:119 -> bookmarkToListByMenuList -> menu:", menu);
+      // console.log("file: Menu.js:65 -> bookmarkToListByMenuList -> tempBookmarks", tempBookmarks);
 
-            tempList?.push(findMenuItemChildren);
-            tempBookmarks = tempBookmarks?.filter(filter => filter !== findMenuItemChildren?.url);
+      for (let i = 0; i < menu.length; i++) {
+        // find parent menu url
+        let findUrl = tempBookmarks?.find(find => find === menu[i]?.url);
+        if (findUrl) {
+          tempList.push(menu[i]);
+          tempBookmarks = tempBookmarks.filter(filter => filter !== menu[i]?.url);
+        }
+
+        // console.log("file: Menu.js:65 -> bookmarkToListByMenuList -> tempBookmarks", tempBookmarks);
+        // find children list menu 
+        if (menu[i]?.childrenLists) {
+          // find menu item 
+          for (let j = 0; j < menu[i].childrenLists.length; j++) {
+            let findChildrenUrl = tempBookmarks?.find(find => find === menu[i].childrenLists[j]?.url);
+            if (findChildrenUrl) {
+              tempList.push(menu[i].childrenLists[j]);
+              tempBookmarks = tempBookmarks.filter(filter => filter !== menu[i].childrenLists[j]?.url);
+            }
           }
         }
 
-      });
-      // console.log("file: Menu.js:66 -> bookmarkToListByMenuList -> tempList", tempList)
+
+      }
+
+      // console.log("file: Menu.js:66 -> bookmarkToListByMenuList -> tempList", tempList);
       return tempList;
     }
   }, [menu, bookmark])
@@ -203,6 +207,8 @@ export const Menu = () => {
           multiSelect
         >
           {bookmarkToListByMenuList?.map(item => {
+            console.log("file: Menu.js:216 -> showTabContent -> item:", item)
+
             return <TreeItem
               key={item.id}
               icon={<img src={treeQs} />} nodeId={item.id}
