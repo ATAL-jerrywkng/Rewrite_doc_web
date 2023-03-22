@@ -207,7 +207,7 @@ export const Menu = () => {
           multiSelect
         >
           {bookmarkToListByMenuList?.map(item => {
-            console.log("file: Menu.js:216 -> showTabContent -> item:", item)
+            // console.log("file: Menu.js:216 -> showTabContent -> item:", item)
 
             return <TreeItem
               key={item.id}
