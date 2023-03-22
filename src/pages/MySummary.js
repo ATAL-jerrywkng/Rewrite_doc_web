@@ -25,10 +25,10 @@ export const MySummary = () => {
             <Typography variant='subtitle1' textAlign={'LEFT'}><b>考勤總覽: </b>顯示有關考勤紀錄遞交及批核狀況</Typography>
           </li>
           <li>
-            <Typography variant='subtitle1' textAlign={'LEFT'}><b>報銷總覽: </b>顯示有關報銷紀錄遞交/批核及自動轉賬狀況</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}><b>報銷總覽: </b>顯示有關報銷紀錄遞交/批核及自動轉賬狀況，可直接點擊各報銷狀態，以查看相關的報銷紀錄</Typography>
           </li>
           <li>
-            <Typography variant='subtitle1' textAlign={'LEFT'}><b>最新消息: </b>顯示相關公司最新消息</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}><b>最新消息: </b>顯示相關公司最新消息，可直接點擊消息，以查看詳細內容</Typography>
           </li>
         </ol>
         <Typography variant='h6' textAlign={'left'}>  </Typography>

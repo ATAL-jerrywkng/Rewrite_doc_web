@@ -4,7 +4,7 @@ import { BasePage } from '../components/BasePage'
 import { CardMedia, Typography } from '@mui/material'
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
-import img1 from '../asserts/claim_add.png'
+import img1 from '../asserts/claim_add2.png'
 import img2 from '../asserts/claim_calendar.png'
 import img3 from '../asserts/claim3.png'
 import img4 from '../asserts/ec_detail.png'
@@ -26,7 +26,7 @@ export const EcrsSystemFormMyself = () => {
         <ol>
           <li>
 
-            <Typography variant='subtitle1' textAlign={'LEFT'}>點擊右上角的{`<+>`}按鈕</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>點擊右下方的按鈕</Typography>
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 
@@ -49,7 +49,7 @@ export const EcrsSystemFormMyself = () => {
           </li>
           <li>
 
-            <Typography variant='subtitle1' textAlign={'LEFT'}>報銷類型: 自墊費用報銷，並輸入報銷的{`<性質與目的/支出描述>`}</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>報銷類型: <b>自墊費用報銷</b>，並輸入報銷的{`<性質與目的/支出描述>`}</Typography>
           </li>
           <li>
 

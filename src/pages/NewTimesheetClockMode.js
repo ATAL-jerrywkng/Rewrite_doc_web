@@ -4,12 +4,12 @@ import { CardMedia, Typography } from '@mui/material'
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
 import img1 from '../asserts/img6.png'
-import img2 from '../asserts/hour_mode_1.png'
-import img3 from '../asserts/hour_mode_2.png'
+import img2 from '../asserts/hour_mode_6.PNG'
+import img3 from '../asserts/hour_mode_5.PNG'
 import img4 from '../asserts/hour_mode_3.png'
 import { ContentImage } from '../components/ContentImage';
 
-import img5 from '../asserts/addClaimAfterTSHour.png'
+import img5 from '../asserts/addClaimAfterTSHour_v2.PNG'
 
 
 
@@ -47,10 +47,10 @@ export const NewTimesheetClockMode = () => {
             image={img2}
           />
           <li>
-            <Typography variant='subtitle1' textAlign={'left'}>輸入{`<基本工時>`}，及是否{`<包括午餐時間>`}</Typography>
+            <Typography variant='subtitle1' textAlign={'left'}>輸入{`<基本工時>`} (如沒有基本工時，可將選項關閉，直接輸入OT時段)，選擇是否{`<包括午餐時間>`}及選擇是否{`<工作至翌日>`}</Typography>
           </li>
           <li>
-            <Typography variant='subtitle1' textAlign={'left'}>輸入加班時段 OT1 / OT2 / OT3 (如適用)，及是否{`<包括午餐時間>`}</Typography>
+            <Typography variant='subtitle1' textAlign={'left'}>輸入加班時段 OT1 / OT2 / OT3 (如適用)，選擇是否{`<包括午餐時間>`}及選擇是否{`<工作至翌日>`}</Typography>
           </li>
           <ContentImage
             // sx={{ height: '1242px' }} 

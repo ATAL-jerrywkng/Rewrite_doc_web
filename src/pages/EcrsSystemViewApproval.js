@@ -14,11 +14,11 @@ import { ContentImage } from '../components/ContentImage';
 
 export const EcrsSystemViewApproval = () => {
   const pageInfo = {
-    title: 'ECRS自墊費用報銷系統\\查閱「自墊費用」報銷審批歷程'
+    title: 'ECRS自墊費用報銷系統\\查閱報銷審批歷程'
   }
   return (
     <BasePage  {...pageInfo}>
-      <ContentPart title={"查閱「自墊費用」報銷審批歷程"} sx={{ overflow: 'scroll' }}>
+      <ContentPart title={"查閱報銷審批歷程"} sx={{ overflow: 'scroll' }}>
 
         <ol>
 

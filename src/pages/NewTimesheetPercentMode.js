@@ -4,11 +4,11 @@ import { CardMedia, Typography } from '@mui/material'
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
 import img1 from '../asserts/img6.png'
-import img2 from '../asserts/per_mode_1.png'
+import img2 from '../asserts/per_mode_4.PNG'
 import img3 from '../asserts/per_mode_3.png'
 import { ContentImage } from '../components/ContentImage';
 
-import img4 from '../asserts/addClaimAfterTSPer.png'
+import img4 from '../asserts/addClaimAfterTSPer_v2.PNG'
 
 export const NewTimesheetPercentMode = () => {
   const pageInfo = {

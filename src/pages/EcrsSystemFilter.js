@@ -4,10 +4,10 @@ import { BasePage } from '../components/BasePage'
 import { CardMedia, Typography } from '@mui/material'
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
-import img1 from '../asserts/claim_filter.png'
+import img1 from '../asserts/claim_filter2.PNG'
 import img2 from '../asserts/claim_filter_detail.png'
 import img3 from '../asserts/claim_filter_detail2.png'
-import img4 from '../asserts/claim_filter_detail3.PNG'
+import img4 from '../asserts/claim_filter_detail4.PNG'
 
 import { ContentImage } from '../components/ContentImage';
 

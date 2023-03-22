@@ -4,7 +4,7 @@ import { BasePage } from '../components/BasePage'
 import { CardMedia, Typography } from '@mui/material'
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
-import img1 from '../asserts/claim_add.png'
+import img1 from '../asserts/claim_add2.png'
 import img2 from '../asserts/claim_calendar.png'
 import img3 from '../asserts/tc_1.png'
 import img4 from '../asserts/tc_2.png'
@@ -25,7 +25,7 @@ export const EcrsSystemFormCar = () => {
         <Typography variant='h7' textAlign={'LEFT'}>   </Typography>
         <ol>
           <li>
-            <Typography variant='subtitle1' textAlign={'LEFT'}>點擊右上角的{`<+>`}按鈕</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>點擊右下方的按鈕</Typography>
           </li>
           <ContentImage
 
@@ -48,7 +48,7 @@ export const EcrsSystemFormCar = () => {
           </li>
           <li>
 
-            <Typography variant='subtitle1' textAlign={'LEFT'}>選擇報銷類型: 交通費報銷，並輸入交通費類型/單雙程/地點</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>選擇報銷類型: <b>交通費報銷</b>，並輸入交通費類型/單雙程/地點</Typography>
           </li>
           <ContentImage
  imageType="y" yWidth="500px"

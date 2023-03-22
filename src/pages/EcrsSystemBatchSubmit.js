@@ -7,9 +7,9 @@ import {
 } from '@mui/material'
 import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
-import img1 from '../asserts/BatchSubmitClaim1.PNG'
-import img2 from '../asserts/BatchSubmitClaim2.PNG'
-import img3 from '../asserts/BatchSubmitClaim3.PNG'
+import img1 from '../asserts/BatchSubmitClaim4.png'
+import img2 from '../asserts/BatchSubmitClaim5.png'
+import img3 from '../asserts/BatchSubmitClaim6.png'
 import img4 from '../asserts/threedots.png'
 import { ContentImage } from '../components/ContentImage';
 
