@@ -41,10 +41,15 @@ export const menuSlice = createSlice({
                     { id: 'menu20', name: 'EcrsSystemFormCar', translateName: 'ecrsSystemFormCar', url: '/ecrsSystemFormCar', icon: 'treeQs', childrenLists: null },
                     { id: 'menu21', name: 'EcrsSystemFormMyself', translateName: 'ecrsSystemFormMyself', url: '/ecrsSystemFormMyself', icon: 'treeQs', childrenLists: null },
                     { id: 'menu22', name: 'EcrsSystemBatchSubmit', translateName: 'ecrsSystemBatchSubmit', url: '/ecrsSystemBatchSubmit', icon: 'treeQs', childrenLists: null },
-                    { id: 'menu23', name: 'EcrsSystemPerformApproval', translateName: 'ecrsSystemPerformApproval', url: '/ecrsSystemPerformApproval', icon: 'treeQs', childrenLists: null },
-                    { id: 'menu24', name: 'EcrsSystemViewApproval', translateName: 'ecrsSystemViewApproval', url: '/ecrsSystemViewApproval', icon: 'treeQs', childrenLists: null },
+                  //  { id: 'menu23', name: 'EcrsSystemPerformApproval', translateName: 'ecrsSystemPerformApproval', url: '/ecrsSystemPerformApproval', icon: 'treeQs', childrenLists: null },
+                    { id: 'menu23', name: 'EcrsSystemViewApproval', translateName: 'ecrsSystemViewApproval', url: '/ecrsSystemViewApproval', icon: 'treeQs', childrenLists: null },
                     // { id: 'menu24', name: 'EcrsSystemRejects', translateName: 'ecrsSystemRejects', url: '/ecrsSystemRejects', icon: 'treeQs', childrenLists: null },
                     //  { id: 'menu25', name: 'EcrsSystemFinishRecord', translateName: 'ecrsSystemFinishRecord', url: '/ecrsSystemFinishRecord', icon: 'treeQs', childrenLists: null },
+                ]
+            },
+            {
+                id: 'menu24', name: 'EcrstimesheetApproval', translateName: 'ecrstimesheetApproval', url: '/ecrstimesheetApproval', icon: null, childrenLists: [
+                    { id: 'menu25', name: 'EcrsSystemPerformApproval', translateName: 'ecrsSystemPerformApproval', url: '/ecrsSystemPerformApproval', icon: 'treeQs', childrenLists: null }
                 ]
             },
             // { id: 'menu26', name: 'Permission', translateName: 'permission', url: '/permission', icon: 'treeQs', childrenLists: null },

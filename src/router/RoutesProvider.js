@@ -38,6 +38,7 @@ import { EcrsSystemViewApproval } from "../pages/EcrsSystemViewApproval";
 import { EcrsSystemRejects } from "../pages/EcrsSystemRejects";
 import { EcrsSystemFinishRecord } from "../pages/EcrsSystemFinishRecord";
 import { NotFind } from "../pages/NotFind";
+import { EcrstimesheetApproval } from "../pages/EcrstimesheetApproval";
 
 
 
@@ -72,8 +73,9 @@ export const RoutesProvider = () => {
         <Route path="/ecrsSystemFormCar" element={<EcrsSystemFormCar />} />
         <Route path="/ecrsSystemFormMyself" element={<EcrsSystemFormMyself />} />
         <Route path="/ecrsSystemBatchSubmit" element={<EcrsSystemBatchSubmit />} />
-        <Route path="/ecrsSystemPerformApproval" element={<EcrsSystemPerformApproval />} />
         <Route path="/ecrsSystemViewApproval" element={<EcrsSystemViewApproval />} />
+        <Route path="/ecrstimesheetApproval" element={<EcrstimesheetApproval />} />
+        <Route path="/ecrsSystemPerformApproval" element={<EcrsSystemPerformApproval />} />
 
         <Route path="*" element={<NotFind />} />
       </Route>

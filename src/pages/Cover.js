@@ -18,16 +18,16 @@ export const Cover = () => {
       <ContentPart title={"Cover"} sx={{ overflow: 'scroll' }}>
 
         <ContentImage
-          sx={{ height: '250px', width: '250px' }}
-          image={img1} />
+
+          imageType="y" yWidth="200px"
+          image={img1}
+        />
 
         <Typography variant='h6' textAlign={'center'}>安樂工程集團</Typography>
 
-        <Typography variant='h6' textAlign={'center'}>ATAL Mobile Access (ECRS-TS)</Typography>
+        <Typography variant='h6' textAlign={'center'}>ATAL Mobile Access</Typography>
         <Typography variant='h6' textAlign={'center'}>使用手冊 (中文版)</Typography>
-        <Typography variant='h6' textAlign={'center'}>第一版</Typography>
-        <Typography variant='h6' textAlign={'center'}>資訊科技</Typography>
-        <Typography variant='h6' textAlign={'center'}>最後更新: 2023年01月16日</Typography>
+
 
 
 
