@@ -14,13 +14,13 @@ import { ContentImage } from '../components/ContentImage';
 
 export const EcrsSystemPerformApproval = () => {
   const pageInfo = {
-    title: 'ECRS自墊費用報銷系統\\審批報銷申請'
+    title: '審批申請\\審批報銷申請'
   }
   return (
     <BasePage  {...pageInfo}>
       <ContentPart title={"審批報銷申請"} sx={{ overflow: 'scroll' }}>
         <Typography variant='h7' textAlign={'LEFT'}>只適用於有審批報銷申請權限的用戶</Typography>
-        <Typography variant='h7' textAlign={'LEFT'} display="block">在下方的功能選項表中，選擇審批</Typography>
+        <Typography variant='h7' textAlign={'LEFT'} display="block">在下方的功能選項表中，選擇審批，並在上方的選項，選擇報銷</Typography>
         <Typography variant='h7' textAlign={'LEFT'}>   </Typography>
 
 
@@ -35,7 +35,7 @@ export const EcrsSystemPerformApproval = () => {
             imageType="y" yWidth="500px"
           />
 
-          <li><Typography variant='subtitle1' textAlign={'LEFT'}>在每項報銷申請，按實際情況點擊(1)拒絕 / (2) 批准 / (3) 批准並留言，以完成審批程序</Typography>
+          <li><Typography variant='subtitle1' textAlign={'LEFT'}>在每項報銷申請，按實際情況點擊(1) 拒絕 / (2) 批准 / (3) 批准並留言，以完成審批程序，如當天有考勤紀錄，可點擊(4) 考勤來查看詳細資料 (如沒有考勤紀錄，會顯示<b>未能找到相關資料</b>)</Typography>
           </li>
 
 
