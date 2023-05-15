@@ -49,9 +49,11 @@ export const menuSlice = createSlice({
             },
             {
                 id: 'menu24', name: 'EcrstimesheetApproval', translateName: 'ecrstimesheetApproval', url: '/ecrstimesheetApproval', icon: null, childrenLists: [
-                    { id: 'menu25', name: 'EcrsSystemPerformApproval', translateName: 'ecrsSystemPerformApproval', url: '/ecrsSystemPerformApproval', icon: 'treeQs', childrenLists: null }
+                    { id: 'menu25', name: 'EcrsSystemPerformApproval', translateName: 'ecrsSystemPerformApproval', url: '/ecrsSystemPerformApproval', icon: 'treeQs', childrenLists: null },
+                    { id: 'menu26', name: 'EcrsSystemTimeSheetPerformApproval', translateName: 'ecrsSystemTimeSheetPerformApproval', url: '/ecrsSystemTimeSheetPerformApproval', icon: 'treeQs', childrenLists: null }
                 ]
             },
+            { id: 'menu27', name: 'PersonalInfo', translateName: 'PersonalInfo', url: '/PersonalInfo', icon: 'treeQs', childrenLists: null }
             // { id: 'menu26', name: 'Permission', translateName: 'permission', url: '/permission', icon: 'treeQs', childrenLists: null },
 
 

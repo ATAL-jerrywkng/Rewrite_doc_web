@@ -24,8 +24,8 @@
     "ecrsSystemBatchSubmit": "一次遞交多條報銷紀錄",
     "ecrsSystemViewApproval": "查閱報銷審批歷程",
     "ecrstimesheetApproval": "審批申請",
-    "ecrsSystemPerformApproval": "審批報銷申請"
-   
-    
+    "ecrsSystemPerformApproval": "審批報銷申請",
+    "ecrsSystemTimeSheetPerformApproval": "審批考勤",
+    "PersonalInfo": "個人資料"
   }
 }
