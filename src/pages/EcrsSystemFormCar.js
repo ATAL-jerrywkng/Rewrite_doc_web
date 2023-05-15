@@ -57,7 +57,11 @@ export const EcrsSystemFormCar = () => {
           />
           <li>
 
-            <Typography variant='subtitle1' textAlign={'LEFT'}>輸入車程類型及車錢</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>輸入交通工具類型及車錢</Typography>
+          </li>
+          <li>
+
+            <Typography variant='subtitle1' textAlign={'LEFT'}>如交通工具包括的士，必須輸入{`<乘搭的士的理由>`}</Typography>
           </li>
           <li>
 
@@ -81,7 +85,7 @@ export const EcrsSystemFormCar = () => {
           />
           <li>
 
-            <Typography variant='subtitle1' textAlign={'LEFT'}>如需附上圖片，可點擊{`<相片庫>`}上載圖片或點擊{`<相機>`}直接拍攝(最多10張相片)</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>如需附上圖片，可點擊{`<相片庫>`}上載圖片或點擊{`<相機>`}直接拍攝(最多10張相片) (請注意: 乘搭的士必須遞交附件)</Typography>
           </li>
           <li>
 

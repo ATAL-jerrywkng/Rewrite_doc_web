@@ -35,7 +35,7 @@ export const EcrsSystemTimeSheetPerformApproval = () => {
             imageType="y" yWidth="500px"
           />
 
-          <li><Typography variant='subtitle1' textAlign={'LEFT'}>在每項考勤紀錄，按實際情況點擊(1) 拒絕 / (2) 批准 / (3) 批准並留言，以完成審批程序</Typography>
+          <li><Typography variant='subtitle1' textAlign={'LEFT'}>在每項考勤紀錄，按實際情況點擊(1) 拒絕 / (2) 批准，以完成審批程序</Typography>
           </li>
 
 
