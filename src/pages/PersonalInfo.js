@@ -17,8 +17,8 @@ export const PersonalInfo = () => {
     <BasePage  {...pageInfo}>
       <ContentPart title={"個人資料"} sx={{ overflow: 'scroll' }}>
         <ol>
-          <li><Typography variant='subtitle1' textAlign={'LEFT'}><b>eNameCard</b></Typography>
-          <Typography variant='h7' textAlign={'left'}>顯示用戶之eNameCard</Typography>
+          <li><Typography variant='subtitle1' textAlign={'LEFT'}><b>eNameCard (只適用於有eNameCard之用戶)</b></Typography>
+          <Typography variant='h7' textAlign={'left'}>顯示用戶之eNameCard，如擁有多於1張eNameCard，版面會顯示用戶所有的eNameCard模板，選擇要顯示之eNameCard模板即可</Typography>
           </li>
           <li><Typography variant='subtitle1' textAlign={'LEFT'}><b>語言</b></Typography>
           <Typography variant='h7' textAlign={'left'}>設定AMA的介面語言</Typography>
