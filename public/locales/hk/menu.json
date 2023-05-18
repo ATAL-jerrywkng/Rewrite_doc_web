@@ -26,6 +26,7 @@
     "ecrstimesheetApproval": "審批申請",
     "ecrsSystemPerformApproval": "審批報銷申請",
     "ecrsSystemTimeSheetPerformApproval": "審批考勤",
+    "ecrsSystemStandbyAllowancePerformApproval": "審批候命津貼(適用於SER)",
     "PersonalInfo": "個人資料"
   }
 }

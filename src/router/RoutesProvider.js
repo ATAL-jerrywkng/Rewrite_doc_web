@@ -41,7 +41,7 @@ import { EcrsSystemFinishRecord } from "../pages/EcrsSystemFinishRecord";
 import { NotFind } from "../pages/NotFind";
 import { PersonalInfo } from "../pages/PersonalInfo";
 import { EcrstimesheetApproval } from "../pages/EcrstimesheetApproval";
-
+import { EcrsSystemStandbyAllowancePerformApproval } from "../pages/EcrsSystemStandbyAllowancePerformApproval";
 
 
 
@@ -79,6 +79,7 @@ export const RoutesProvider = () => {
         <Route path="/ecrstimesheetApproval" element={<EcrstimesheetApproval />} />
         <Route path="/ecrsSystemPerformApproval" element={<EcrsSystemPerformApproval />} />
         <Route path="/ecrsSystemTimeSheetPerformApproval" element={<EcrsSystemTimeSheetPerformApproval />} />
+        <Route path="/ecrsSystemStandbyAllowancePerformApproval" element={<EcrsSystemStandbyAllowancePerformApproval />} />
         <Route path="/PersonalInfo" element={<PersonalInfo />} />
         <Route path="*" element={<NotFind />} />
       </Route>
