@@ -37,7 +37,7 @@ export const EcrsSystemStandbyAllowancePerformApproval = () => {
             imageType="y" yWidth="500px"
           />
 
-          <li><Typography variant='subtitle1' textAlign={'LEFT'}>按實際情況選擇(1) 是否有缺席，填上備註(如適用)，再點擊(2) 確定，以完成審批候命津貼程序</Typography>
+          <li><Typography variant='subtitle1' textAlign={'LEFT'}>按實際情況選擇(1) 出席/缺席，填上備註(如適用)，再點擊(2) 確定，以完成審批候命津貼程序</Typography>
           </li>
 
 
