@@ -39,22 +39,23 @@ export const menuSlice = createSlice({
                     { id: 'menu18', name: 'EcrsSystemSummary', translateName: 'ecrsSystemSummary', url: '/ecrsSystemSummary', icon: 'treeQs', childrenLists: null },
                     { id: 'menu19', name: 'EcrsSystemFilter', translateName: 'ecrsSystemFilter', url: '/ecrsSystemFilter', icon: 'treeQs', childrenLists: null },
                     { id: 'menu20', name: 'EcrsSystemFormCar', translateName: 'ecrsSystemFormCar', url: '/ecrsSystemFormCar', icon: 'treeQs', childrenLists: null },
-                    { id: 'menu21', name: 'EcrsSystemFormMyself', translateName: 'ecrsSystemFormMyself', url: '/ecrsSystemFormMyself', icon: 'treeQs', childrenLists: null },
-                    { id: 'menu22', name: 'EcrsSystemBatchSubmit', translateName: 'ecrsSystemBatchSubmit', url: '/ecrsSystemBatchSubmit', icon: 'treeQs', childrenLists: null },
+                    { id: 'menu21', name: 'EcrsSystemFormCarBM', translateName: 'ecrsSystemFormCarBM', url: '/ecrsSystemFormCarBM', icon: 'treeQs', childrenLists: null },
+                    { id: 'menu22', name: 'EcrsSystemFormMyself', translateName: 'ecrsSystemFormMyself', url: '/ecrsSystemFormMyself', icon: 'treeQs', childrenLists: null },
+                    { id: 'menu23', name: 'EcrsSystemBatchSubmit', translateName: 'ecrsSystemBatchSubmit', url: '/ecrsSystemBatchSubmit', icon: 'treeQs', childrenLists: null },
                   //  { id: 'menu23', name: 'EcrsSystemPerformApproval', translateName: 'ecrsSystemPerformApproval', url: '/ecrsSystemPerformApproval', icon: 'treeQs', childrenLists: null },
-                    { id: 'menu23', name: 'EcrsSystemViewApproval', translateName: 'ecrsSystemViewApproval', url: '/ecrsSystemViewApproval', icon: 'treeQs', childrenLists: null },
+                    { id: 'menu24', name: 'EcrsSystemViewApproval', translateName: 'ecrsSystemViewApproval', url: '/ecrsSystemViewApproval', icon: 'treeQs', childrenLists: null },
                     // { id: 'menu24', name: 'EcrsSystemRejects', translateName: 'ecrsSystemRejects', url: '/ecrsSystemRejects', icon: 'treeQs', childrenLists: null },
                     //  { id: 'menu25', name: 'EcrsSystemFinishRecord', translateName: 'ecrsSystemFinishRecord', url: '/ecrsSystemFinishRecord', icon: 'treeQs', childrenLists: null },
                 ]
             },
             {
-                id: 'menu24', name: 'EcrstimesheetApproval', translateName: 'ecrstimesheetApproval', url: '/ecrstimesheetApproval', icon: null, childrenLists: [
-                    { id: 'menu25', name: 'EcrsSystemPerformApproval', translateName: 'ecrsSystemPerformApproval', url: '/ecrsSystemPerformApproval', icon: 'treeQs', childrenLists: null },
-                    { id: 'menu26', name: 'EcrsSystemTimeSheetPerformApproval', translateName: 'ecrsSystemTimeSheetPerformApproval', url: '/ecrsSystemTimeSheetPerformApproval', icon: 'treeQs', childrenLists: null },
-                    { id: 'menu27', name: 'EcrsSystemStandbyAllowancePerformApproval', translateName: 'ecrsSystemStandbyAllowancePerformApproval', url: '/ecrsSystemStandbyAllowancePerformApproval', icon: 'treeQs', childrenLists: null }
+                id: 'menu25', name: 'EcrstimesheetApproval', translateName: 'ecrstimesheetApproval', url: '/ecrstimesheetApproval', icon: null, childrenLists: [
+                    { id: 'menu26', name: 'EcrsSystemPerformApproval', translateName: 'ecrsSystemPerformApproval', url: '/ecrsSystemPerformApproval', icon: 'treeQs', childrenLists: null },
+                    { id: 'menu27', name: 'EcrsSystemTimeSheetPerformApproval', translateName: 'ecrsSystemTimeSheetPerformApproval', url: '/ecrsSystemTimeSheetPerformApproval', icon: 'treeQs', childrenLists: null },
+                    { id: 'menu28', name: 'EcrsSystemStandbyAllowancePerformApproval', translateName: 'ecrsSystemStandbyAllowancePerformApproval', url: '/ecrsSystemStandbyAllowancePerformApproval', icon: 'treeQs', childrenLists: null }
                 ]
             },
-            { id: 'menu28', name: 'PersonalInfo', translateName: 'PersonalInfo', url: '/PersonalInfo', icon: 'treeQs', childrenLists: null }
+            { id: 'menu29', name: 'PersonalInfo', translateName: 'PersonalInfo', url: '/PersonalInfo', icon: 'treeQs', childrenLists: null }
             // { id: 'menu26', name: 'Permission', translateName: 'permission', url: '/permission', icon: 'treeQs', childrenLists: null },
 
 

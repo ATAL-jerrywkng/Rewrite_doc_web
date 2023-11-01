@@ -42,7 +42,7 @@ export const EcrsSystemSummary = () => {
           </Grid>
 
           <Grid item >
-                <ContentImage sx={{ height: '50px', width: '20px' }} image={img5} />
+                <ContentImage sx={{ height: '100px', width: '100px' }} image={img5} />
 
               </Grid>
 

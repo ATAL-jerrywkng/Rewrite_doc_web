@@ -6,19 +6,19 @@ import { ContentPart } from '../components/ContentPart';
 import { Link } from 'react-router-dom';
 import img1 from '../asserts/claim_add2.png'
 import img2 from '../asserts/claim_calendar.png'
-import img3 from '../asserts/tc_1.png'
-import img4 from '../asserts/tc_2.png'
-import img5 from '../asserts/tc_4.png'
+import img3 from '../asserts/tcBM_1.png'
+import img4 from '../asserts/tcBM_2.png'
+import img5 from '../asserts/tcBM_3.png'
 import img6 from '../asserts/tc_3.png'
 
 import { ContentImage } from '../components/ContentImage';
-export const EcrsSystemFormCar = () => {
+export const EcrsSystemFormCarBM = () => {
   const pageInfo = {
-    title: 'ECRS自墊費用報銷系統\\新增「交通費報銷表」- 普通車程'
+    title: 'ECRS自墊費用報銷系統\\新增「交通費報銷表」- 因公行車'
   }
   return (
     <BasePage  {...pageInfo}>
-      <ContentPart title={"新增「交通費報銷表」- 普通車程"} sx={{ overflow: 'scroll' }}>
+      <ContentPart title={"新增「交通費報銷表」- 因公行車 "} sx={{ overflow: 'scroll' }}>
 
         <Typography variant='h7' textAlign={'LEFT'}>在下方的功能選項表中，選擇報銷</Typography>
         <Typography variant='h7' textAlign={'LEFT'} display="block">請注意: 你只能為自己填寫的報銷。不能為其他同事輸入。</Typography>
@@ -48,7 +48,7 @@ export const EcrsSystemFormCar = () => {
           </li>
           <li>
 
-            <Typography variant='subtitle1' textAlign={'LEFT'}>選擇報銷類型: <b>交通費報銷</b>，並選擇交通費類型: <b>普通車程</b>，以及輸入{`<單雙程>`}和{`<地點>`}</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>選擇報銷類型: <b>交通費報銷</b>，並選擇交通費類型: <b>因公行車</b>，以及輸入{`<地點>`}</Typography>
           </li>
           <ContentImage
             imageType="y" yWidth="500px"
@@ -57,15 +57,7 @@ export const EcrsSystemFormCar = () => {
           />
           <li>
 
-            <Typography variant='subtitle1' textAlign={'LEFT'}>輸入交通工具類型及車錢</Typography>
-          </li>
-          <li>
-
-            <Typography variant='subtitle1' textAlign={'LEFT'}>如交通工具包括的士，必須輸入{`<乘搭的士的理由>`}</Typography>
-          </li>
-          <li>
-
-            <Typography variant='subtitle1' textAlign={'LEFT'}>如同一日有多於一程車程，可點擊{`<+行程>`}新增另一項車程資料，可報銷之款項會於{`<合共>`}顯示</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>選擇適當的{`<車牌登記號碼>`}及填上{`<行程目的>`}</Typography>
           </li>
           <ContentImage
             imageType="y" yWidth="500px"
@@ -74,18 +66,16 @@ export const EcrsSystemFormCar = () => {
           />
           <li>
 
-            <Typography variant='subtitle1' textAlign={'LEFT'}>如交通費類型為{`<直接由家出發>`}或{`<直接返家>`}，{`<扣除差額>`}會顯示{`<由家出發>`}/{`<直接返家>`}之交通費，而可報銷之款項(合共) = 該車程交通費 - 由家出發/返家之交通費</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>如行程包括了{`<天橋、隧道及幹線費用>`}、{`<泊車費>`}或{`<汽油費>`}，可填上相關支出，如有多於一程天橋、隧道及幹線費用支出，可點擊{`<+路線>`}新增另一項相關費用支出</Typography>
           </li>
-
           <ContentImage
-
-            // sx={{ height: '1242px' }} 
             imageType="y" yWidth="500px"
-            image={img5}
-          />
+            // sx={{ height: '1242px' }} 
+            image={img5} />
           <li>
 
-            <Typography variant='subtitle1' textAlign={'LEFT'}>如需附上圖片，可點擊{`<相片庫>`}上載圖片或點擊{`<相機>`}直接拍攝(最多10張相片) (請注意: 乘搭的士必須遞交附件)</Typography>
+           
+            <Typography variant='subtitle1' textAlign={'LEFT'}>如需附上圖片，可點擊{`<相片庫>`}上載圖片或點擊{`<相機>`}直接拍攝(最多10張相片) (請注意: 報銷泊車費必須遞交附件)</Typography>
           </li>
           <li>
 

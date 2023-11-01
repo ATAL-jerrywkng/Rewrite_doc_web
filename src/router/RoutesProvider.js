@@ -31,6 +31,7 @@ import { AddDateToTimesheet } from "../pages/AddDateToTimesheet";
 import { EcrsSystemSummary } from "../pages/EcrsSystemSummary";
 import { EcrsSystemFilter } from "../pages/EcrsSystemFilter";
 import { EcrsSystemFormCar } from "../pages/EcrsSystemFormCar";
+import { EcrsSystemFormCarBM } from "../pages/EcrsSystemFormCarBM";
 import { EcrsSystemFormMyself } from "../pages/EcrsSystemFormMyself";
 import { EcrsSystemBatchSubmit } from "../pages/EcrsSystemBatchSubmit";
 import { EcrsSystemPerformApproval } from "../pages/EcrsSystemPerformApproval";
@@ -73,6 +74,7 @@ export const RoutesProvider = () => {
         <Route path="/ecrsSystemSummary" element={<EcrsSystemSummary />} />
         <Route path="/ecrsSystemFilter" element={<EcrsSystemFilter />} />
         <Route path="/ecrsSystemFormCar" element={<EcrsSystemFormCar />} />
+        <Route path="/ecrsSystemFormCarBM" element={<EcrsSystemFormCarBM />} />
         <Route path="/ecrsSystemFormMyself" element={<EcrsSystemFormMyself />} />
         <Route path="/ecrsSystemBatchSubmit" element={<EcrsSystemBatchSubmit />} />
         <Route path="/ecrsSystemViewApproval" element={<EcrsSystemViewApproval />} />
