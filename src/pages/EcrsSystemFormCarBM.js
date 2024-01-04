@@ -8,7 +8,7 @@ import img1 from '../asserts/claim_add2.png'
 import img2 from '../asserts/claim_calendar.png'
 import img3 from '../asserts/tcBM_1.png'
 import img4 from '../asserts/tcBM_2.png'
-import img5 from '../asserts/tcBM_3.png'
+import img5 from '../asserts/tcBM_4.png'
 import img6 from '../asserts/tc_3.png'
 
 import { ContentImage } from '../components/ContentImage';
