@@ -75,7 +75,7 @@ export const EcrsSystemFormCarBM = () => {
           <li>
 
            
-            <Typography variant='subtitle1' textAlign={'LEFT'}>如需附上圖片，可點擊{`<相片庫>`}上載圖片或點擊{`<相機>`}直接拍攝(最多10張相片) (請注意: 報銷泊車費必須遞交附件)</Typography>
+            <Typography variant='subtitle1' textAlign={'LEFT'}>如需附上圖片，可點擊{`<相片庫>`}上載圖片或點擊{`<相機>`}直接拍攝(最多10張相片) (請注意: 報銷泊車費或天橋、隧道及幹線費用都必須遞交附件)</Typography>
           </li>
           <li>
 
